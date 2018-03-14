@@ -1,2 +1,2 @@
-class InstrumentsController < ApplicationController
+class Api::V1::InstrumentsController < ApplicationController
 end

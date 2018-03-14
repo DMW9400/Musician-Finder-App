@@ -1,2 +1,2 @@
-class SoughtInstrumentsController < ApplicationController
+class Api::V1::SoughtInstrumentsController < ApplicationController
 end

@@ -1,2 +1,2 @@
-class UserArtistsController < ApplicationController
+class Api::V1::UserArtistsController < ApplicationController
 end

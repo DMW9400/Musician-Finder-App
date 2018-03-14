@@ -1,2 +1,2 @@
-class GenresController < ApplicationController
+class Api::V1::GenresController < ApplicationController
 end
