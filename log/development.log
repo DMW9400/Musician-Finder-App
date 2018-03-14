@@ -1543,3 +1543,299 @@ No serializer found for resource: #<User id: 1, name: "Matt", image_url: "google
 Completed 200 OK in 47ms (Views: 28.2ms | ActiveRecord: 6.7ms)
 
 
+Started GET "/?name=asdds&image_url=ags&age=12&gender=as&top_song_url=asgasg" for 127.0.0.1 at 2018-03-14 17:24:37 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"name"=>"asdds", "image_url"=>"ags", "age"=>"12", "gender"=>"as", "top_song_url"=>"asgasg"}
+  Rendering /Users/matthewwelch/.rvm/gems/ruby-2.3.3/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/matthewwelch/.rvm/gems/ruby-2.3.3/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/recipes" for 127.0.0.1 at 2018-03-14 17:24:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/recipes"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:24:47 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Matt", image_url: "google.com", age: 26, gender: "M", top_song_url: "autechre.com", created_at: "2018-03-14 19:54:56", updated_at: "2018-03-14 19:54:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.02ms)
+Completed 200 OK in 61ms (Views: 27.3ms | ActiveRecord: 19.6ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:29:13 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Bart", "image_url"=>"akaskdj", "age"=>"12", "gender"=>"ask", "top_song_url"=>"asksdjdsa", "user"=>{"name"=>"Bart", "image_url"=>"akaskdj", "age"=>"12", "gender"=>"ask", "top_song_url"=>"asksdjdsa"}}
+Unpermitted parameters: :name, :image_url, :age, :gender, :top_song_url, :user
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.37ms)
+Completed 201 Created in 7ms (Views: 2.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:30:29 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Bart", "image_url"=>"akaskdj", "age"=>"12", "gender"=>"ask", "top_song_url"=>"asksdjdsa", "user"=>{"name"=>"Bart", "image_url"=>"akaskdj", "age"=>"12", "gender"=>"ask", "top_song_url"=>"asksdjdsa"}}
+Unpermitted parameters: :name, :image_url, :age, :gender, :top_song_url, :user
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.34ms)
+Completed 201 Created in 4ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:30:30 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Bart", "image_url"=>"akaskdj", "age"=>"12", "gender"=>"ask", "top_song_url"=>"asksdjdsa", "user"=>{"name"=>"Bart", "image_url"=>"akaskdj", "age"=>"12", "gender"=>"ask", "top_song_url"=>"asksdjdsa"}}
+Unpermitted parameters: :name, :image_url, :age, :gender, :top_song_url, :user
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.34ms)
+Completed 201 Created in 4ms (Views: 0.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:30:30 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Bart", "image_url"=>"akaskdj", "age"=>"12", "gender"=>"ask", "top_song_url"=>"asksdjdsa", "user"=>{"name"=>"Bart", "image_url"=>"akaskdj", "age"=>"12", "gender"=>"ask", "top_song_url"=>"asksdjdsa"}}
+Unpermitted parameters: :name, :image_url, :age, :gender, :top_song_url, :user
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.32ms)
+Completed 201 Created in 4ms (Views: 0.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:30:30 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Bart", "image_url"=>"akaskdj", "age"=>"12", "gender"=>"ask", "top_song_url"=>"asksdjdsa", "user"=>{"name"=>"Bart", "image_url"=>"akaskdj", "age"=>"12", "gender"=>"ask", "top_song_url"=>"asksdjdsa"}}
+Unpermitted parameters: :name, :image_url, :age, :gender, :top_song_url, :user
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.35ms)
+Completed 201 Created in 4ms (Views: 1.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:33:07 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>"", "user"=>{"name"=>"", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>""}}
+Unpermitted parameters: :name, :image_url, :age, :gender, :top_song_url, :user
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.52ms)
+Completed 201 Created in 18ms (Views: 5.8ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:33:09 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>"", "user"=>{"name"=>"", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>""}}
+Unpermitted parameters: :name, :image_url, :age, :gender, :top_song_url, :user
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.37ms)
+Completed 201 Created in 18ms (Views: 0.9ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:33:10 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>"", "user"=>{"name"=>"", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>""}}
+Unpermitted parameters: :name, :image_url, :age, :gender, :top_song_url, :user
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.36ms)
+Completed 201 Created in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:34:35 -0400
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:34:45 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>"", "user"=>{"name"=>"", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>""}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" IS NULL AND "users"."gender" = $3 AND "users"."top_song_url" = $4 LIMIT $5[0m  [["name", ""], ["image_url", ""], ["gender", ""], ["top_song_url", ""], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "gender", "top_song_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["image_url", ""], ["gender", ""], ["top_song_url", ""], ["created_at", "2018-03-14 21:34:45.170265"], ["updated_at", "2018-03-14 21:34:45.170265"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 21ms (ActiveRecord: 9.0ms)
+
+
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>"", "user"=>{"name"=>"", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>""}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" IS NULL AND "users"."gender" = $3 AND "users"."top_song_url" = $4 LIMIT $5[0m  [["name", ""], ["image_url", ""], ["gender", ""], ["top_song_url", ""], ["LIMIT", 1]]
+Completed 204 No Content in 8ms (ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:35:50 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"sds", "image_url"=>"asds", "age"=>nil, "gender"=>"", "top_song_url"=>"", "user"=>{"name"=>"sds", "image_url"=>"asds", "age"=>nil, "gender"=>"", "top_song_url"=>""}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" IS NULL AND "users"."gender" = $3 AND "users"."top_song_url" = $4 LIMIT $5[0m  [["name", "sds"], ["image_url", "asds"], ["gender", ""], ["top_song_url", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "gender", "top_song_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "sds"], ["image_url", "asds"], ["gender", ""], ["top_song_url", ""], ["created_at", "2018-03-14 21:35:50.580183"], ["updated_at", "2018-03-14 21:35:50.580183"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 6ms (ActiveRecord: 2.2ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:36:18 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"asfafs", "image_url"=>"fasds", "age"=>"asds", "gender"=>"asdassdas", "top_song_url"=>"asd", "user"=>{"name"=>"asfafs", "image_url"=>"fasds", "age"=>"asds", "gender"=>"asdassdas", "top_song_url"=>"asd"}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" = $3 AND "users"."gender" = $4 AND "users"."top_song_url" = $5 LIMIT $6[0m  [["name", "asfafs"], ["image_url", "fasds"], ["age", 0], ["gender", "asdassdas"], ["top_song_url", "asd"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "age", "gender", "top_song_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "asfafs"], ["image_url", "fasds"], ["age", 0], ["gender", "asdassdas"], ["top_song_url", "asd"], ["created_at", "2018-03-14 21:36:18.566348"], ["updated_at", "2018-03-14 21:36:18.566348"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.5ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:40:58 -0400
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::V1::UsersController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/v1/users_controller.rb:3:in `<class:UsersController>'
+app/controllers/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:41:02 -0400
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::V1::UsersController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/v1/users_controller.rb:3:in `<class:UsersController>'
+app/controllers/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:41:08 -0400
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::V1::UsersController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/v1/users_controller.rb:3:in `<class:UsersController>'
+app/controllers/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:41:08 -0400
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::V1::UsersController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/v1/users_controller.rb:3:in `<class:UsersController>'
+app/controllers/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:41:09 -0400
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::V1::UsersController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/v1/users_controller.rb:3:in `<class:UsersController>'
+app/controllers/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:41:10 -0400
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::V1::UsersController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/v1/users_controller.rb:3:in `<class:UsersController>'
+app/controllers/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:41:11 -0400
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::V1::UsersController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/v1/users_controller.rb:3:in `<class:UsersController>'
+app/controllers/api/v1/users_controller.rb:1:in `<top (required)>'
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:41:18 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Matt", image_url: "google.com", age: 26, gender: "M", top_song_url: "autechre.com", created_at: "2018-03-14 19:54:56", updated_at: "2018-03-14 19:54:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.24ms)
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:41:40 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Test Name!", "image_url"=>"testURL", "age"=>"25", "gender"=>"MALE", "top_song_url"=>"akjasds", "user"=>{"name"=>"Test Name!", "image_url"=>"testURL", "age"=>"25", "gender"=>"MALE", "top_song_url"=>"akjasds"}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" = $3 AND "users"."gender" = $4 AND "users"."top_song_url" = $5 LIMIT $6[0m  [["name", "Test Name!"], ["image_url", "testURL"], ["age", 25], ["gender", "MALE"], ["top_song_url", "akjasds"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "age", "gender", "top_song_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Test Name!"], ["image_url", "testURL"], ["age", 25], ["gender", "MALE"], ["top_song_url", "akjasds"], ["created_at", "2018-03-14 21:41:40.381273"], ["updated_at", "2018-03-14 21:41:40.381273"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 11ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:41:43 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Matt", image_url: "google.com", age: 26, gender: "M", top_song_url: "autechre.com", created_at: "2018-03-14 19:54:56", updated_at: "2018-03-14 19:54:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.75ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:43:42 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"TEST2", "image_url"=>"1212i4", "age"=>"1kasdfk", "gender"=>"and", "top_song_url"=>"CARAKR", "user"=>{"name"=>"TEST2", "image_url"=>"1212i4", "age"=>"1kasdfk", "gender"=>"and", "top_song_url"=>"CARAKR"}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" = $3 AND "users"."gender" = $4 AND "users"."top_song_url" = $5 LIMIT $6[0m  [["name", "TEST2"], ["image_url", "1212i4"], ["age", 1], ["gender", "and"], ["top_song_url", "CARAKR"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "age", "gender", "top_song_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "TEST2"], ["image_url", "1212i4"], ["age", 1], ["gender", "and"], ["top_song_url", "CARAKR"], ["created_at", "2018-03-14 21:43:42.689346"], ["updated_at", "2018-03-14 21:43:42.689346"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:43:47 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Matt", image_url: "google.com", age: 26, gender: "M", top_song_url: "autechre.com", created_at: "2018-03-14 19:54:56", updated_at: "2018-03-14 19:54:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.82ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:46:16 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"JSHDJS", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>"", "user"=>{"name"=>"JSHDJS", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>""}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" IS NULL AND "users"."gender" = $3 AND "users"."top_song_url" = $4 LIMIT $5[0m  [["name", "JSHDJS"], ["image_url", ""], ["gender", ""], ["top_song_url", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "gender", "top_song_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "JSHDJS"], ["image_url", ""], ["gender", ""], ["top_song_url", ""], ["created_at", "2018-03-14 21:46:16.745408"], ["updated_at", "2018-03-14 21:46:16.745408"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:46:29 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Matt", image_url: "google.com", age: 26, gender: "M", top_song_url: "autechre.com", created_at: "2018-03-14 19:54:56", updated_at: "2018-03-14 19:54:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.76ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:47:25 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"BARBKF", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>"", "user"=>{"name"=>"BARBKF", "image_url"=>"", "age"=>nil, "gender"=>"", "top_song_url"=>""}}
+Unpermitted parameter: :user
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" IS NULL AND "users"."gender" = $3 AND "users"."top_song_url" = $4 LIMIT $5[0m  [["name", "BARBKF"], ["image_url", ""], ["gender", ""], ["top_song_url", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "gender", "top_song_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "BARBKF"], ["image_url", ""], ["gender", ""], ["top_song_url", ""], ["created_at", "2018-03-14 21:47:25.791191"], ["updated_at", "2018-03-14 21:47:25.791191"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.27ms)
+Completed 201 Created in 22ms (Views: 9.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-14 17:47:30 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Matt", image_url: "google.com", age: 26, gender: "M", top_song_url: "autechre.com", created_at: "2018-03-14 19:54:56", updated_at: "2018-03-14 19:54:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (2.49ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+
+

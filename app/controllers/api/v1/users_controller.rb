@@ -1,8 +1,10 @@
 class Api::V1::UsersController < ApplicationController
+
+
   def index
   users = User.all
   render json: users, status: 200
-end
+  end
 
 def create
  user = User.find_or_create_by(user_params)
@@ -10,7 +12,7 @@ def create
  # user = User.find(params[:user_id])
 
  # quick fix:
- user=User.all.first
+ # user=User.all.first
  # recipe.user = user
  # params[:ingredients].each do |i|
  #   ingredient = Ingredient.find_or_create_by(name: i)
@@ -38,10 +40,10 @@ end
 
 private
 def user_params
-  params.permit()
+  params.permit(:name,:image_url,:age,:gender,:top_song_url)
 end
 
-def set_user
-  @recipe = User.find(params[:id])
-end
+# def set_user
+#   @recipe = User.find(params[:id])
+# end
 end
