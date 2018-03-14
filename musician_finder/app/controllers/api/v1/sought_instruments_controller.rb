@@ -1,0 +1,2 @@
+class SoughtInstrumentsController < ApplicationController
+end
