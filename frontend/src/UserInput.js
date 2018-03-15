@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 export default class UserInput extends React.Component{
   state={
     user: {
@@ -11,7 +13,10 @@ export default class UserInput extends React.Component{
     },
     instruments: [],
     artists: [],
-    genres: []
+    genres: [],
+    selectedInstruments:[],
+    selectedArtists:[],
+    selectedGenres:[]
   }
 
   componentDidMount(){
@@ -48,6 +53,27 @@ export default class UserInput extends React.Component{
     .then(json=>this.setState({genres:json}, ()=>{console.log("genres:",this.state.genres)}))
   }
 
+  populateInstrumentSelect = () => {
+    let instruments = this.state.instruments.map(instrument =>{
+      return <option  key={instrument.id} value={instrument.id}>{instrument.name}</option>
+    })
+    return instruments
+  }
+  populateArtistSelect = () => {
+    let artists = this.state.artists.map(artist =>{
+      return <option  key={artist.id} value={artist.id}>{artist.name}</option>
+    })
+    return artists
+  }
+  populateGenreSelect = () => {
+    let genres = this.state.genres.map(genre =>{
+      return <option  key={genre.id} value={genre.id}>{genre.name}</option>
+    })
+    return genres
+  }
+
+
+
 
 
   handleSubmit = (event) => {
@@ -68,6 +94,31 @@ export default class UserInput extends React.Component{
     }).then(res=>res.json())
   }
 
+  handleInstrumentChange = (event) => {
+    // Ask why this works!
+    let instrumentSelect= [].slice.call(event.target.selectedOptions).map(option =>{
+      return {id: option.value, name: option.text}
+    })
+    this.setState({
+      selectedInstruments: instrumentSelect
+    },()=>{console.log("Selected Instruments STATE:", this.state.selectedInstruments)})
+  }
+  handleArtistChange = (event) => {
+    let artistSelect= [].slice.call(event.target.selectedOptions).map(option =>{
+      return {id: option.value, name: option.text}
+    })
+    this.setState({
+      selectedArtists: artistSelect
+    },()=>{console.log("Selected Artists STATE:", this.state.selectedArtists)})
+  }
+  handleGenreChange = (event) => {
+    let genreSelect= [].slice.call(event.target.selectedOptions).map(option =>{
+      return {id: option.value, name: option.text}
+    })
+    this.setState({
+      selectedGenres: genreSelect
+    },()=>{console.log("Selected Genres STATE:", this.state.selectedGenres)})
+  }
 
 
   render(){
@@ -85,8 +136,17 @@ export default class UserInput extends React.Component{
           <label>Top Song URL</label>
           <input type='text' onChange={this.handleChange} name='top_song_url'></input>
           <input type='submit'></input>
-          <select>
-
+          <label>Instruments</label>
+          <select multiple onChange={this.handleInstrumentChange}>
+            {this.populateInstrumentSelect()}
+          </select>
+          <label>Artists</label>
+          <select multiple onChange={this.handleArtistChange}>
+            {this.populateArtistSelect()}
+          </select>
+          <label>Genres</label>
+          <select multiple onChange={this.handleGenreChange}>
+            {this.populateGenreSelect()}
           </select>
         </form>
 
