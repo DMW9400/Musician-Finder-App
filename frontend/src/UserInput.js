@@ -2,18 +2,53 @@ import React from 'react'
 
 export default class UserInput extends React.Component{
   state={
-    name:'',
-    image_url:'',
-    age:null,
-    gender:'',
-    top_song_url:''
+    user: {
+      name:'',
+      image_url:'',
+      age:null,
+      gender:'',
+      top_song_url:''
+    },
+    instruments: [],
+    artists: [],
+    genres: []
+  }
+
+  componentDidMount(){
+    this.retrieveInstruments()
+    this.retrieveArtists()
+    this.retrieveGenres()
   }
 
   handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      user:{
+        ...this.state.user,
+        [event.target.name]: event.target.value
+      }
+
     })
   }
+
+  retrieveInstruments = () => {
+    fetch(`http://localhost:3000/api/v1/instruments`)
+    .then(res=>res.json())
+    .then(json=>this.setState({instruments:json}, ()=>{console.log("instruments:",this.state.instruments)}))
+  }
+
+  retrieveArtists = () => {
+    fetch(`http://localhost:3000/api/v1/artists`)
+    .then(res=>res.json())
+    .then(json=>this.setState({artists:json}, ()=>{console.log("artists:",this.state.artists)}))
+  }
+
+  retrieveGenres = () => {
+    fetch(`http://localhost:3000/api/v1/genres`)
+    .then(res=>res.json())
+    .then(json=>this.setState({genres:json}, ()=>{console.log("genres:",this.state.genres)}))
+  }
+
+
 
   handleSubmit = (event) => {
     event.preventDefault()
@@ -24,11 +59,11 @@ export default class UserInput extends React.Component{
         'Content-Type':'application/json'
       },
       body: JSON.stringify({
-        name: this.state.name,
-        image_url: this.state.image_url,
-        age: this.state.age,
-        gender: this.state.gender,
-        top_song_url: this.state.top_song_url
+        name: this.state.user.name,
+        image_url: this.state.user.image_url,
+        age: this.state.user.age,
+        gender: this.state.user.gender,
+        top_song_url: this.state.user.top_song_url
       })
     }).then(res=>res.json())
   }
@@ -50,6 +85,9 @@ export default class UserInput extends React.Component{
           <label>Top Song URL</label>
           <input type='text' onChange={this.handleChange} name='top_song_url'></input>
           <input type='submit'></input>
+          <select>
+
+          </select>
         </form>
 
       </div>
