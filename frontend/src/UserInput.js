@@ -15,6 +15,7 @@ export default class UserInput extends React.Component{
     artists: [],
     genres: [],
     selectedInstruments:[],
+    seekingInstruments:[],
     selectedArtists:[],
     selectedGenres:[]
   }
@@ -89,7 +90,11 @@ export default class UserInput extends React.Component{
         image_url: this.state.user.image_url,
         age: this.state.user.age,
         gender: this.state.user.gender,
-        top_song_url: this.state.user.top_song_url
+        top_song_url: this.state.user.top_song_url,
+        selectedInstruments: this.state.selectedInstruments,
+        seekingInstruments: this.state.seekingInstruments,
+        selectedArtists: this.state.selectedArtists,
+        selectedGenres: this.state.selectedGenres
       })
     }).then(res=>res.json())
   }
@@ -101,7 +106,16 @@ export default class UserInput extends React.Component{
     })
     this.setState({
       selectedInstruments: instrumentSelect
-    },()=>{console.log("Selected Instruments STATE:", this.state.selectedInstruments)})
+    })
+  }
+  handleSoughtInstrumentChange = (event) => {
+    // Ask why this works!
+    let instrumentSelect= [].slice.call(event.target.selectedOptions).map(option =>{
+      return {id: option.value, name: option.text}
+    })
+    this.setState({
+      seekingInstruments: instrumentSelect
+    }, ()=>{console.log(this.state.seekingInstruments)})
   }
   handleArtistChange = (event) => {
     let artistSelect= [].slice.call(event.target.selectedOptions).map(option =>{
@@ -109,7 +123,7 @@ export default class UserInput extends React.Component{
     })
     this.setState({
       selectedArtists: artistSelect
-    },()=>{console.log("Selected Artists STATE:", this.state.selectedArtists)})
+    })
   }
   handleGenreChange = (event) => {
     let genreSelect= [].slice.call(event.target.selectedOptions).map(option =>{
@@ -135,9 +149,12 @@ export default class UserInput extends React.Component{
           <input type='text' onChange={this.handleChange} name='gender'></input>
           <label>Top Song URL</label>
           <input type='text' onChange={this.handleChange} name='top_song_url'></input>
-          <input type='submit'></input>
           <label>Instruments</label>
           <select multiple onChange={this.handleInstrumentChange}>
+            {this.populateInstrumentSelect()}
+          </select>
+          <label>Seeking Instruments</label>
+          <select multiple onChange={this.handleSoughtInstrumentChange}>
             {this.populateInstrumentSelect()}
           </select>
           <label>Artists</label>
@@ -145,9 +162,10 @@ export default class UserInput extends React.Component{
             {this.populateArtistSelect()}
           </select>
           <label>Genres</label>
-          <select multiple onChange={this.handleGenreChange}>
+          <select multiple onChange={this.handleGenreChange} width={10}>
             {this.populateGenreSelect()}
           </select>
+          <input type='submit'></input>
         </form>
 
       </div>
