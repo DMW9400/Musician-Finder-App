@@ -7380,3 +7380,2384 @@ No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: 
 Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 13:11:34 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.22ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 14:01:38 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 14:01:38 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 14:01:38 -0400
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (1.7ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (0.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.83ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.83ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.7ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.78ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 1.1ms)
+
+
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 14:05:48 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.24ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:19:29 -0400
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:19:29 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:19:29 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mInstrument Load (0.8ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mGenre Load (0.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.64ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.5ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.61ms)
+Completed 200 OK in 44ms (Views: 25.7ms | ActiveRecord: 6.0ms)
+
+
+Completed 200 OK in 43ms (Views: 21.4ms | ActiveRecord: 9.4ms)
+
+
+Completed 200 OK in 44ms (Views: 19.2ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/api/v1/recipes" for 127.0.0.1 at 2018-03-15 15:19:35 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/recipes"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 15:19:37 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.24ms)
+Completed 200 OK in 31ms (Views: 10.9ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-15 15:19:48 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"alkasd", "image_url"=>"aslka", "age"=>"askdfk", "gender"=>"akjasd", "top_song_url"=>"askd", "selectedInstruments"=>[{"id"=>"1", "name"=>"trumpet"}, {"id"=>"3", "name"=>"guitar"}, {"id"=>"4", "name"=>"marimba"}], "seekingInstruments"=>[{"id"=>"2", "name"=>"saxophone"}, {"id"=>"3", "name"=>"guitar"}], "selectedArtists"=>[{"id"=>"4", "name"=>"Novos Baianos"}], "selectedGenres"=>[{"id"=>"2", "name"=>"r&b"}], "user"=>{"name"=>"alkasd", "image_url"=>"aslka", "age"=>"askdfk", "gender"=>"akjasd", "top_song_url"=>"askd"}}
+Unpermitted parameters: :selectedInstruments, :seekingInstruments, :selectedArtists, :selectedGenres, :user
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" = $3 AND "users"."gender" = $4 AND "users"."top_song_url" = $5 LIMIT $6[0m  [["name", "alkasd"], ["image_url", "aslka"], ["age", 0], ["gender", "akjasd"], ["top_song_url", "askd"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "age", "gender", "top_song_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "alkasd"], ["image_url", "aslka"], ["age", 0], ["gender", "akjasd"], ["top_song_url", "askd"], ["created_at", "2018-03-15 19:19:48.967230"], ["updated_at", "2018-03-15 19:19:48.967230"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInstrument Load (0.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["instrument_id", 1], ["created_at", "2018-03-15 19:19:49.012365"], ["updated_at", "2018-03-15 19:19:49.012365"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (1.2ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 2], ["instrument_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "f"], ["updated_at", "2018-03-15 19:19:49.023269"], ["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["instrument_id", 3], ["created_at", "2018-03-15 19:19:49.028470"], ["updated_at", "2018-03-15 19:19:49.028470"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 2], ["instrument_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "f"], ["updated_at", "2018-03-15 19:19:49.032534"], ["id", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["instrument_id", 4], ["created_at", "2018-03-15 19:19:49.034958"], ["updated_at", "2018-03-15 19:19:49.034958"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 2], ["instrument_id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "f"], ["updated_at", "2018-03-15 19:19:49.038802"], ["id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["instrument_id", 2], ["created_at", "2018-03-15 19:19:49.041523"], ["updated_at", "2018-03-15 19:19:49.041523"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 2], ["instrument_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "t"], ["updated_at", "2018-03-15 19:19:49.045391"], ["id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["instrument_id", 3], ["created_at", "2018-03-15 19:19:49.047938"], ["updated_at", "2018-03-15 19:19:49.047938"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 2], ["instrument_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "t"], ["updated_at", "2018-03-15 19:19:49.052166"], ["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_artists" ("user_id", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["artist_id", 4], ["created_at", "2018-03-15 19:19:49.066881"], ["updated_at", "2018-03-15 19:19:49.066881"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["genre_id", 2], ["created_at", "2018-03-15 19:19:49.083062"], ["updated_at", "2018-03-15 19:19:49.083062"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.32ms)
+Completed 201 Created in 125ms (Views: 1.9ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 15:19:50 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.44ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUserInstrument Load (0.4ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:21:14 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:21:14 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:21:14 -0400
+  [1m[36mInstrument Load (2.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.6ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 2.2ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.5ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.52ms)
+Completed 200 OK in 16ms (Views: 8.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:21:19 -0400
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:21:19 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:21:19 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.42ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mInstrument Load (1.7ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.5ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.47ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.6ms)
+
+
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:21:43 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:21:43 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:21:43 -0400
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mInstrument Load (2.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.49ms)
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (1.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.41ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 2.5ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.47ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:27:42 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:27:42 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:27:42 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mInstrument Load (1.4ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.57ms)
+  [1m[36mGenre Load (1.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 1.3ms)
+
+
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.57ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.69ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:33:55 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:33:55 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:33:55 -0400
+  [1m[36mInstrument Load (1.3ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.91ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (1.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.3ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.63ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 1.3ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.73ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:34:17 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:34:17 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:34:17 -0400
+  [1m[36mInstrument Load (0.9ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.83ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.9ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.46ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.4ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.7ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:34:49 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:34:49 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:34:49 -0400
+Processing by Api::V1::ArtistsController#index as */*
+  [1m[36mInstrument Load (1.4ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.75ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mGenre Load (1.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.5ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.73ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:35:22 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:35:22 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:35:22 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (0.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.48ms)
+  [1m[36mArtist Load (1.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms)
+
+
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.56ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.52ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.7ms)
+
+
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:37:24 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:37:24 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:37:24 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (3.1ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mArtist Load (2.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.66ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 3.1ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.74ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.88ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.6ms)
+
+
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:37:38 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:37:38 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:37:38 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (1.9ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.8ms)
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.93ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.9ms)
+
+
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.79ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:37:43 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:37:43 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:37:43 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (1.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.78ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mGenre Load (2.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (2.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.76ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 2.0ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.54ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:39:58 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:39:58 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:39:58 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (1.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.84ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (2.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.5ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (1.09ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 1.6ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (1.15ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-15 15:40:21 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"KARLAKR", "image_url"=>"Askjds", "age"=>"1256", "gender"=>"FMSp", "top_song_url"=>"kasdj", "selectedInstruments"=>[{"id"=>"1", "name"=>"trumpet"}, {"id"=>"3", "name"=>"guitar"}, {"id"=>"4", "name"=>"marimba"}], "seekingInstruments"=>[{"id"=>"3", "name"=>"guitar"}], "selectedArtists"=>[{"id"=>"2", "name"=>"Miles Davis"}, {"id"=>"4", "name"=>"Novos Baianos"}], "selectedGenres"=>[{"id"=>"3", "name"=>"rock"}], "user"=>{"name"=>"KARLAKR", "image_url"=>"Askjds", "age"=>"1256", "gender"=>"FMSp", "top_song_url"=>"kasdj"}}
+Unpermitted parameters: :selectedInstruments, :seekingInstruments, :selectedArtists, :selectedGenres, :user
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" = $3 AND "users"."gender" = $4 AND "users"."top_song_url" = $5 LIMIT $6[0m  [["name", "KARLAKR"], ["image_url", "Askjds"], ["age", 1256], ["gender", "FMSp"], ["top_song_url", "kasdj"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "age", "gender", "top_song_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "KARLAKR"], ["image_url", "Askjds"], ["age", 1256], ["gender", "FMSp"], ["top_song_url", "kasdj"], ["created_at", "2018-03-15 19:40:21.650958"], ["updated_at", "2018-03-15 19:40:21.650958"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInstrument Load (0.4ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["instrument_id", 1], ["created_at", "2018-03-15 19:40:21.660625"], ["updated_at", "2018-03-15 19:40:21.660625"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.4ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 3], ["instrument_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "f"], ["updated_at", "2018-03-15 19:40:21.666518"], ["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["instrument_id", 3], ["created_at", "2018-03-15 19:40:21.669349"], ["updated_at", "2018-03-15 19:40:21.669349"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 3], ["instrument_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "f"], ["updated_at", "2018-03-15 19:40:21.673569"], ["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["instrument_id", 4], ["created_at", "2018-03-15 19:40:21.675993"], ["updated_at", "2018-03-15 19:40:21.675993"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 3], ["instrument_id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.3ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "f"], ["updated_at", "2018-03-15 19:40:21.681079"], ["id", 12]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["instrument_id", 3], ["created_at", "2018-03-15 19:40:21.684124"], ["updated_at", "2018-03-15 19:40:21.684124"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 3], ["instrument_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "t"], ["updated_at", "2018-03-15 19:40:21.687972"], ["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_artists" ("user_id", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["artist_id", 2], ["created_at", "2018-03-15 19:40:21.691223"], ["updated_at", "2018-03-15 19:40:21.691223"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_artists" ("user_id", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["artist_id", 4], ["created_at", "2018-03-15 19:40:21.694092"], ["updated_at", "2018-03-15 19:40:21.694092"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["genre_id", 3], ["created_at", "2018-03-15 19:40:21.697822"], ["updated_at", "2018-03-15 19:40:21.697822"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.19ms)
+Completed 201 Created in 53ms (Views: 0.6ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 15:40:23 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.74ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUserInstrument Load (0.4ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:42:49 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:42:49 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:42:49 -0400
+  [1m[36mInstrument Load (1.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.78ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (0.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.5ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.52ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.5ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.59ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:43:51 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:43:51 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:43:51 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (1.8ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.64ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.59ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.5ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:48:30 -0400
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:48:30 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:48:30 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.66ms)
+  [1m[36mInstrument Load (1.1ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mGenre Load (1.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.9ms)
+
+
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.5ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.47ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.1ms)
+
+
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 15:48:41 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 15:48:41 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 15:48:41 -0400
+Processing by Api::V1::ArtistsController#index as */*
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mInstrument Load (1.9ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.48ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.4ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.7ms)
+
+
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.9ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.49ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:06:16 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:06:16 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:06:16 -0400
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (2.1ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.47ms)
+  [1m[36mArtist Load (2.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mGenre Load (1.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.62ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.47ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 2.3ms)
+
+
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:06:33 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:06:33 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:06:33 -0400
+  [1m[36mInstrument Load (1.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.56ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.2ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.51ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.5ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:07:14 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:07:14 -0400
+Processing by Api::V1::GenresController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:07:14 -0400
+Processing by Api::V1::ArtistsController#index as */*
+  [1m[36mGenre Load (1.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mInstrument Load (3.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.74ms)
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.3ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.65ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.47ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 3.2ms)
+
+
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:07:52 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:07:52 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:07:52 -0400
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mArtist Load (3.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mInstrument Load (0.9ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.76ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.63ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 3.6ms)
+
+
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.9ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.48ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:07:59 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:07:59 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:07:59 -0400
+Processing by Api::V1::ArtistsController#index as */*
+  [1m[36mInstrument Load (1.0ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.64ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.85ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.68ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.7ms)
+
+
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:13:47 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:13:47 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:13:47 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (2.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.71ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.82ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.73ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.7ms)
+
+
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:13:51 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:13:51 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:13:51 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+  [1m[36mInstrument Load (0.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (0.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.47ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.49ms)
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.8ms)
+
+
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.53ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:14:11 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:14:11 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:14:11 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (1.4ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.77ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (2.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.4ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.83ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.81ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:14:49 -0400
+Processing by Api::V1::GenresController#index as */*
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:14:49 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:14:49 -0400
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.67ms)
+  [1m[36mInstrument Load (1.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.74ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.55ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:15:01 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:15:01 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:15:01 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+  [1m[36mInstrument Load (2.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.75ms)
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.51ms)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 2.5ms)
+
+
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.93ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:15:23 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:15:23 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:15:23 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mArtist Load (1.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.83ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mInstrument Load (3.0ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.64ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.53ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:16:40 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:16:40 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:16:40 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+  [1m[36mInstrument Load (0.7ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.89ms)
+  [1m[36mGenre Load (2.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mArtist Load (2.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.8ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.92ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 2.7ms)
+
+
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:17:04 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:17:04 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:17:04 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (0.7ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.48ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.51ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.65ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+
+
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:21:27 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+  [1m[36mInstrument Load (0.3ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.73ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:21:27 -0400
+Processing by Api::V1::GenresController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:21:27 -0400
+Processing by Api::V1::ArtistsController#index as */*
+  [1m[36mGenre Load (1.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.79ms)
+  [1m[36mArtist Load (1.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.2ms)
+
+
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.83ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:25:36 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:25:36 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:25:36 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (1.3ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.46ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (1.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.3ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.51ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.65ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:25:39 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:25:39 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:25:39 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+  [1m[36mInstrument Load (1.7ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.71ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.7ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.62ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.64ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:25:50 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:25:50 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:25:50 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (2.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.81ms)
+  [1m[36mGenre Load (1.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.5ms)
+
+
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.73ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.77ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.9ms)
+
+
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:26:49 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:26:49 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:26:49 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (0.8ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (0.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mArtist Load (1.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.81ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.8ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.8ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.9ms)
+
+
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:28:22 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:28:22 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:28:22 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 16:28:22 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mInstrument Load (3.4ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mArtist Load (1.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.71ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.51ms)
+  [1m[36mGenre Load (2.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 3.4ms)
+
+
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 1.5ms)
+
+
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.77ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.8ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 2.7ms)
+
+
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-15 16:30:06 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Gaucho Jones", "image_url"=>"unerk", "age"=>"aksmd", "gender"=>"pppoeror", "top_song_url"=>"kjsdfkmnd", "selectedInstruments"=>[{"id"=>"2", "name"=>"saxophone"}, {"id"=>"3", "name"=>"guitar"}, {"id"=>"4", "name"=>"marimba"}], "seekingInstruments"=>[{"id"=>"1", "name"=>"trumpet"}], "selectedArtists"=>[{"id"=>"2", "name"=>"Miles Davis"}, {"id"=>"4", "name"=>"Novos Baianos"}], "selectedGenres"=>[{"id"=>"3", "name"=>"rock"}], "user"=>{"name"=>"Gaucho Jones", "image_url"=>"unerk", "age"=>"aksmd", "gender"=>"pppoeror", "top_song_url"=>"kjsdfkmnd"}}
+Unpermitted parameters: :selectedInstruments, :seekingInstruments, :selectedArtists, :selectedGenres, :user
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" = $3 AND "users"."gender" = $4 AND "users"."top_song_url" = $5 LIMIT $6[0m  [["name", "Gaucho Jones"], ["image_url", "unerk"], ["age", 0], ["gender", "pppoeror"], ["top_song_url", "kjsdfkmnd"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "age", "gender", "top_song_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Gaucho Jones"], ["image_url", "unerk"], ["age", 0], ["gender", "pppoeror"], ["top_song_url", "kjsdfkmnd"], ["created_at", "2018-03-15 20:30:06.117984"], ["updated_at", "2018-03-15 20:30:06.117984"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInstrument Load (0.3ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["instrument_id", 2], ["created_at", "2018-03-15 20:30:06.122993"], ["updated_at", "2018-03-15 20:30:06.122993"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.5ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 4], ["instrument_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "f"], ["updated_at", "2018-03-15 20:30:06.129013"], ["id", 14]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["instrument_id", 3], ["created_at", "2018-03-15 20:30:06.132011"], ["updated_at", "2018-03-15 20:30:06.132011"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 4], ["instrument_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "f"], ["updated_at", "2018-03-15 20:30:06.136340"], ["id", 15]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["instrument_id", 4], ["created_at", "2018-03-15 20:30:06.139266"], ["updated_at", "2018-03-15 20:30:06.139266"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 4], ["instrument_id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "f"], ["updated_at", "2018-03-15 20:30:06.143831"], ["id", 16]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["instrument_id", 1], ["created_at", "2018-03-15 20:30:06.146729"], ["updated_at", "2018-03-15 20:30:06.146729"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 4], ["instrument_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "t"], ["updated_at", "2018-03-15 20:30:06.150553"], ["id", 17]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_artists" ("user_id", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["artist_id", 2], ["created_at", "2018-03-15 20:30:06.153849"], ["updated_at", "2018-03-15 20:30:06.153849"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_artists" ("user_id", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["artist_id", 4], ["created_at", "2018-03-15 20:30:06.156225"], ["updated_at", "2018-03-15 20:30:06.156225"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 4], ["genre_id", 3], ["created_at", "2018-03-15 20:30:06.159293"], ["updated_at", "2018-03-15 20:30:06.159293"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.35ms)
+Completed 201 Created in 48ms (Views: 0.9ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 16:30:08 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.86ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUserInstrument Load (0.4ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 16:30:43 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.7ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:30:45 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:30:45 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:30:45 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 16:30:45 -0400
+  [1m[36mInstrument Load (0.7ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.8ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.83ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.4ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.87ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.0ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 1.9ms)
+
+
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mInstrument Load (1.3ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" INNER JOIN "user_instruments" ON "instruments"."id" = "user_instruments"."instrument_id" WHERE "user_instruments"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 11]]
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" ORDER BY "user_instruments"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUserInstrument Load (0.5ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:33:09 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 16:33:09 -0400
+Processing by Api::V1::UsersController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:33:09 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:33:09 -0400
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (2.6ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by Api::V1::ArtistsController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+  [1m[36mGenre Load (1.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.54ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.04ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (2.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 2.6ms)
+
+
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 1.1ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.72ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 1.3ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.56ms)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:39:24 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:39:24 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:39:24 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 16:39:24 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mInstrument Load (3.7ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (1.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.74ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.46ms)
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 3.7ms)
+
+
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.56ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.4ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.1ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 16:39:53 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 16:39:53 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 16:39:53 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 16:39:53 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mInstrument Load (1.8ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.7ms)
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.45ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.8ms)
+
+
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.98ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.7ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.76ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 17:25:08 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 17:25:08 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 17:25:08 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 17:25:08 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mArtist Load (3.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.84ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 3.3ms)
+
+
+  [1m[36mGenre Load (3.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.82ms)
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 3.5ms)
+
+
+  [1m[36mInstrument Load (6.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.78ms)
+Completed 200 OK in 11ms (Views: 4.2ms | ActiveRecord: 6.5ms)
+
+
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.39ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 17:33:02 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 17:33:02 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 17:33:02 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 17:33:02 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mArtist Load (4.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.99ms)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 4.2ms)
+
+
+  [1m[36mInstrument Load (9.4ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.91ms)
+Completed 200 OK in 16ms (Views: 6.6ms | ActiveRecord: 9.4ms)
+
+
+  [1m[36mGenre Load (3.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.87ms)
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 3.2ms)
+
+
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.23ms)
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 17:36:53 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 17:36:53 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 17:36:53 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 17:36:53 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (1.8ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.58ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.59ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.14ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.7ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.9ms)
+
+
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 1.3ms)
+
+
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 17:37:30 -0400
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 17:37:30 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 17:37:30 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 17:37:30 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mInstrument Load (1.1ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (1.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.54ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.72ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 1.6ms)
+
+
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.5ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 1.1ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.9ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 1.3ms)
+
+
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 17:37:45 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 17:37:45 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 17:37:45 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 17:37:45 -0400
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (1.1ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (0.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.51ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.57ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.1ms)
+
+
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.81ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.93ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.8ms)
+
+
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-15 17:37:47 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-15 17:37:47 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-15 17:37:47 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-15 17:37:47 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mInstrument Load (0.7ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.66ms)
+  [1m[36mGenre Load (2.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.7ms)
+
+
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.75ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.82ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.86ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.6ms)
+
+
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 2.4ms)
+
+
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 09:30:08 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 09:30:08 -0400
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 09:30:08 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 09:30:08 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mInstrument Load (10.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mArtist Load (9.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mGenre Load (10.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (3.63ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (1.0ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.84ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.83ms)
+Completed 200 OK in 38ms (Views: 29.3ms | ActiveRecord: 8.2ms)
+
+
+Completed 200 OK in 40ms (Views: 28.7ms | ActiveRecord: 10.5ms)
+
+
+Completed 200 OK in 58ms (Views: 45.3ms | ActiveRecord: 9.8ms)
+
+
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 09:31:02 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 09:31:02 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 09:31:02 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 09:31:02 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (1.6ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (1.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (1.23ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (1.47ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.6ms)
+
+
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (1.27ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 1.1ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.26ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 09:31:30 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 09:31:30 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 09:31:30 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 09:31:30 -0400
+Processing by Api::V1::ArtistsController#index as */*
+  [1m[36mInstrument Load (1.6ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (1.16ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mGenre Load (2.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.72ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.6ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.91ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.95ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 2.6ms)
+
+
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 09:38:37 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 09:38:37 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 09:38:37 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 09:38:37 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mInstrument Load (0.9ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (1.14ms)
+  [1m[36mGenre Load (2.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 2.0ms)
+
+
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.75ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (1.23ms)
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.9ms)
+
+
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 2.0ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.82ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 09:45:36 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 09:45:36 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 09:45:36 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 09:45:36 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mInstrument Load (0.8ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (3.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.83ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.89ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.8ms)
+
+
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 1.1ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (1.5ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.99ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 3.2ms)
+
+
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 09:49:53 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 09:49:53 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 09:49:53 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 09:49:53 -0400
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+  [1m[36mInstrument Load (2.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (1.01ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mArtist Load (2.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+  [1m[36mGenre Load (1.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.77ms)
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (1.41ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 2.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (1.4ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 2.1ms)
+
+
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:07:18 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.18ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:07:23 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.37ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:09:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.43ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:10:07 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.28ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:11:10 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.24ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:12:16 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.38ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:12:19 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.73ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:16:04 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.98ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 10:19:12 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 10:19:12 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 10:19:12 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:19:12 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mInstrument Load (2.0ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mGenre Load (1.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.71ms)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.77ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 2.0ms)
+
+
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.89ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.1ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.23ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.7ms)
+
+
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:19:23 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.85ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 10:19:44 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 10:19:44 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:19:44 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 10:19:44 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (1.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[36mArtist Load (1.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.72ms)
+  [1m[36mGenre Load (3.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.89ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.5ms)
+
+
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.04ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 1.5ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.78ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 2.2ms)
+
+
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 10:23:20 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 10:23:20 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 10:23:20 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:23:20 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mInstrument Load (1.5ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.98ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.95ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGenre Load (3.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.1ms)
+
+
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.5ms)
+
+
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.32ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.85ms)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 2.7ms)
+
+
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 10:24:06 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+  [1m[36mInstrument Load (0.4ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.91ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 10:24:06 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 10:24:06 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:24:06 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.89ms)
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.79ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.96ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.9ms)
+
+
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 10:25:17 -0400
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 10:25:17 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 10:25:17 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:25:17 -0400
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (0.7ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (1.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.93ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.87ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.7ms)
+
+
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.92ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.9ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.19ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 1.8ms)
+
+
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:25:29 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.86ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:27:51 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.13ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:28:04 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.64ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:31:43 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.03ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 10:31:45 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 10:31:45 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:31:45 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 10:31:45 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mInstrument Load (2.4ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.71ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mGenre Load (1.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.79ms)
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.9ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.9ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.7ms)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 2.8ms)
+
+
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:32:01 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.85ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:32:38 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.79ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:32:40 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.83ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:32:58 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.72ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 10:33:07 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 10:33:07 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 10:33:07 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:33:07 -0400
+Processing by Api::V1::GenresController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mInstrument Load (2.9ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mGenre Load (2.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.81ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (1.0ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 2.0ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.79ms)
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.7ms)
+
+
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 2.9ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.31ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:37:59 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.69ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:38:07 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 10:38:09 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:38:09 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mInstrument Load (1.1ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 10:38:09 -0400
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 10:38:09 -0400
+Processing by Api::V1::ArtistsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.63ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by Api::V1::GenresController#index as */*
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.1ms)
+
+
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.05ms)
+  [1m[36mGenre Load (1.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 2.0ms)
+
+
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.6ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.66ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 10:38:41 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 10:38:41 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 10:38:41 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:38:41 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Processing by Api::V1::GenresController#index as */*
+  [1m[36mInstrument Load (2.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::UsersController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.76ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 2.2ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.88ms)
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.88ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.7ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.12ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.7ms)
+
+
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:38:44 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.91ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:38:58 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:39:03 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.98ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:40:17 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.83ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:40:58 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.72ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:41:10 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.95ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:44:15 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.98ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 10:44:17 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 10:44:17 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:44:17 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 10:44:17 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mInstrument Load (5.4ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::GenresController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.59ms)
+  [1m[36mArtist Load (2.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 12ms (Views: 6.6ms | ActiveRecord: 5.4ms)
+
+
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.55ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.74ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.62ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 2.9ms)
+
+
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.7ms)
+
+
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:44:23 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.88ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:44:41 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Gredat", "image_url"=>"kakjd", "age"=>"poasdp", "gender"=>"ksnsnkdfk", "top_song_url"=>"ssdkfj", "selectedInstruments"=>[{"id"=>"3", "name"=>"guitar"}], "seekingInstruments"=>[{"id"=>"4", "name"=>"marimba"}], "selectedArtists"=>[{"id"=>"2", "name"=>"Miles Davis"}], "selectedGenres"=>[{"id"=>"2", "name"=>"r&b"}, {"id"=>"4", "name"=>"folk"}], "user"=>{"name"=>"Gredat", "image_url"=>"kakjd", "age"=>"poasdp", "gender"=>"ksnsnkdfk", "top_song_url"=>"ssdkfj"}}
+Unpermitted parameters: :selectedInstruments, :seekingInstruments, :selectedArtists, :selectedGenres, :user
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 AND "users"."image_url" = $2 AND "users"."age" = $3 AND "users"."gender" = $4 AND "users"."top_song_url" = $5 LIMIT $6[0m  [["name", "Gredat"], ["image_url", "kakjd"], ["age", 0], ["gender", "ksnsnkdfk"], ["top_song_url", "ssdkfj"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "image_url", "age", "gender", "top_song_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Gredat"], ["image_url", "kakjd"], ["age", 0], ["gender", "ksnsnkdfk"], ["top_song_url", "ssdkfj"], ["created_at", "2018-03-16 14:44:41.936391"], ["updated_at", "2018-03-16 14:44:41.936391"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["instrument_id", 3], ["created_at", "2018-03-16 14:44:41.948934"], ["updated_at", "2018-03-16 14:44:41.948934"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.4ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 5], ["instrument_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "f"], ["updated_at", "2018-03-16 14:44:41.953424"], ["id", 18]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_instruments" ("user_id", "instrument_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["instrument_id", 4], ["created_at", "2018-03-16 14:44:41.956947"], ["updated_at", "2018-03-16 14:44:41.956947"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserInstrument Load (0.3ms)[0m  [1m[34mSELECT  "user_instruments".* FROM "user_instruments" WHERE "user_instruments"."user_id" = $1 AND "user_instruments"."instrument_id" = $2 LIMIT $3[0m  [["user_id", 5], ["instrument_id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mInstrument Load (0.2ms)[0m  [1m[34mSELECT  "instruments".* FROM "instruments" WHERE "instruments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "user_instruments" SET "seeking" = $1, "updated_at" = $2 WHERE "user_instruments"."id" = $3[0m  [["seeking", "t"], ["updated_at", "2018-03-16 14:44:41.962063"], ["id", 19]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_artists" ("user_id", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["artist_id", 2], ["created_at", "2018-03-16 14:44:41.965610"], ["updated_at", "2018-03-16 14:44:41.965610"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["genre_id", 2], ["created_at", "2018-03-16 14:44:41.968981"], ["updated_at", "2018-03-16 14:44:41.968981"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["genre_id", 4], ["created_at", "2018-03-16 14:44:41.971219"], ["updated_at", "2018-03-16 14:44:41.971219"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.18ms)
+Completed 201 Created in 46ms (Views: 0.6ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:44:44 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.73ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:45:19 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.08ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:45:21 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.97ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:57:22 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.81ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:57:56 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.97ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:59:43 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.03ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:59:46 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.02ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/instruments" for 127.0.0.1 at 2018-03-16 10:59:47 -0400
+Processing by Api::V1::InstrumentsController#index as */*
+Started GET "/api/v1/artists" for 127.0.0.1 at 2018-03-16 10:59:47 -0400
+Processing by Api::V1::ArtistsController#index as */*
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:59:47 -0400
+Started GET "/api/v1/genres" for 127.0.0.1 at 2018-03-16 10:59:47 -0400
+  [1m[36mInstrument Load (2.2ms)[0m  [1m[34mSELECT "instruments".* FROM "instruments"[0m
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::GenresController#index as */*
+No serializer found for resource: #<Instrument id: 1, name: "trumpet", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Instrument::ActiveRecord_Relation (0.7ms)
+No serializer found for resource: #<Artist id: 1, name: "Pink Floyd", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Artist::ActiveRecord_Relation (0.73ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<Genre id: 1, name: "jazz     ", created_at: "2018-03-15 16:57:55", updated_at: "2018-03-15 16:57:55">
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.6ms)
+
+
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Genre::ActiveRecord_Relation (0.55ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.42ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 10:59:50 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.16ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 11:00:07 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (1.34ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2018-03-16 11:00:19 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+No serializer found for resource: #<User id: 1, name: "Carl Hungus", image_url: "eiure", age: 27, gender: "M", top_song_url: "jahs", created_at: "2018-03-15 17:00:47", updated_at: "2018-03-15 17:00:47">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.98ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+

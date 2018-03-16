@@ -39,19 +39,19 @@ export default class UserInput extends React.Component{
   retrieveInstruments = () => {
     fetch(`http://localhost:3000/api/v1/instruments`)
     .then(res=>res.json())
-    .then(json=>this.setState({instruments:json}, ()=>{console.log("instruments:",this.state.instruments)}))
+    .then(json=>this.setState({instruments:json}))
   }
 
   retrieveArtists = () => {
     fetch(`http://localhost:3000/api/v1/artists`)
     .then(res=>res.json())
-    .then(json=>this.setState({artists:json}, ()=>{console.log("artists:",this.state.artists)}))
+    .then(json=>this.setState({artists:json}))
   }
 
   retrieveGenres = () => {
     fetch(`http://localhost:3000/api/v1/genres`)
     .then(res=>res.json())
-    .then(json=>this.setState({genres:json}, ()=>{console.log("genres:",this.state.genres)}))
+    .then(json=>this.setState({genres:json}))
   }
 
   populateInstrumentSelect = () => {
@@ -167,6 +167,7 @@ export default class UserInput extends React.Component{
           </select>
           <input type='submit'></input>
         </form>
+        
 
       </div>
     )
