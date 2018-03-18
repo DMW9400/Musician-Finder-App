@@ -1,29 +1,24 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 
-
-export default class UserInput extends React.Component{
+class UserInput extends React.Component{
   state={
     user: {
       name:'',
+      borough:'',
       image_url:'',
       age:null,
       gender:'',
-      top_song_url:''
+      top_song_url:'',
+      song_embed_1: '',
+      song_embed_2: '',
+      song_embed_3: ''
     },
-    instruments: [],
-    artists: [],
-    genres: [],
     selectedInstruments:[],
     seekingInstruments:[],
     selectedArtists:[],
     selectedGenres:[]
-  }
-
-  componentDidMount(){
-    this.retrieveInstruments()
-    this.retrieveArtists()
-    this.retrieveGenres()
   }
 
   handleChange = (event) => {
@@ -32,45 +27,34 @@ export default class UserInput extends React.Component{
         ...this.state.user,
         [event.target.name]: event.target.value
       }
-
     })
   }
 
-  retrieveInstruments = () => {
-    fetch(`http://localhost:3000/api/v1/instruments`)
-    .then(res=>res.json())
-    .then(json=>this.setState({instruments:json}))
-  }
-
-  retrieveArtists = () => {
-    fetch(`http://localhost:3000/api/v1/artists`)
-    .then(res=>res.json())
-    .then(json=>this.setState({artists:json}))
-  }
-
-  retrieveGenres = () => {
-    fetch(`http://localhost:3000/api/v1/genres`)
-    .then(res=>res.json())
-    .then(json=>this.setState({genres:json}))
-  }
 
   populateInstrumentSelect = () => {
-    let instruments = this.state.instruments.map(instrument =>{
-      return <option  key={instrument.id} value={instrument.id}>{instrument.name}</option>
-    })
-    return instruments
+    if (this.props.instruments.length > 0){
+      let instruments = this.props.instruments[0].map(instrument =>{
+         return <option  key={instrument.id} value={instrument.id}>{instrument.name}</option>
+      })
+      return instruments
+    }
   }
   populateArtistSelect = () => {
-    let artists = this.state.artists.map(artist =>{
-      return <option  key={artist.id} value={artist.id}>{artist.name}</option>
-    })
-    return artists
+    if (this.props.artists.length > 0){
+      let artists = this.props.artists[0].map(artist =>{
+        return <option  key={artist.id} value={artist.id}>{artist.name}</option>
+      })
+      return artists
+    }
   }
+
   populateGenreSelect = () => {
-    let genres = this.state.genres.map(genre =>{
-      return <option  key={genre.id} value={genre.id}>{genre.name}</option>
-    })
-    return genres
+    if (this.props.genres.length > 0){
+      let genres = this.props.genres[0].map(genre =>{
+        return <option  key={genre.id} value={genre.id}>{genre.name}</option>
+      })
+      return genres
+    }
   }
 
 
@@ -87,10 +71,14 @@ export default class UserInput extends React.Component{
       },
       body: JSON.stringify({
         name: this.state.user.name,
-        image_url: this.state.user.image_url,
         age: this.state.user.age,
+        image_url: this.state.user.image_url,
         gender: this.state.user.gender,
         top_song_url: this.state.user.top_song_url,
+        song_embed_1: this.state.user.song_embed_1,
+        song_embed_2: this.state.user.song_embed_2,
+        song_embed_3: this.state.user.song_embed_3,
+        borough: this.state.user.borough,
         selectedInstruments: this.state.selectedInstruments,
         seekingInstruments: this.state.seekingInstruments,
         selectedArtists: this.state.selectedArtists,
@@ -133,6 +121,26 @@ export default class UserInput extends React.Component{
       selectedGenres: genreSelect
     },()=>{console.log("Selected Genres STATE:", this.state.selectedGenres)})
   }
+  handleBoroughChange = (event) => {
+    let value=event.target.value
+    this.setState({user:{
+      ...this.state.user,
+      borough: event.target.value
+      }
+    }, ()=>{console.log(this.state.user.borough)})
+  }
+
+  renderBorough = () => {
+    return (
+      <select onChange={this.handleBoroughChange}>
+          <option value="Bronx">Bronx</option>
+          <option value="Brooklyn">Brooklyn</option>
+          <option value="Manhattan">Manhattan</option>
+          <option value="Queens">Queens</option>
+          <option value="Staten Island">Staten Island</option>
+      </select>
+    )
+  }
 
 
   render(){
@@ -149,6 +157,12 @@ export default class UserInput extends React.Component{
           <input type='text' onChange={this.handleChange} name='gender'></input>
           <label>Top Song URL</label>
           <input type='text' onChange={this.handleChange} name='top_song_url'></input>
+          <label>Song Embed One</label>
+          <input type='text' onChange={this.handleChange} name='song_embed_1'></input>
+          <label>Song Embed Two</label>
+          <input type='text' onChange={this.handleChange} name='song_embed_2'></input>
+          <label>Song Embed Three</label>
+          <input type='text' onChange={this.handleChange} name='song_embed_3'></input>
           <label>Instruments</label>
           <select multiple onChange={this.handleInstrumentChange}>
             {this.populateInstrumentSelect()}
@@ -165,11 +179,22 @@ export default class UserInput extends React.Component{
           <select multiple onChange={this.handleGenreChange} width={10}>
             {this.populateGenreSelect()}
           </select>
+          {this.renderBorough()}
           <input type='submit'></input>
         </form>
-        
+
 
       </div>
     )
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    users: state.users,
+    instruments: state.instruments,
+    artists: state.artists,
+    genres: state.genres
+  }
+}
+
+export default connect(mapStateToProps)(UserInput)

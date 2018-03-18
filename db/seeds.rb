@@ -1,14 +1,11 @@
 
-# matt = User.create(name:"Matt",image_url:"google.com",age:26,gender:'M',top_song_url:"autechre.com")
-# molly = User.create(name:"Molly",image_url:"google.com",age:26,gender:'F',top_song_url:"thehollies.com")
-# scott = User.create(name:"Scott",image_url:"google.com",age:28,gender:'M',top_song_url:"spoon.com")
-# melei = User.create(name:"Melei",image_url:"google.com",age:26,gender:'F',top_song_url:"boysage.com")
-#
 jazz = Genre.create(name:"jazz     ")
 rb = Genre.create(name:"r&b     ")
 rock = Genre.create(name:"rock     ")
 folk = Genre.create(name:"folk     ")
-#
+electronic = Genre.create(name:"electronic     ")
+country = Genre.create(name:"country     ")
+
 pinkfloyd = Artist.create(name:"Pink Floyd")
 milesdavis = Artist.create(name:"Miles Davis")
 fleetfoxes = Artist.create(name: "Fleet Foxes")
@@ -18,19 +15,16 @@ trumpet = Instrument.create(name:"trumpet")
 saxophone = Instrument.create(name:"saxophone")
 guitar = Instrument.create(name:"guitar")
 marimba = Instrument.create(name:"marimba")
+tuba = Instrument.create(name:"tuba")
+apiano = Instrument.create(name:"piano")
+epiano = Instrument.create(name:"electric piano")
+harp = Instrument.create(name:"harp")
+drums = Instrument.create(name:"drums")
 
-#
-# matt.genres << jazz << folk
-# molly.genres << folk << rb
-# scott.genres << rock
-# melei.genres <<  jazz << rb << folk << rock
-#
-# matt.artists << milesdavis << fleetfoxes
-# molly.artists << novos << pinkfloyd
-# scott.artists << fleetfoxes
-# melei.artists <<  pinkfloyd << milesdavis << novos << fleetfoxes
-#
-# matt.instruments << saxophone << guitar
-# molly.instruments << guitar << marimba
-# scott.instruments << trumpet
-# melei.instruments << marimba << saxophone
+User.create(name: "Thom Yorke", borough:"Brooklyn",image_url:"http://cdn3-www.comingsoon.net/assets/uploads/2017/05/Yorke.jpg", age:49,gender:'M',top_song_url:'width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/255800075&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">',song_embed_1:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/414769023&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>)',song_embed_2:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/413639913&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',  song_embed_3:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/407165313&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>')
+
+User.create(name: "Erykah Badu", borough:"Queens",image_url:"https://www.fevermagazine.com/wp-content/uploads/2018/01/Erykah-Badu.jpeg", age:48,gender:'F',top_song_url:'width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/255800075&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">',song_embed_1:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/414769023&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>)',song_embed_2:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/413639913&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',  song_embed_3:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/407165313&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>')
+
+User.create(name: "PJ Harvey", borough:"Staten Island",image_url:"https://www.filepicker.io/api/file/DNHHPMNUSuKHTQmk1XnY/convert?cache=true&crop=0%2C0%2C1356%2C678", age:41,gender:'F',top_song_url:'width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/255800075&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">',song_embed_1:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/414769023&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>)',song_embed_2:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/413639913&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',  song_embed_3:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/407165313&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>')
+
+User.create(name: "D'Angelo", borough:"Bronx",image_url:"http://www.rap-up.com/app/uploads/2015/01/dangelo-snl.jpg", age:41,gender:'F',top_song_url:'width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/255800075&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">',song_embed_1:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/414769023&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>)',song_embed_2:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/413639913&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',  song_embed_3:'<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/407165313&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>')
