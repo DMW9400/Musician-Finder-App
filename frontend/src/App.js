@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import UserInput from './components/UserInput'
 import { connect } from 'react-redux'
-import { fetchUsers, fetchInstruments, fetchGenres, fetchArtists } from './actions'
-import {BrowserRouter,Route, Switch} from 'react-router-dom'
-import {Welcome} from './components/Welcome'
-import UsersList from './components/UsersList'
-import Profile from './components/Profile'
-import MessagePage from './components/MessagePage'
+import { fetchUsers, fetchInstruments, fetchGenres, fetchArtists, fetchUserInstruments, fetchUserGenres, fetchUserArtists } from './actions'
+import { withRouter, Route } from 'react-router-dom'
+import Login from './components/Login'
+import Container from './components/Container'
+
 
 class App extends Component {
 
@@ -16,21 +14,23 @@ class App extends Component {
     this.props.fetchInstruments()
     this.props.fetchGenres()
     this.props.fetchArtists()
-  }
+    this.props.fetchUserInstruments()
+    this.props.fetchUserGenres()
+    this.props.fetchUserArtists()
+
+    }
+
+
 
   render() {
+    console.log(this.props)
     return (
-      <BrowserRouter>
         <div className="App">
-          <Switch>
-            <Route exact path="/" component={Welcome} />
-            <Route exact path="/create-user" component={UserInput} />
-            <Route exact path="/users" component={UsersList} />
-            <Route exact path = "/users/:id" component={Profile} />
-            <Route exact path="/users/:id/message" component={MessagePage}/>
-          </Switch>
+          <Route exact path="/login" component={Login} />
+          <Route path="/" component={Container}/>
+
         </div>
-      </BrowserRouter>
+
     );
   }
 }
@@ -39,7 +39,14 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    users: state.users
+    users: state.users,
+    currentUser: state.currentUser,
+    instruments: state.instruments,
+    artists: state.artists,
+    genres: state.genres,
+    userInstruments: state.userInstruments,
+    userGenres: state.userGenres,
+    userArtists: state.userArtists
   }
 }
 
@@ -48,8 +55,11 @@ const mapDispatchToProps = dispatch =>{
     fetchUsers: (user) => dispatch(fetchUsers(user)),
     fetchInstruments: (instrument) => dispatch(fetchInstruments(instrument)),
     fetchArtists: (artist) => dispatch(fetchArtists(artist)),
-    fetchGenres: (genre) => dispatch(fetchGenres(genre))
+    fetchGenres: (genre) => dispatch(fetchGenres(genre)),
+    fetchUserInstruments: (userInstrument) => dispatch(fetchUserInstruments(userInstrument)),
+    fetchUserGenres: (userGenre) => dispatch(fetchUserGenres(userGenre)),
+    fetchUserArtists: (userArtist) => dispatch(fetchUserArtists(userArtist))
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

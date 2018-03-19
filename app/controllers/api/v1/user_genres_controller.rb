@@ -1,6 +1,6 @@
 class Api::V1::UserGenresController < ApplicationController
   def index
-    genres = Genre.all
-    render json: genres, status: 200
+    user_genres = UserGenre.all
+    render json: user_genres, status: 200
   end
 end

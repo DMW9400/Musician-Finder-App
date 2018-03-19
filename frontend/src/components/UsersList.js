@@ -15,6 +15,7 @@ class UsersList extends React.Component {
   }
 
   render(){
+    console.log("Users List", this.props)
     return(
       <div>
         <h1>Users List</h1>

@@ -7,5 +7,6 @@ class User < ApplicationRecord
   has_many :sought_instruments, through: :user_sought_instruments
   has_many :user_genres
   has_many :genres, through: :user_genres
-  
+  has_secure_password
+
 end

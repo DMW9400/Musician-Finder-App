@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20180317231128) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "password_digest"
     t.string "borough"
     t.string "image_url"
     t.integer "age"

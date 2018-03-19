@@ -1,10 +1,34 @@
-
+import loginFetch from './APIs'
 
 export function addUser(user){
   return {
     type: 'ADD_USER',
     payload: user
   }
+}
+
+export const loginUser = (username, password) => {
+  return function(dispatch){
+    loginFetch(username, password)
+    .then(json => {
+      console.log("response login", json)
+      if(json.token){
+        console.log("set token")
+        localStorage.setItem('token', json.token)
+        dispatch({
+          type: "SET_USER",
+          payload: json
+        })
+      } else {
+        console.log(json.error)
+      }
+    })
+  }
+}
+
+export const fetchCurrentUser = () => {
+  // send token to the backend to get the current user
+  // dispatch the set user type 
 }
 
 export function fetchUsers(){
@@ -51,8 +75,16 @@ export function fetchUserInstruments(){
 export function fetchUserGenres(){
   return function(dispatch){
     fetch('http://localhost:3000/api/v1/user_genres').then(res=>res.json())
-    .then(userInstruments => {
-      dispatch({type:"FETCH_USER_INSTRUMENTS", payload: userInstruments})
+    .then(userGenres => {
+      dispatch({type:"FETCH_USER_GENRES", payload: userGenres})
+    })
+  }
+}
+export function fetchUserArtists(){
+  return function(dispatch){
+    fetch('http://localhost:3000/api/v1/user_artists').then(res=>res.json())
+    .then(userArtists => {
+      dispatch({type:"FETCH_USER_ARTISTS", payload: userArtists})
     })
   }
 }

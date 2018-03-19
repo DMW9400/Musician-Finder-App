@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Welcome = () => {
+const Welcome = () => {
   return(
       <div>
         <h1>MUSICIAN FINDER!</h1>
@@ -12,3 +12,4 @@ export const Welcome = () => {
       </div>
   )
 }
+export default Welcome

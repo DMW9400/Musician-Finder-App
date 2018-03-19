@@ -23,12 +23,3 @@ const User = (props) => {
 }
 
 export default User
-
-
-// Ask why this doesn't work -
-
-
-{/* <h2>  <Link to={`/users/${props.user.id}`} className="collection-item" key={props.user.id}>
-{props.user.name}
-</Link>
-</h2> */}
