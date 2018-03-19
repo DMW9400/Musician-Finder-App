@@ -85,6 +85,7 @@ class UserInput extends React.Component{
         selectedGenres: this.state.selectedGenres
       })
     }).then(res=>res.json())
+      .then(json=>console.log(json))
   }
 
   handleInstrumentChange = (event) => {

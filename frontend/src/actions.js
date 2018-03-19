@@ -40,3 +40,19 @@ export function fetchGenres(){
     })
   }
 }
+export function fetchUserInstruments(){
+  return function(dispatch){
+    fetch('http://localhost:3000/api/v1/user_instruments').then(res=>res.json())
+    .then(userInstruments => {
+      dispatch({type:"FETCH_USER_INSTRUMENTS", payload: userInstruments})
+    })
+  }
+}
+export function fetchUserGenres(){
+  return function(dispatch){
+    fetch('http://localhost:3000/api/v1/user_genres').then(res=>res.json())
+    .then(userInstruments => {
+      dispatch({type:"FETCH_USER_INSTRUMENTS", payload: userInstruments})
+    })
+  }
+}

@@ -3,10 +3,11 @@ import './App.css';
 import UserInput from './components/UserInput'
 import { connect } from 'react-redux'
 import { fetchUsers, fetchInstruments, fetchGenres, fetchArtists } from './actions'
-import {Route, Switch} from 'react-router-dom'
+import {BrowserRouter,Route, Switch} from 'react-router-dom'
 import {Welcome} from './components/Welcome'
 import UsersList from './components/UsersList'
 import Profile from './components/Profile'
+import MessagePage from './components/MessagePage'
 
 class App extends Component {
 
@@ -19,15 +20,17 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Switch>
-          <Route exact path="/" component={Welcome} />
-          <Route exact path="/create-user" component={UserInput} />
-          <Route exact path="/users" component={UsersList} />
-          <Route path = "/users/:id" component={Profile} />
-        </Switch>
-
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={Welcome} />
+            <Route exact path="/create-user" component={UserInput} />
+            <Route exact path="/users" component={UsersList} />
+            <Route exact path = "/users/:id" component={Profile} />
+            <Route exact path="/users/:id/message" component={MessagePage}/>
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
