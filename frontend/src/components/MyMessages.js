@@ -17,31 +17,35 @@ class MyMessages extends React.Component{
           this.setState({
             messages: data
           })
-        } 
+        }
       )
     }
   }
 
 
   renderMyMessages = () => {
+    // if (this.props.currentUser && this.props.users){
+    //       return (<div>
+    //               "DIV"
+    //               <h2>{this.state.}</h2>
+    //               <li key={message.id}>{message.message}</li>
+    //             </div>)
+    // }
     if (this.props.currentUser && this.props.users){
-      return this.state.messages.map(message=>{
-        if (message.recipient_id === this.props.currentUser.id){
-          let senderName = this.props.users.find(function(user){
-            user.id === message.sender_id
-          })
-          return (<div>
-                  "DIV"
-                  <h2>{senderName}</h2>
+      return this.state.messages.map(message => {
+          let sender = this.props.users[0].find(function(user){
+            return user.id === message.sender_id
+        })
+        return (<div>
+                  <h2>{sender.name}</h2>
                   <li key={message.id}>{message.message}</li>
                 </div>)
-        }
       })
     }
   }
 
   render(){
-    console.log("my messages props", this.props)
+    // console.log("my messages props", this.props)
     // this.props.currentUser ? console.log(this.props.currentUser.id) : console.log("NULL USER FOR NOW")
     return(
       <div>
@@ -55,7 +59,6 @@ class MyMessages extends React.Component{
 }
 
   const mapStateToProps = (state) => {
-    console.log("my messages",state)
     return {
       users: state.users,
       currentUser: state.currentUser

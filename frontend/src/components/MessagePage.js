@@ -21,8 +21,8 @@ class MessagePage extends React.Component{
         'Content-Type':'application/json'
       },
       body: JSON.stringify({
-        sender_id: 1,
-        recipient_id: 2,
+        sender_id: this.props.currentUser.id,
+        recipient_id: this.props.match.params.id,
         message: this.state.body
       })
     }).then(res=>res.json())
