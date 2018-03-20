@@ -9,4 +9,13 @@ class Api::V1::AuthController < ApplicationController
       render json: {'error': 'Could not find or authenticate user'}, status: 401
     end
   end
+
+  def active_user
+    if !current_user.present?
+      render json: {'error': 'There is no current user'}
+    else
+      render json: {'user': current_user}
+    end
+  end
+
 end

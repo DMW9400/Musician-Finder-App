@@ -15,7 +15,7 @@ class UsersList extends React.Component {
   }
 
   render(){
-    console.log("Users List", this.props)
+    console.log(this.props)
     return(
       <div>
         <h1>Users List</h1>
@@ -28,6 +28,7 @@ class UsersList extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
+    currentUser:state.currentUser,
     users: state.users
   }
 }

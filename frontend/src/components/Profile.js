@@ -1,12 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import User from './User'
 
 class Profile extends React.Component {
 
 
   findById = () => {
-       console.log(this.props)
        if (this.props.users.length > 0){
          let found = this.props.users[0].find((user) => {
           return user.id === parseInt(this.props.match.params.id)
@@ -26,7 +24,7 @@ class Profile extends React.Component {
                 <p>Gender: {relUser.gender}</p>
                 <p>Borough: {relUser.borough}</p>
               </div>
-              <iframe width="65%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/283077932&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+              <iframe title ='' width="65%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/283077932&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
             </div>
           )
     }else{
@@ -34,10 +32,7 @@ class Profile extends React.Component {
         }
   }
 
-
-  // { this.props.users.length > 0 ? <User user={this.findById()} /> : <h1>Loading</h1> }
   render(){
-    console.log(this.findById())
     return(
       <div>
         {this.renderPage()}

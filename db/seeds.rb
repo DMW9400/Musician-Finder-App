@@ -64,4 +64,20 @@ UserInstrument.all[14].update(:seeking => true)
 UserInstrument.all[15].update(:seeking => false)
 UserInstrument.all[16].update(:seeking => true)
 
-    # relevant_user_instrument.update(:seeking => false)
+
+
+Message.create(recipient_id:1,sender_id:2, message:"This is message one")
+Message.create(recipient_id:1,sender_id:3, message:"This is message two")
+Message.create(recipient_id:1,sender_id:4, message:"This is message three")
+
+Message.create(recipient_id:2,sender_id:2, message:"This is message one")
+Message.create(recipient_id:2,sender_id:3, message:"This is message two")
+Message.create(recipient_id:2,sender_id:4, message:"This is message three")
+
+Message.create(recipient_id:3,sender_id:2, message:"This is message one")
+Message.create(recipient_id:3,sender_id:3, message:"This is message two")
+Message.create(recipient_id:3,sender_id:4, message:"This is message three")
+
+Message.create(recipient_id:4,sender_id:2, message:"This is message one")
+Message.create(recipient_id:4,sender_id:3, message:"This is message two")
+Message.create(recipient_id:4,sender_id:4, message:"This is message three")

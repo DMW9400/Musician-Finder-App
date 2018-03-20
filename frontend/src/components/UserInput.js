@@ -85,7 +85,6 @@ class UserInput extends React.Component{
         selectedGenres: this.state.selectedGenres
       })
     }).then(res=>res.json())
-      .then(json=>console.log(json))
   }
 
   handleInstrumentChange = (event) => {
@@ -104,7 +103,7 @@ class UserInput extends React.Component{
     })
     this.setState({
       seekingInstruments: instrumentSelect
-    }, ()=>{console.log(this.state.seekingInstruments)})
+    })
   }
   handleArtistChange = (event) => {
     let artistSelect= [].slice.call(event.target.selectedOptions).map(option =>{
@@ -120,15 +119,14 @@ class UserInput extends React.Component{
     })
     this.setState({
       selectedGenres: genreSelect
-    },()=>{console.log("Selected Genres STATE:", this.state.selectedGenres)})
+    })
   }
   handleBoroughChange = (event) => {
-    let value=event.target.value
     this.setState({user:{
       ...this.state.user,
       borough: event.target.value
       }
-    }, ()=>{console.log(this.state.user.borough)})
+    })
   }
 
   renderBorough = () => {

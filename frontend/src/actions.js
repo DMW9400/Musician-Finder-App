@@ -1,19 +1,10 @@
-import loginFetch from './APIs'
-
-export function addUser(user){
-  return {
-    type: 'ADD_USER',
-    payload: user
-  }
-}
+import fetches from './APIs'
 
 export const loginUser = (username, password) => {
   return function(dispatch){
-    loginFetch(username, password)
+    fetches.loginFetch(username, password)
     .then(json => {
-      console.log("response login", json)
       if(json.token){
-        console.log("set token")
         localStorage.setItem('token', json.token)
         dispatch({
           type: "SET_USER",
@@ -26,10 +17,18 @@ export const loginUser = (username, password) => {
   }
 }
 
-export const fetchCurrentUser = () => {
-  // send token to the backend to get the current user
-  // dispatch the set user type 
+export const dispatchCurrentUser = () => {
+  return function(dispatch){
+    fetches.fetchCurrentUser()
+    .then(json => {
+      dispatch({
+        type: "SET_USER",
+        payload: json
+      })
+    })
+  }
 }
+
 
 export function fetchUsers(){
   return function(dispatch){

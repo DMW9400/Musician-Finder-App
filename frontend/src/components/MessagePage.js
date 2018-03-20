@@ -10,7 +10,7 @@ class MessagePage extends React.Component{
   handleChange = (event) => {
     this.setState({
         body: event.target.value
-    },()=>{console.log(this.state)})
+    })
   }
   handleSubmit = (event) => {
     event.preventDefault()
@@ -26,11 +26,9 @@ class MessagePage extends React.Component{
         message: this.state.body
       })
     }).then(res=>res.json())
-    .then(json=>console.log(json))
   }
 
   render(){
-    console.log(this.props)
     return(
       <div>
         <label>Send Message</label>
@@ -46,7 +44,8 @@ class MessagePage extends React.Component{
 
 const mapStateToProps = (state) => {
   return {
-    users: state.users
+    users: state.users,
+    currentUser: state.currentUser
   }
 }
 
