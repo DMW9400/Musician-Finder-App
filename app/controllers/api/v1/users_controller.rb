@@ -39,6 +39,13 @@ def create
  render json: user, status: 201
 end
 
+def user_messages
+  relevant_user = User.find_by(id: params[:id])
+  relevant_messages = relevant_user.received_messages
+  render json: relevant_messages, status: 201
+end
+
+
 def update
   @recipe.update(recipe_params)
   render json: @recipe, status: 200
@@ -56,7 +63,7 @@ end
 
 private
 def user_params
-  params.permit(:name,:image_url,:age,:gender,:top_song_url, :selectedInstruments, :seekingInstruments, :selectedArtists, :selectedGenres, :song_embed_1, :song_embed_2, :song_embed_3, :borough)
+  params.permit(:id, :name,:image_url,:age,:gender,:top_song_url, :selectedInstruments, :seekingInstruments, :selectedArtists, :selectedGenres, :song_embed_1, :song_embed_2, :song_embed_3, :borough, :sender_id, :recipient_id)
 end
 
 

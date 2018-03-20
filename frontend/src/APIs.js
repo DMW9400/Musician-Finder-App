@@ -24,6 +24,10 @@ const fetches = {
   fetchMessages: () => {
     return fetch('http://localhost:3000/api/v1/messages')
     .then(res => res.json())
+  },
+  fetchUserMessages: (recipientID) => {
+    return fetch(`http://localhost:3000/api/v1/users/${recipientID}/messages`)
+    .then(res => res.json())
   }
 }
 

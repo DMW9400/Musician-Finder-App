@@ -8,20 +8,19 @@ class MyMessages extends React.Component{
     messages: []
   }
 
-  componentDidMount(){
-    if (localStorage.length===0){
-      this.props.history.push('/login')
-    }else{
-      this.props.dispatchCurrentUser()
-      fetches.fetchMessages()
-        .then(json => {
+  componentWillReceiveProps(nextProps){
+    console.log("messages componentWillReceiveProps", nextProps)
+    if(nextProps.currentUser){
+      console.log("FETCHING RELEVANT USER MESSAGES")
+      fetches.fetchUserMessages(nextProps.currentUser.id)
+      .then(data => {
           this.setState({
-            messages: json
+            messages: data
           })
-        }
-        )
-      }
+        } 
+      )
     }
+  }
 
 
   renderMyMessages = () => {
@@ -42,7 +41,7 @@ class MyMessages extends React.Component{
   }
 
   render(){
-    console.log(this.props.users)
+    console.log("my messages props", this.props)
     // this.props.currentUser ? console.log(this.props.currentUser.id) : console.log("NULL USER FOR NOW")
     return(
       <div>
@@ -56,6 +55,7 @@ class MyMessages extends React.Component{
 }
 
   const mapStateToProps = (state) => {
+    console.log("my messages",state)
     return {
       users: state.users,
       currentUser: state.currentUser

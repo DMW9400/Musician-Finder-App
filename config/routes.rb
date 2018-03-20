@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       resources :messages
       post "/login", to: 'auth#login'
       post "/active_user", to: 'auth#active_user'
+      # post "/user_messages", to: 'user#user_messages'
+      get '/users/:id/messages', to: 'users#user_messages'
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

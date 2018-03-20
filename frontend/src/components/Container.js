@@ -13,16 +13,17 @@ import { dispatchCurrentUser } from '../actions'
 class Container extends React.Component{
 
   componentDidMount(){
-    console.log("CONTAINER RESET")
     if (localStorage.length===0){
+      console.log("pushing to login from container")
       this.props.history.push('/login')
     }else{
-      console.log("CONTAINER DISPATCH USER")
+      console.log("fetch current User")
       this.props.dispatchCurrentUser()
     }
   }
 
   render(){
+    console.log("container props", this.props)
     return(
       <div>
         <Switch>
