@@ -1,10 +1,10 @@
 
-jazz = Genre.create(name:"jazz     ")
-rb = Genre.create(name:"r&b     ")
-rock = Genre.create(name:"rock     ")
-folk = Genre.create(name:"folk     ")
-electronic = Genre.create(name:"electronic     ")
-country = Genre.create(name:"country     ")
+jazz = Genre.create(name:"jazz")
+rb = Genre.create(name:"r&b")
+rock = Genre.create(name:"rock")
+folk = Genre.create(name:"folk")
+electronic = Genre.create(name:"electronic")
+country = Genre.create(name:"country")
 
 pinkfloyd = Artist.create(name:"Pink Floyd")
 milesdavis = Artist.create(name:"Miles Davis")

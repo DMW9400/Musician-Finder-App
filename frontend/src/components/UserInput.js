@@ -6,6 +6,7 @@ class UserInput extends React.Component{
   state={
     user: {
       name:'',
+      password:'',
       borough:'',
       image_url:'',
       age:null,
@@ -71,6 +72,7 @@ class UserInput extends React.Component{
       },
       body: JSON.stringify({
         name: this.state.user.name,
+        password: this.state.user.password,
         age: this.state.user.age,
         image_url: this.state.user.image_url,
         gender: this.state.user.gender,
@@ -84,7 +86,7 @@ class UserInput extends React.Component{
         selectedArtists: this.state.selectedArtists,
         selectedGenres: this.state.selectedGenres
       })
-    }).then(res=>res.json())
+    }).then(res=>res.json().then(data => console.log(data)))
   }
 
   handleInstrumentChange = (event) => {
@@ -103,7 +105,7 @@ class UserInput extends React.Component{
     })
     this.setState({
       seekingInstruments: instrumentSelect
-    })
+    },()=>console.log(this.state.seekingInstruments))
   }
   handleArtistChange = (event) => {
     let artistSelect= [].slice.call(event.target.selectedOptions).map(option =>{
@@ -148,6 +150,8 @@ class UserInput extends React.Component{
         <form onSubmit={this.handleSubmit}>
           <label>Name</label>
           <input type='text' onChange={this.handleChange} name='name'></input>
+          <label>Password</label>
+          <input type='text' onChange={this.handleChange} name='password'></input>
           <label>Image Url</label>
           <input type='text' onChange={this.handleChange} name='image_url'></input>
           <label>Age</label>

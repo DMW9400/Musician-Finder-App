@@ -23,6 +23,7 @@ export function rootReducer(state=defaultState,action){
     case "FETCH_GENRES":
       return {...state, genres:[...state.genres, action.payload]}
     case "FETCH_USER_INSTRUMENTS":
+      console.log("Fetch User Instruments reducers")
       return {...state, userInstruments:[...state.userInstruments, action.payload]}
     case "FETCH_USER_GENRES":
       return {...state, userGenres:[...state.userGenres, action.payload]}

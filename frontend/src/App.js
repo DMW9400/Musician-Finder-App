@@ -18,7 +18,6 @@ class App extends Component {
     this.props.fetchUserInstruments()
     this.props.fetchUserGenres()
     this.props.fetchUserArtists()
-
     }
 
 

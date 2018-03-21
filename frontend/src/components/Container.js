@@ -14,10 +14,8 @@ class Container extends React.Component{
 
   componentDidMount(){
     if (localStorage.length===0){
-      console.log("pushing to login from container")
       this.props.history.push('/login')
     }else{
-      console.log("fetch current User")
       this.props.dispatchCurrentUser()
     }
   }
