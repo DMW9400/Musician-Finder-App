@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       post "/login", to: 'auth#login'
       post "/active_user", to: 'auth#active_user'
       get '/users/:id/messages', to: 'users#user_messages'
+      get '/users/:id/instruments', to: 'users#user_instruments'
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

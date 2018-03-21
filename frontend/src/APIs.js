@@ -28,6 +28,10 @@ const fetches = {
   fetchUserMessages: (recipientID) => {
     return fetch(`http://localhost:3000/api/v1/users/${recipientID}/messages`)
     .then(res => res.json())
+  },
+  fetchUserInstruments: (userID) => {
+    return fetch(`http://localhost:3000/api/v1/users/${userID}/instruments`)
+    .then(res => res.json())
   }
 }
 

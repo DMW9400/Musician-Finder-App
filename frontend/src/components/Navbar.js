@@ -11,7 +11,6 @@ class Navbar extends React.Component {
       this.props.history.push('/login')
   }
   render(){
-    console.log(this.props)
     return(
       <header className="nav-wrapper">
         <nav>

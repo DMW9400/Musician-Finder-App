@@ -1,7 +1,32 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import fetches from '../APIs'
 
 class Profile extends React.Component {
+
+  state = {
+    instruments:[]
+  }
+
+  componentWillReceiveProps(nextProps){
+    console.log("instruments componentWillReceiveProps", nextProps)
+    if(nextProps.currentUser){
+      // console.log("FETCHING RELEVANT USER INSTRUMENTS")
+      fetches.fetchUserInstruments(this.props.match.params.id)
+      .then(data => {
+          this.setState({
+            instruments: data
+          },()=>{console.log("PROFILE INSTRUMENT STATE",this.state)})
+        }
+      )
+    }
+  }
+
+  renderRelevantInstruments(){
+    if(this.props.instruments){
+      // relevantthis.props.instruments[0]
+    }
+  }
 
 
   findById = () => {
@@ -14,7 +39,6 @@ class Profile extends React.Component {
   }
   renderPage = () => {
     let relUser = this.findById()
-    console.log("RELEVANT USER", relUser)
     if (this.props.users.length > 0){
           return (
             <div>
@@ -37,7 +61,7 @@ class Profile extends React.Component {
   }
 
   render(){
-    console.log(this.props)
+    console.log(this.props.instruments[0])
     return(
       <div>
         {this.renderPage()}
@@ -49,7 +73,9 @@ class Profile extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    users: state.users
+    users: state.users,
+    currentUser: state.currentUser,
+    instruments: state.instruments
   }
 }
 

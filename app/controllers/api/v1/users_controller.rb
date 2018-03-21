@@ -45,6 +45,12 @@ def user_messages
   render json: relevant_messages, status: 201
 end
 
+def user_instruments
+  relevant_user = User.find_by(id: params[:id])
+  relevant_instruments = relevant_user.user_instruments
+  render json: relevant_instruments, status: 201
+end
+
 
 def update
   @recipe.update(recipe_params)

@@ -9,9 +9,7 @@ class MyMessages extends React.Component{
   }
 
   componentWillReceiveProps(nextProps){
-    console.log("messages componentWillReceiveProps", nextProps)
     if(nextProps.currentUser){
-      console.log("FETCHING RELEVANT USER MESSAGES")
       fetches.fetchUserMessages(nextProps.currentUser.id)
       .then(data => {
           this.setState({
