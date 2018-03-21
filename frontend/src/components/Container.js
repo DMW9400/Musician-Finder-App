@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {Route, Switch } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import UserInput from '../components/UserInput'
 import Welcome from '../components/Welcome'
 import UsersList from '../components/UsersList'
 import Profile from '../components/Profile'
@@ -23,18 +22,18 @@ class Container extends React.Component{
     }
   }
 
+  // Route is what gives a component history in its props
+
   render(){
-    console.log("container props", this.props)
     return(
       <div>
-        <Navbar />
+        <Route path="/" component={Navbar}></Route>
         <Switch>
-          <Route exact path="/" component={Welcome} />
-          <Route exact path="/create-user" component={UserInput} />
-          <Route exact path="/users" component={UsersList} />
-          <Route exact path = "/users/:id" component={Profile} />
-          <Route exact path="/users/:id/message" component={MessagePage}/>
-          <Route exact path="/my_messages" component={MyMessages}/>
+          <Route exact path="/base" component={Welcome} />
+          <Route exact path="/base/users" component={UsersList} />
+          <Route exact path="/base/users/:id" component={Profile} />
+          <Route exact path="/base/users/:id/message" component={MessagePage}/>
+          <Route exact path="/base/my_messages" component={MyMessages}/>
 
         </Switch>
       </div>

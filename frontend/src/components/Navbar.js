@@ -2,17 +2,23 @@ import React from 'react'
 import User from './User'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router'
 
-export default class Navbar extends React.Component {
+class Navbar extends React.Component {
 
+  logout = () =>{
+    localStorage.clear()
+      this.props.history.push('/login')
+  }
   render(){
+    console.log(this.props)
     return(
       <header className="nav-wrapper">
         <nav>
           <ul>
-            <p>"NAV TEST"</p>
-            <p>"NAV TEST 2"</p>
-            <p>"NAV TEST 3"</p>
+            <li>  <Link to="/base/users">View Users</Link></li>
+            <li><a href="/base/my_messages">My Messages</a></li>
+            <button onClick={this.logout}>Logout</button>
           </ul>
         </nav>
       </header>
@@ -20,3 +26,11 @@ export default class Navbar extends React.Component {
   }
 
 }
+const mapStateToProps = state => {
+  return {currentUser: state.currentUser}
+}
+
+export default connect(mapStateToProps)(Navbar)
+
+// Link to not working immediately
+{/* <Link to="/base/my_messages">My Messages</Link> */}

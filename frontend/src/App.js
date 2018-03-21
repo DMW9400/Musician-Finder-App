@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux'
 import { fetchUsers, fetchInstruments, fetchGenres, fetchArtists, fetchUserInstruments, fetchUserGenres, fetchUserArtists } from './actions'
-import { withRouter, Route } from 'react-router-dom'
+import { withRouter, Route, Switch } from 'react-router-dom'
 import Login from './components/Login'
 import Container from './components/Container'
+import UserInput from './components/UserInput'
 
 
 class App extends Component {
@@ -25,9 +26,11 @@ class App extends Component {
   render() {
     return (
         <div className="App">
-          <Route exact path="/login" component={Login} />
-          <Route path="/" component={Container}/>
-
+          <Switch>
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/create-user" component={UserInput}/>
+            <Route path="/base" component={Container}/>
+          </Switch>
         </div>
 
     );

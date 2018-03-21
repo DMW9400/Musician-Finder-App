@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { loginUser } from '../actions'
+import { Link } from 'react-router-dom'
 
 class Login extends React.Component{
   state = {
@@ -19,7 +20,7 @@ class Login extends React.Component{
 
   componentWillReceiveProps(nextProps){
     if (nextProps.currentUser){
-      this.props.history.push('/')
+      this.props.history.push('/base')
     }
 
   }
@@ -35,6 +36,7 @@ class Login extends React.Component{
           <input type="password" onChange={this.handleChange} name="password"></input>
           <input type="submit"></input>
         </form>
+        <Link to="/create-user">CREATE PROFILE</Link>
       </div>
     )
   }

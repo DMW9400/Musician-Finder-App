@@ -24,13 +24,6 @@ class MyMessages extends React.Component{
 
 
   renderMyMessages = () => {
-    // if (this.props.currentUser && this.props.users){
-    //       return (<div>
-    //               "DIV"
-    //               <h2>{this.state.}</h2>
-    //               <li key={message.id}>{message.message}</li>
-    //             </div>)
-    // }
     if (this.props.currentUser && this.props.users){
       return this.state.messages.map(message => {
           let sender = this.props.users[0].find(function(user){

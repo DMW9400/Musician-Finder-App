@@ -45,25 +45,16 @@ d.instruments << apiano << trumpet << drums << tuba << guitar
 d.genres << rock << rb << electronic
 d.artists << pinkfloyd << milesdavis
 
-
-UserInstrument.all[0].update(:seeking => true)
-UserInstrument.all[1].update(:seeking => false)
-UserInstrument.all[2].update(:seeking => true)
-UserInstrument.all[3].update(:seeking => false)
-UserInstrument.all[4].update(:seeking => true)
-UserInstrument.all[5].update(:seeking => false)
-UserInstrument.all[6].update(:seeking => true)
-UserInstrument.all[7].update(:seeking => false)
-UserInstrument.all[8].update(:seeking => true)
-UserInstrument.all[9].update(:seeking => false)
-UserInstrument.all[10].update(:seeking => true)
-UserInstrument.all[11].update(:seeking => false)
-UserInstrument.all[12].update(:seeking => true)
-UserInstrument.all[13].update(:seeking => false)
-UserInstrument.all[14].update(:seeking => true)
-UserInstrument.all[15].update(:seeking => false)
-UserInstrument.all[16].update(:seeking => true)
-
+bool=true
+UserInstrument.all.each do |ui|
+  if bool == true
+    ui.update(:seeking => true)
+    bool = !bool
+  elsif bool == false
+    ui.update(:seeking => false)
+    bool = !bool
+  end
+end
 
 
 Message.create(recipient_id:1,sender_id:2, message:"This is message one")
