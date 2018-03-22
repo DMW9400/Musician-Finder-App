@@ -14,8 +14,9 @@ class Api::V1::AuthController < ApplicationController
     if !current_user.present?
       render json: {'error': 'There is no current user'}
     else
-      render json: {'user': current_user}
+      render json: current_user, serializer: UserSerializer
     end
   end
+
 
 end

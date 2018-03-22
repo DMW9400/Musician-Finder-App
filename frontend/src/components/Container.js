@@ -7,6 +7,7 @@ import UsersList from '../components/UsersList'
 import Profile from '../components/Profile'
 import MessagePage from '../components/MessagePage'
 import MyMessages from '../components/MyMessages'
+import FindMusician from '../components/FindMusician'
 import { dispatchCurrentUser } from '../actions'
 
 
@@ -23,6 +24,7 @@ class Container extends React.Component{
   // Route is what gives a component history in its props
 
   render(){
+    // console.log('Container Props: ', this.props)
     return(
       <div>
         <Route path="/" component={Navbar}></Route>
@@ -32,6 +34,7 @@ class Container extends React.Component{
           <Route exact path="/base/users/:id" component={Profile} />
           <Route exact path="/base/users/:id/message" component={MessagePage}/>
           <Route exact path="/base/my_messages" component={MyMessages}/>
+          <Route exact path="/base/findMusician" component={FindMusician}/>
 
         </Switch>
       </div>
@@ -40,7 +43,9 @@ class Container extends React.Component{
 }
 
 const mapStateToProps = state => {
-  return {currentUser: state.currentUser}
+  return {
+    currentUser: state.currentUser,
+    users: state.users}
 }
 
 export default connect(mapStateToProps,{dispatchCurrentUser})(Container)

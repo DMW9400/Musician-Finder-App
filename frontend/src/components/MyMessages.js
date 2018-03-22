@@ -22,7 +22,7 @@ class MyMessages extends React.Component{
 
 
   renderMyMessages = () => {
-    if (this.props.currentUser && this.props.users){
+    if (this.props.currentUser && this.props.users.length > 0){
       return this.state.messages.map(message => {
           let sender = this.props.users[0].find(function(user){
             return user.id === message.sender_id
@@ -36,8 +36,6 @@ class MyMessages extends React.Component{
   }
 
   render(){
-    // console.log("my messages props", this.props)
-    // this.props.currentUser ? console.log(this.props.currentUser.id) : console.log("NULL USER FOR NOW")
     return(
       <div>
         "MY MESSAGES"
@@ -58,4 +56,4 @@ class MyMessages extends React.Component{
 
 
 
-export default connect(mapStateToProps, {dispatchCurrentUser})(MyMessages)
+export default connect(mapStateToProps)(MyMessages)

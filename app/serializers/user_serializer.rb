@@ -13,7 +13,6 @@ class UserSerializer < ActiveModel::Serializer
     seeking_instruments = object.user_instruments.select{|ui| ui.seeking == true}
     seeking_instrument_ids = seeking_instruments.map{|si| si.instrument_id}
     relevant_instruments = Instrument.all.select{|instrument| seeking_instrument_ids.include?(instrument.id)}
-
   end
 end
 

@@ -15,7 +15,8 @@ class Navbar extends React.Component {
       <header className="nav-wrapper">
         <nav>
           <ul>
-            <li>  <Link to="/base/users">View Users</Link></li>
+            <li><Link to="/base/users">View Users</Link></li>
+            <li><Link to="/base/findmusician">Find Musician</Link></li>
             <li><a href="/base/my_messages">My Messages</a></li>
             <button onClick={this.logout}>Logout</button>
           </ul>
