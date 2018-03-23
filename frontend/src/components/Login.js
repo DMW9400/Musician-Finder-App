@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { loginUser } from '../actions'
 import { Link } from 'react-router-dom'
+import FlatButton from 'material-ui/FlatButton';
 
 class Login extends React.Component{
   state = {
@@ -35,6 +36,7 @@ class Login extends React.Component{
           <label>Password: </label>
           <input type="password" onChange={this.handleChange} name="password"></input>
           <input type="submit"></input>
+          <FlatButton onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
         </form>
         <Link to="/create-user">CREATE PROFILE</Link>
       </div>

@@ -8,6 +8,7 @@ class UsersList extends React.Component {
   renderUsers = () => {
     if (this.props.users.length > 0){
       return this.props.users[0].map(user=>{
+        console.log(user)
         return <User key={user.id}
                      user={user}/>
       })

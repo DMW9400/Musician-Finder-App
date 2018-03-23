@@ -6,6 +6,7 @@ import { withRouter, Route, Switch } from 'react-router-dom'
 import Login from './components/Login'
 import Container from './components/Container'
 import UserInput from './components/UserInput'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
 
   render() {
     return (
+      <MuiThemeProvider>
         <div className="App">
           <Switch>
             <Route exact path="/login" component={Login} />
@@ -31,7 +33,7 @@ class App extends Component {
             <Route path="/base" component={Container}/>
           </Switch>
         </div>
-
+      </MuiThemeProvider>
     );
   }
 }

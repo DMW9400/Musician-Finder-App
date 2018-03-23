@@ -1,13 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import fetches from '../APIs'
+import User from './User'
+import { Link } from 'react-router-dom'
 
 class FindMusician extends React.Component {
 
   state={
     shared_artists:'',
     shared_genres:'',
-    instrument_match:''
+    instrument_match:'',
+    submitted:null
   }
 
   handleChange = (event) => {
@@ -20,6 +23,8 @@ class FindMusician extends React.Component {
     let ranking = {}
     if(this.props.users.length > 0){
       this.props.users[0].map(user =>{
+        if(user.name !== this.props.currentUser.name ){
+
         ranking[user.name] = {
           id: user.id,
           shared_artists:0,
@@ -47,6 +52,7 @@ class FindMusician extends React.Component {
             ranking[user.name].shared_artists ++
           }
         })
+      }
       })
     }
     return ranking
@@ -88,18 +94,25 @@ class FindMusician extends React.Component {
       this.keyAlteration(ranking,"instrument_match",1)
     }
 
+    console.log("Rankings: ", ranking)
     return ranking
-    console.log(ranking)
   }
 
   keyAlteration = (object, term, increment) => {
     for(let user in object){
       for(let key in object[user]){
-        if (key==term){
+        if (key===term){
           object[user][key]+=increment
         }
       }
     }
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.setState({
+      submitted: true
+    },()=>console.log("STATE CHANGE: ", this.state.submitted))
   }
 
   sortFinalRanking = () => {
@@ -109,44 +122,84 @@ class FindMusician extends React.Component {
 
     for (let user in ranking){
       for (let key in ranking[user]){
-        if (key == "shared_artists" || key == "shared_genres" || key == "instrument_match" ){
+        if (key === "shared_artists" || key === "shared_genres" || key === "instrument_match" ){
           // console.log(ranking[user][key])
           tally += ranking[user][key]
           returnObject[user] = tally
         }
       }
       tally = 0
-      console.log("user scores: ",ranking)
+      // console.log("user scores: ",ranking)
     }
     console.log("user totals: ", returnObject)
-
-    // let obj = {a: 24, b: 12, c:21, d:15};
-    //
-    // // Get an array of the keys:
-    // let keys = Object.keys(obj);
-    //
-    // // Then sort by using the keys to lookup the values in the original object:
-    // keys.sort(function(a, b) { return obj[a] - obj[b] });
-    //
-    // console.log(keys);
-
+    let keys = Object.keys(returnObject)
+    keys.sort(function(a, b) { return returnObject[a] - returnObject[b] });
+    const sortedNames = keys.reverse()
+    console.log("Sorted names:", sortedNames)
+    return sortedNames
   }
 
+  renderFoundMusicians(){
+    if (this.state.submitted===true){
+      let musicianReturn = []
+      let sortedMusicians = this.sortFinalRanking()
+      let musicianRender = this.props.users[0].filter(user=>{
+        return sortedMusicians.includes(user.name)
+      })
+      let topMatch = this.props.users[0].filter(user =>{
+        return user.name === sortedMusicians[0]
+      })
+      let secondMatch = this.props.users[0].filter(user =>{
+        return user.name === sortedMusicians[1]
+      })
+      let thirdMatch = this.props.users[0].filter(user =>{
+        return user.name === sortedMusicians[2]
+      })
+
+      let matchArray = [topMatch,secondMatch,thirdMatch]
+      console.log(matchArray)
+      return (
+        <ul>
+          {matchArray.map(match=>{
+            return (
+              <div>
+                <Link to={`/base/users/${match[0].id}`} className="collection-item" key={match[0].id}>
+                    {match[0].name}
+                </Link>
+                <img src={match[0].image_url} alt='' ></img>
+                <p>Age:{match[0].age}</p>
+                <p>Borough:{match[0].borough}</p>
+                <Link to={`/base/users/${match[0].id}/message`}>
+                  Message {match[0].name}
+                </Link>
+              </div>
+            )
+          })
+        }
+        </ul>
+      )
+  }
+}
+
   render(){
+    console.log("Full Users: ", this.props.users)
     this.prioritizeUsersViaInstruments()
     this.sortFinalRanking()
+    // this.renderFoundMusicians()
     return(
       <div>
         <h1>Find your Musical Match!</h1>
         <h3>Prioritize the following criteria on a scale of 1-3:</h3>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>Listens to artists you like:</label>
           <input name='shared_artists' onChange={this.handleChange}></input>
           <label>Listens to genres you like:</label>
           <input name='shared_genres' onChange={this.handleChange}></input>
           <label>Plays an instrument you're looking for:</label>
           <input name='instrument_match' onChange={this.handleChange}></input>
+          <input type='submit'></input>
         </form>
+        {this.renderFoundMusicians()}
       </div>
     )
   }
