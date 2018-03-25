@@ -7,7 +7,7 @@ const User = (props) => {
     return(
       <div>
         <h2>
-          <Link to={`/base/users/${props.user.id}`} className="collection-item" key={props.user.id}>
+          <Link to={`/base/users/${props.user.id}`} className="collection-item" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A' }} key={props.user.id}>
               {props.user.name}
           </Link>
         </h2>

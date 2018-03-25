@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { loginUser } from '../actions'
 import { Link } from 'react-router-dom'
 import FlatButton from 'material-ui/FlatButton';
+import TextField from 'material-ui/TextField';
+import './ComponentCss.css'
 
 class Login extends React.Component{
   state = {
@@ -29,16 +31,23 @@ class Login extends React.Component{
   render(){
     return(
       <div>
-        <h1>User Login</h1>
+        <h1 className='header1'>User Login</h1>
         <form onSubmit={this.handleSubmit}>
           <label>Username: </label>
-          <input onChange={this.handleChange} name="username"></input>
+          {/* <input onChange={this.handleChange} name="username"></input> */}
+          <TextField
+            name='username'
+            onChange={this.handleChange}
+          />
           <label>Password: </label>
-          <input type="password" onChange={this.handleChange} name="password"></input>
-          <input type="submit"></input>
-          <FlatButton onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
+          <TextField
+            name='password'
+            onChange={this.handleChange}
+          />
+          {/* <input type="password" onChange={this.handleChange} name="password"></input> */}
+          <FlatButton  onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
         </form>
-        <Link to="/create-user">CREATE PROFILE</Link>
+        <Link to="/create-user" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A' }}>Not registered? Create a Profile</Link>
       </div>
     )
   }

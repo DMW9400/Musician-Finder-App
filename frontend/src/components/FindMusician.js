@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import fetches from '../APIs'
 import User from './User'
 import { Link } from 'react-router-dom'
+import TextField from 'material-ui/TextField';
 
 class FindMusician extends React.Component {
 
@@ -192,11 +193,23 @@ class FindMusician extends React.Component {
         <h3>Prioritize the following criteria on a scale of 1-3:</h3>
         <form onSubmit={this.handleSubmit}>
           <label>Listens to artists you like:</label>
-          <input name='shared_artists' onChange={this.handleChange}></input>
+          <TextField
+            name='shared_artists'
+            onChange={this.handleChange}
+          />
+          {/* <input name='shared_artists' onChange={this.handleChange}></input> */}
           <label>Listens to genres you like:</label>
-          <input name='shared_genres' onChange={this.handleChange}></input>
+          <TextField
+            name='shared_genres'
+            onChange={this.handleChange}
+          />
+          {/* <input name='shared_genres' onChange={this.handleChange}></input> */}
           <label>Plays an instrument you're looking for:</label>
-          <input name='instrument_match' onChange={this.handleChange}></input>
+          <TextField
+            name='username'
+            onChange={this.handleChange}
+          />
+          {/* <input name='instrument_match' onChange={this.handleChange}></input> */}
           <input type='submit'></input>
         </form>
         {this.renderFoundMusicians()}
