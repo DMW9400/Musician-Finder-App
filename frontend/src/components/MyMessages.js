@@ -21,7 +21,7 @@ class MyMessages extends React.Component{
   }
 
 
-  renderMyMessages = () => {
+  organizeMessages = () => {
     if (this.props.currentUser && this.props.users.length > 0){
       let returnObj = {}
 
@@ -51,13 +51,27 @@ class MyMessages extends React.Component{
         })
 
       }
-      console.log ('state: ', this.state.messages)
-      console.log('convo object: ', returnObj)
-      // console.log(this.state.messages)
+      return returnObj
     }
   }
 
+  renderMyMessages = () => {
+    let conversations = this.organizeMessages()
+    console.log(conversations)
+
+      for(let partner in conversations){
+        for(let thread in conversations[partner]){
+          return(
+            <div>
+              {/* <h3>{this.props.users[0].find(user=> user.id === partner. )}</h3> */}
+            </div>
+          )
+        }
+      }
+  }
+
   render(){
+    console.log(this.props.currentUser)
     return(
       <div>
         "MY MESSAGES"
