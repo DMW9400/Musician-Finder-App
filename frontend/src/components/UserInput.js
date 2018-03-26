@@ -7,7 +7,6 @@ import FlatButton from 'material-ui/FlatButton';
 
 
 const selectStyle = {
-  color: 'orange',
   width: '70%',
   backgroundColor: '#B0BEC5',
 }
@@ -187,60 +186,69 @@ class UserInput extends React.Component{
     const seekingInstruments = this.state.seekingInstruments
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label style={{position: 'absolute', top: '80px', left: '200px', width: '200px', height: '100px'}}>Name</label>
+        <form onSubmit={this.handleSubmit} className='User-Creation-Form'>
+          <label style={{}}><span className="field-name">Name </span>
           {/* <input type='text' onChange={this.handleChange} name='name'></input> */}
           <TextField
             name='name'
             onChange={this.handleChange}
-          />
-          <label>Password</label>
+            placeholder='                       Your Name            '
+          /></label>
+          <label style={{}}><span className="field-name">Password  </span>
           {/* <input type='text' onChange={this.handleChange} name='password'></input> */}
           <TextField
             name='password'
             onChange={this.handleChange}
-          />
-          <label>Image Url</label>
+            placeholder='               Your Password            '
+          /></label>
+          <label> <span className="field-name">Image Url</span>
           {/* <input type='text' onChange={this.handleChange} name='image_url'></input> */}
           <TextField
             name='image_url'
             onChange={this.handleChange}
-          />
-          <label>Age</label>
+            placeholder='        URL for your profile picture            '
+          /></label>
+          <label className="field-name"><span className="field-name">Age</span>
           {/* <input type='text' onChange={this.handleChange} name='age'></input> */}
           <TextField
             name='age'
             onChange={this.handleChange}
-          />
-          <label>Gender</label>
+            placeholder='                              Your Age            '
+          /></label>
+          <label className="field-name"><span className="field-name">Gender</span>
           {/* <input type='text' onChange={this.handleChange} name='gender'></input> */}
           <TextField
             name='gender'
             onChange={this.handleChange}
-          />
-          <label>Top Song URL</label>
+            placeholder='                        Your Gender            '
+          /></label>
+          <label className="field-name"><span className="field-name">Top Song URL</span>
           {/* <input type='text' onChange={this.handleChange} name='top_song_url'></input> */}
           <TextField
             name='top_song_url'
             onChange={this.handleChange}
-          />
-          <label>Song Embed One</label>
+            placeholder='          Link for your top song            '
+          /></label>
+          <label className="field-name"><span className="field-name">Song Embed One</span>
           <TextField
             name='song_embed_1'
             onChange={this.handleChange}
-          />
+            placeholder='    Your first song embed link            '
+          /></label>
           {/* <input type='text' onChange={this.handleChange} name='song_embed_1'></input> */}
-          <label>Song Embed Two</label>
+          <label className="field-name"><span className="field-name">Song Embed Two</span>
           <TextField
             name='song_embed_2'
             onChange={this.handleChange}
-          />
+            placeholder=' Your second song embed link            '
+          /></label>
           {/* <input type='text' onChange={this.handleChange} name='song_embed_2'></input> */}
-          <label>Song Embed Three</label>
+          <label className="field-name"><span className="field-name">Song Embed Three</span>
           <TextField
             name='song_embed_3'
             onChange={this.handleChange}
-          />
+              placeholder='   Your third song embed link            '
+          /></label>
           {/* <input type='text' onChange={this.handleChange} name='song_embed_3'></input> */}
           {/* <label>Instruments</label> */}
           {/* <select multiple onChange={this.handleInstrumentChange}>
@@ -288,8 +296,8 @@ class UserInput extends React.Component{
                 {this.menuItems(seekingInstruments)}
               </SelectField>
           {/* <input type='submit'></input> */}
-            <FlatButton onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
         </form>
+        <FlatButton id='submit-button' onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
 
       </div>
     )

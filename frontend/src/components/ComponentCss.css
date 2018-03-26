@@ -24,6 +24,16 @@ ul{
    list-style-type: none;
    text-align: center;
 }
+#submit-button{
+ text-align: center;
+
+}
+.User-Creation-Form label{
+  display:block
+}
+.field-name{
+  margin-right: 20px;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
