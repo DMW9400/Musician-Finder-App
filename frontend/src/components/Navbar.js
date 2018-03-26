@@ -11,14 +11,17 @@ class Navbar extends React.Component {
     localStorage.clear()
       this.props.history.push('/login')
   }
+
+
   render(){
+    const linkstyle = {textDecoration: 'none', borderBottom: 'blue', color:'#546E7A', margin:'30px'}
     return(
-      <header className="nav-wrapper">
-        <nav>
+      <header className="nav-wrapper" style={{backgroundColor:'#BDBDBD', margin:'0px',paddingTop: '0px'}} >
+        <nav style={{backgroundColor:'#BDBDBD',margin:'0px',paddingTop: '0px'}}>
           <ul>
-            <li><Link to="/base/users" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A' }}>View Users</Link></li>
-            <li><Link to="/base/findmusician" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A' }}>Find Musician</Link></li>
-            <li><a href="/base/my_messages" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A' }}>My Messages</a></li>
+            <li><Link to="/base/users" style={linkstyle}>View Users</Link></li>
+            <li><Link to="/base/findmusician" style={linkstyle}>Find Musician</Link></li>
+            <li><a href="/base/my_messages" style={linkstyle}>My Messages</a></li>
             <FlatButton onClick={this.logout} label="Logout" backgroundColor="#90A4AE" />
           </ul>
         </nav>

@@ -4,6 +4,10 @@ h1 {
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
 }
+img {
+    max-width: 40%;
+    max-height: 40%;
+}
 h3 {
   text-align: center;
   color: #455A64;
@@ -24,9 +28,18 @@ ul{
    list-style-type: none;
    text-align: center;
 }
+#user-list-div{
+  background-color: #B0BEC5 ;
+  margin:20px;
+  border-style: solid;
+  border-color: #607D8B;
+  width:70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 #submit-button{
  text-align: center;
-
 }
 .User-Creation-Form label{
   display:block

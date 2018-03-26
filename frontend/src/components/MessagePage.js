@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import TextField from 'material-ui/TextField';
+import FlatButton from 'material-ui/FlatButton';
 
 class MessagePage extends React.Component{
 
@@ -32,11 +34,17 @@ class MessagePage extends React.Component{
     return(
       <div>
         <label>Send Message</label>
-        <form onSubmit={this.handleSubmit}>
+        {/* <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange}></input>
           <input type='submit'></input>
-        </form>
-        <a href="/users">View Users</a>
+        </form> */}
+        <label className="field-name"><span className="field-name">Song Embed Three</span>
+        <TextField
+          name='song_embed_3'
+          onChange={this.handleChange}
+            placeholder='   Your third song embed link            '
+        /></label>
+        <a href="/base/users">View Users</a>
       </div>
     )
   }

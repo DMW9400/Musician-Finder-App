@@ -4,6 +4,7 @@ import fetches from '../APIs'
 import User from './User'
 import { Link } from 'react-router-dom'
 import TextField from 'material-ui/TextField';
+import FlatButton from 'material-ui/FlatButton';
 
 class FindMusician extends React.Component {
 
@@ -164,13 +165,13 @@ class FindMusician extends React.Component {
           {matchArray.map(match=>{
             return (
               <div>
-                <Link to={`/base/users/${match[0].id}`} className="collection-item" key={match[0].id}>
+                <Link to={`/base/users/${match[0].id}`} className="collection-item" key={match[0].id} style={{display:'block', margin:'10px',textDecoration: 'none', borderBottom: 'blue', color:'#37474F'}}>
                     {match[0].name}
                 </Link>
                 <img src={match[0].image_url} alt='' ></img>
                 <p>Age:{match[0].age}</p>
                 <p>Borough:{match[0].borough}</p>
-                <Link to={`/base/users/${match[0].id}/message`}>
+                <Link to={`/base/users/${match[0].id}/message`} style={{display:'block', margin:'10px',fontWeight:'bold',textDecoration: 'none', borderBottom: 'blue', color:'#37474F'}}>
                   Message {match[0].name}
                 </Link>
               </div>
@@ -186,32 +187,29 @@ class FindMusician extends React.Component {
     console.log("Full Users: ", this.props.users)
     this.prioritizeUsersViaInstruments()
     this.sortFinalRanking()
-    // this.renderFoundMusicians()
     return(
       <div>
         <h1>Find your Musical Match!</h1>
         <h3>Prioritize the following criteria on a scale of 1-3:</h3>
         <form onSubmit={this.handleSubmit}>
-          <label>Listens to artists you like:</label>
+          <label className="field-name"><span className="field-name">Listens to artists you like:</span>
           <TextField
             name='shared_artists'
             onChange={this.handleChange}
-          />
-          {/* <input name='shared_artists' onChange={this.handleChange}></input> */}
-          <label>Listens to genres you like:</label>
+          /></label>
+          <label className="field-name"><span className="field-name">Listens to genres you like:</span>
           <TextField
             name='shared_genres'
             onChange={this.handleChange}
           />
-          {/* <input name='shared_genres' onChange={this.handleChange}></input> */}
-          <label>Plays an instrument you're looking for:</label>
+          </label>
+          <label className="field-name"><span className="field-name">Plays an instrument you're looking for:</span>
           <TextField
             name='username'
             onChange={this.handleChange}
-          />
-          {/* <input name='instrument_match' onChange={this.handleChange}></input> */}
-          <input type='submit'></input>
+          /></label>
         </form>
+          <FlatButton id='submit-button' onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
         {this.renderFoundMusicians()}
       </div>
     )
