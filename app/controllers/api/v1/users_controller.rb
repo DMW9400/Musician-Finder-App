@@ -40,8 +40,9 @@ end
 
 def user_messages
   relevant_user = User.find_by(id: params[:id])
-  relevant_messages = relevant_user.received_messages
-  render json: relevant_messages, status: 201
+  received_messages = relevant_user.received_messages
+  sent_messages = relevant_user.sent_messages
+  render json: {received_messages: received_messages, sent_messages: sent_messages}, status: 201
 end
 
 def user_instruments

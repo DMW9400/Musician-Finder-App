@@ -7,7 +7,7 @@ import FlatButton from 'material-ui/FlatButton';
 
 class Navbar extends React.Component {
 
-  logout = () =>{
+  logout = () => {
     localStorage.clear()
       this.props.history.push('/login')
   }

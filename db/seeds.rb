@@ -57,9 +57,15 @@ UserInstrument.all.each do |ui|
 end
 
 
-Message.create(recipient_id:1,sender_id:2, message:"This is message one")
-Message.create(recipient_id:1,sender_id:3, message:"This is message two")
-Message.create(recipient_id:1,sender_id:4, message:"This is message three")
+Message.create(recipient_id:1,sender_id:2, message:"Message 1 to thom from erykah")
+Message.create(recipient_id:2,sender_id:1, message:"Message 2 to erkyah from thom")
+Message.create(recipient_id:1,sender_id:2, message:"Message 3 to thom from erykah")
+Message.create(recipient_id:2,sender_id:1, message:"Message 4 to erykah from thom")
+
+Message.create(recipient_id:1,sender_id:3, message:"Message 1 to thom from pj")
+Message.create(recipient_id:3,sender_id:1, message:"Message 2 to erkyah from thom")
+Message.create(recipient_id:1,sender_id:3, message:"Message 3 to thom from pj")
+Message.create(recipient_id:3,sender_id:1, message:"Message 4 to pj from thom")
 
 Message.create(recipient_id:2,sender_id:2, message:"This is message one")
 Message.create(recipient_id:2,sender_id:3, message:"This is message two")

@@ -23,15 +23,37 @@ class MyMessages extends React.Component{
 
   renderMyMessages = () => {
     if (this.props.currentUser && this.props.users.length > 0){
-      return this.state.messages.map(message => {
-          let sender = this.props.users[0].find(function(user){
-            return user.id === message.sender_id
-        })
-        return (<div>
-                  <h2>{sender.name}</h2>
-                  <li key={message.id}>{message.message}</li>
-                </div>)
+      let returnObj = {}
+
+      this.state.messages.received_messages.map(message=>{
+        if (returnObj[message.sender_id]){
+          returnObj[message.sender_id] = [...returnObj[message.sender_id], message]
+        }else{
+          returnObj[message.sender_id] = [message]
+        }
       })
+
+      this.state.messages.sent_messages.map(message=>{
+        if (returnObj[message.recipient_id]){
+          returnObj[message.recipient_id] = [...returnObj[message.recipient_id], message]
+        }else{
+          returnObj[message.recipient_id] = [message]
+        }
+      })
+
+      for (let user in returnObj){
+        returnObj[user].sort(function(a, b) {
+          let keyA = new Date(a.created_at)
+          let keyB = new Date(b.created_at)
+          if(keyA < keyB) return -1;
+          if(keyA > keyB) return 1;
+          return 0;
+        })
+
+      }
+      console.log ('state: ', this.state.messages)
+      console.log('convo object: ', returnObj)
+      // console.log(this.state.messages)
     }
   }
 
