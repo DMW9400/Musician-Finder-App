@@ -157,8 +157,14 @@ class FindMusician extends React.Component {
       let thirdMatch = this.props.users[0].filter(user =>{
         return user.name === sortedMusicians[2]
       })
+      let fourthMatch = this.props.users[0].filter(user =>{
+        return user.name === sortedMusicians[3]
+      })
+      let fifthMatch = this.props.users[0].filter(user =>{
+        return user.name === sortedMusicians[4]
+      })
 
-      let matchArray = [topMatch,secondMatch,thirdMatch]
+      let matchArray = [topMatch,secondMatch,thirdMatch,fourthMatch,fifthMatch]
       console.log(matchArray)
       return (
         <ul>
@@ -169,8 +175,9 @@ class FindMusician extends React.Component {
                     {match[0].name}
                 </Link>
                 <img src={match[0].image_url} alt='' ></img>
-                <p>Age:{match[0].age}</p>
-                <p>Borough:{match[0].borough}</p>
+                <p>Age: {match[0].age}</p>
+                <p>Plays: {match[0].played_instruments.map(instrument=><li>{instrument.name}</li>)}</p>
+                <p>Borough: {match[0].borough}</p>
                 <Link to={`/base/users/${match[0].id}/message`} style={{display:'block', margin:'10px',fontWeight:'bold',textDecoration: 'none', borderBottom: 'blue', color:'#37474F'}}>
                   Message {match[0].name}
                 </Link>
