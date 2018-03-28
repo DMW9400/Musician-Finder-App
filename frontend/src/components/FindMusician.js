@@ -18,7 +18,7 @@ class FindMusician extends React.Component {
   handleChange = (event) => {
     this.setState({
         [event.target.name]: event.target.value
-    })
+    }, ()=>console.log(this.state))
   }
 
   sortUsers = () => {
@@ -26,7 +26,6 @@ class FindMusician extends React.Component {
     if(this.props.users.length > 0){
       this.props.users[0].map(user =>{
         if(user.name !== this.props.currentUser.name ){
-
         ranking[user.name] = {
           id: user.id,
           shared_artists:0,
@@ -63,7 +62,9 @@ class FindMusician extends React.Component {
   prioritizeUsersViaArtists = () => {
     let ranking = this.sortUsers()
     if (Object.keys(ranking).length > 0){
+      // console.log("ARTIST MULTIPLIER (1)  HIT!")
       if (this.state.shared_artists === '1'){
+          console.log("ARTIST RANKING IS ONE")
         this.keyAlteration(ranking,"shared_artists",3)
       }else if(this.state.shared_artists === '2'){
         this.keyAlteration(ranking,"shared_artists",2)
@@ -76,7 +77,9 @@ class FindMusician extends React.Component {
 
   prioritizeUsersViaGenres = () => {
     let ranking = this.prioritizeUsersViaArtists()
+      // console.log("GENRE MULTIPLIER (2)  HIT!")
     if (this.state.shared_genres === '1'){
+        console.log("GENRE RANKING IS ONE")
       this.keyAlteration(ranking,"shared_genres",3)
     }else if(this.state.shared_genres === '2'){
       this.keyAlteration(ranking,"shared_genres",2)
@@ -88,8 +91,10 @@ class FindMusician extends React.Component {
 
   prioritizeUsersViaInstruments = () => {
     let ranking = this.prioritizeUsersViaGenres()
+      // console.log("INSTRUMENT MULTIPLIER (3)  HIT!")
     if (this.state.instrument_match === '1'){
-      this.keyAlteration(ranking,"instrument_match",3)
+      console.log("INSTRUMENT RANKING IS ONE")
+      this.keyAlteration(ranking,"instrument_match",5)
     }else if(this.state.instrument_match === '2'){
       this.keyAlteration(ranking,"instrument_match",2)
     }else if(this.state.instrument_match === '3') {
@@ -101,6 +106,7 @@ class FindMusician extends React.Component {
   }
 
   keyAlteration = (object, term, increment) => {
+    console.log("KEY ALTERATION TRIGGERED")
     for(let user in object){
       for(let key in object[user]){
         if (key===term){
@@ -212,7 +218,7 @@ class FindMusician extends React.Component {
           </label>
           <label className="field-name"><span className="field-name">Plays an instrument you're looking for:</span>
           <TextField
-            name='username'
+            name='instrument_match'
             onChange={this.handleChange}
           /></label>
         </form>

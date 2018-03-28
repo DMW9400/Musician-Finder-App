@@ -17,6 +17,20 @@ img {
     max-height: 40%;
 }
 
+#navbar-ul{
+  /* list-style-type: none;
+  margin: 0 auto;
+  padding: 0px; */
+}
+.nav {
+    display:inline;
+    margin:50px;
+}
+.nav a{
+  display:inline;
+  display:inline-block;
+  padding:10px;
+}
 #container-div{
   display:grid;
   grid-template-columns: [first] 40px [line2] 35% [line3] auto [line4] 50px [five] 40px [end];
