@@ -74,7 +74,6 @@ class MyMessages extends React.Component{
         }
         messagingObject[partner]=conversationArray
       }
-      console.log(messagingObject)
       let elements = []
       for (let userConvo in messagingObject){
         let foundMessager = this.props.users[0].find(function(user) {
