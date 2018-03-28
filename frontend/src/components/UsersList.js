@@ -19,7 +19,7 @@ class UsersList extends React.Component {
     console.log(this.props)
     return(
       <div>
-        <h1>Users List</h1>
+        <h1>Our Musicians</h1>
         {this.renderUsers()}
       </div>
     )

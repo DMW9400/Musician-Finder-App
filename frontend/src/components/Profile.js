@@ -62,7 +62,7 @@ class Profile extends React.Component {
               <div className='profile-user-div'>
                 <h1>{relUser.name}</h1>
                 <img className='profile' src={relUser.image_url} alt='' ></img>
-                <div align='left' className="user-info">
+                <div align='center' className="user-info">
                   <p>Age: {relUser.age}</p>
                   <p>Gender: {relUser.gender}</p>
                   <p>Borough: {relUser.borough}</p>
