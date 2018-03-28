@@ -32,6 +32,20 @@ const fetches = {
   fetchUserInstruments: (userID) => {
     return fetch(`http://localhost:3000/api/v1/users/${userID}/instruments`)
     .then(res => res.json())
+  },
+  sendMessage: (currentUser, recipient,message) => {
+    return fetch(`http://localhost:3000/api/v1/messages`, {
+      method: 'POST',
+      headers:{
+        'Accept': 'application/json',
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify({
+        sender_id: currentUser,
+        recipient_id: recipient,
+        message: message
+      })
+    }).then(res=>res.json())
   }
 }
 

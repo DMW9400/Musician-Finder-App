@@ -64,9 +64,9 @@ class FindMusician extends React.Component {
     let ranking = this.sortUsers()
     if (Object.keys(ranking).length > 0){
       if (this.state.shared_artists === '1'){
-        this.keyAlteration(ranking,"shared_artists",5)
-      }else if(this.state.shared_artists === '2'){
         this.keyAlteration(ranking,"shared_artists",3)
+      }else if(this.state.shared_artists === '2'){
+        this.keyAlteration(ranking,"shared_artists",2)
       }else if(this.state.shared_artists === '3') {
         this.keyAlteration(ranking,"shared_artists",1)
       }
@@ -77,9 +77,9 @@ class FindMusician extends React.Component {
   prioritizeUsersViaGenres = () => {
     let ranking = this.prioritizeUsersViaArtists()
     if (this.state.shared_genres === '1'){
-      this.keyAlteration(ranking,"shared_genres",5)
-    }else if(this.state.shared_genres === '2'){
       this.keyAlteration(ranking,"shared_genres",3)
+    }else if(this.state.shared_genres === '2'){
+      this.keyAlteration(ranking,"shared_genres",2)
     }else if(this.state.shared_genres === '3') {
       this.keyAlteration(ranking,"shared_genres",1)
     }
@@ -89,9 +89,9 @@ class FindMusician extends React.Component {
   prioritizeUsersViaInstruments = () => {
     let ranking = this.prioritizeUsersViaGenres()
     if (this.state.instrument_match === '1'){
-      this.keyAlteration(ranking,"instrument_match",5)
-    }else if(this.state.instrument_match === '2'){
       this.keyAlteration(ranking,"instrument_match",3)
+    }else if(this.state.instrument_match === '2'){
+      this.keyAlteration(ranking,"instrument_match",2)
     }else if(this.state.instrument_match === '3') {
       this.keyAlteration(ranking,"instrument_match",1)
     }
@@ -104,7 +104,7 @@ class FindMusician extends React.Component {
     for(let user in object){
       for(let key in object[user]){
         if (key===term){
-          object[user][key]+=increment
+          object[user][key]*=increment
         }
       }
     }

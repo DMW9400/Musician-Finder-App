@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import fetches from '../APIs'
+import { Link } from 'react-router-dom'
 
 class Profile extends React.Component {
 
@@ -57,18 +58,41 @@ class Profile extends React.Component {
     let relUser = this.findById()
     if (this.props.users.length > 0){
           return (
-            <div>
-              <h1>{relUser.name}</h1>
-              <img src={relUser.image_url} alt='' ></img>
-              <div className="UserInfo">
-                <p>Age: {relUser.age}</p>
-                <p>Gender: {relUser.gender}</p>
-                <p>Borough: {relUser.borough}</p>
+            <div id="container-div">
+              <div className='profile-user-div'>
+                <h1>{relUser.name}</h1>
+                <img className='profile' src={relUser.image_url} alt='' ></img>
+                <div align='left' className="user-info">
+                  <p>Age: {relUser.age}</p>
+                  <p>Gender: {relUser.gender}</p>
+                  <p>Borough: {relUser.borough}</p>
+                  <Link to={`/base/users/${relUser.id}/message`} style={{display:'block', margin:'10px',fontWeight: 'bold',textDecoration: 'none', borderBottom: 'blue', color:'#546E7A'}}>
+                    Message {relUser.name}
+                  </Link>
+                </div>
               </div>
-              <div>
+              <div className='instruments-div'>
+                <span className='instrument-span'>
+                  <h2>Instruments Played:</h2>
+                  {this.renderPlayedInstruments()}
+                </span>
+                <span className='instrument-span'>
+                  <h2>Instruments Seeking:</h2>
+                  {this.renderSeekingInstruments()}
+                </span>
+                <span className='instrument-span'>
+                  <h2>Genre Influences:</h2>
+                  {this.renderGenresLiked()}
+                </span>
+                <span className='instrument-span'>
+                  <h2>Artist Influences:</h2>
+                  {this.renderArtistsLiked()}
+                </span>
 
               </div>
-              <iframe title ='' width="65%" height="150" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/283077932&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+              <div id='soundCloud-iFrame'>
+                <iframe title ='' width="65%" height="150" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/283077932&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+              </div>
             </div>
           )
     }else{
@@ -91,16 +115,7 @@ class Profile extends React.Component {
     return(
       <div>
         {this.renderPage()}
-        <div>
-          <h2>Instruments Played:</h2>
-          {this.renderPlayedInstruments()}
-          <h2>Instruments Seeking:</h2>
-          {this.renderSeekingInstruments()}
-          <h2>Genre Influences:</h2>
-          {this.renderGenresLiked()}
-          <h2>Artist Influences:</h2>
-          {this.renderArtistsLiked()}
-        </div>
+
       </div>
     )
   }

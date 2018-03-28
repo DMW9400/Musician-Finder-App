@@ -5,7 +5,7 @@ const User = (props) => {
   console.log(props)
 
     return(
-      <div id='user-list-div' >
+      <div className='styled-div' >
         <h2>
           <Link to={`/base/users/${props.user.id}`} className="collection-item" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A' }} key={props.user.id}>
               {props.user.name}

@@ -4,9 +4,70 @@ h1 {
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
 }
+
+h2 {
+  text-align: center;
+  color: #546E7A;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
 img {
     max-width: 40%;
     max-height: 40%;
+}
+
+#container-div{
+  display:grid;
+  grid-template-columns: [first] 40px [line2] 35% [line3] auto [line4] 50px [five] 40px [end];
+  grid-template-rows: 25% 300px auto;
+  width:100%;
+  height:100%;
+}
+.profile-user-div{
+  grid-column-start: line2;
+  grid-column-end: line3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+}
+
+img.profile{
+ display: block;
+ max-width: 100%;
+ height: auto;
+ margin: auto;
+}
+div.user-info{
+  margin-top:5px;
+  display: block;
+  width: 59%;
+}
+.instruments-div{
+  grid-column-start: line3;
+  grid-column-end: line4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-items: center;
+  justify-items: center;
+}
+
+#soundCloud-iFrame{
+  grid-column-start: line3;
+  grid-column-end: line4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.instrument-span{
+  background-color: #B0BEC5 ;
+  margin:20px;
+  border-style: solid;
+  border-color: #607D8B;
+  width:70%;
+  display: block;
+  /* justify-items: center; */
+  margin: auto;
 }
 h3 {
   text-align: center;
@@ -28,12 +89,28 @@ ul{
    list-style-type: none;
    text-align: center;
 }
-#user-list-div{
+.styled-div{
   background-color: #B0BEC5 ;
   margin:20px;
   border-style: solid;
   border-color: #607D8B;
   width:70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* .instruments-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+} */
+.user-info{
+  background-color: #B0BEC5 ;
+  margin:20px;
+  border-style: solid;
+  border-color: #607D8B;
+  width:30%;
   display: block;
   margin-left: auto;
   margin-right: auto;

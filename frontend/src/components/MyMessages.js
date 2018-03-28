@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { dispatchCurrentUser } from '../actions'
-import fetches from '../APIs'
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
+import fetches from '../APIs'
 
 
 class MyMessages extends React.Component{
@@ -80,7 +80,7 @@ class MyMessages extends React.Component{
         let foundMessager = this.props.users[0].find(function(user) {
                 return user.id == userConvo
               })
-        elements.push( <div id='user-list-div'>
+        elements.push( <div className='styled-div'>
               <h1>{foundMessager.name}</h1>
               {messagingObject[userConvo].map(thread=><li style={{margin:'15px'}}>{thread}</li>)}
               <label><span className="field-name">Send {foundMessager.name} a message</span>
@@ -89,8 +89,9 @@ class MyMessages extends React.Component{
                 multiLine= 'true'
                 onChange={this.handleChange}
                 placeholder='    Your message here            '
+                style={{rightMargin:'100px'}}
               /></label>
-                <FlatButton onClick={this.handleMessageSend} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
+                <FlatButton onClick={this.handleMessageSend(foundMessager.id)} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
             </div>)
       }
       return elements
@@ -100,6 +101,13 @@ class MyMessages extends React.Component{
     this.setState({
       messageText: event.target.value
     })
+  }
+  handleMessageSend = (recipientId) => {
+    return event => {
+    fetches.sendMessage(this.props.currentUser.id,recipientId,this.state.messageText)
+     console.log(recipientId)
+     window.location.reload();
+    }
   }
 
   render(){
