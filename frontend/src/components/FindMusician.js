@@ -203,9 +203,9 @@ class FindMusician extends React.Component {
     this.sortFinalRanking()
     return(
       <div>
-        <h1>Find your Musical Match!</h1>
+        <h1 style={{marginTop:'100px'}}>Find your Musical Match!</h1>
         <h3>Prioritize the following criteria on a scale of 1-3:</h3>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} style={{marginTop:'80px'}}>
           <label className="field-name"><span className="field-name">Listens to artists you like:</span>
           <TextField
             name='shared_artists'

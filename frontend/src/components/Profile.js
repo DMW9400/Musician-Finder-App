@@ -59,7 +59,7 @@ class Profile extends React.Component {
     if (this.props.users.length > 0){
           return (
             <div id="container-div">
-              <div className='profile-user-div'>
+              <div className='profile-user-div' style={{marginTop:'80px'}}>
                 <h1>{relUser.name}</h1>
                 <img className='profile' src={relUser.image_url} alt='' ></img>
                 <div align='center' className="user-info">
@@ -71,7 +71,7 @@ class Profile extends React.Component {
                   </Link>
                 </div>
               </div>
-              <div className='instruments-div'>
+              <div className='instruments-div' style={{marginTop:'80px'}}>
                 <span className='instrument-span'>
                   <h2>Instruments Played:</h2>
                   {this.renderPlayedInstruments()}

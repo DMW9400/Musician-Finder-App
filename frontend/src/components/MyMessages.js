@@ -112,7 +112,7 @@ class MyMessages extends React.Component{
   render(){
     return(
       <div>
-        <h1>My Messages</h1>
+        <h1 style={{marginTop:'100px'}}>My Messages</h1>
         <ul>
           {this.renderMyMessages()}
         </ul>
