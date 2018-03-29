@@ -56,6 +56,7 @@ class FindMusician extends React.Component {
       }
       })
     }
+
     return ranking
   }
 
@@ -106,7 +107,7 @@ class FindMusician extends React.Component {
   }
 
   keyAlteration = (object, term, increment) => {
-    console.log("KEY ALTERATION TRIGGERED")
+    // console.log("KEY ALTERATION TRIGGERED")
     for(let user in object){
       for(let key in object[user]){
         if (key===term){
@@ -120,7 +121,7 @@ class FindMusician extends React.Component {
     event.preventDefault()
     this.setState({
       submitted: true
-    },()=>console.log("STATE CHANGE: ", this.state.submitted))
+    })
   }
 
   sortFinalRanking = () => {

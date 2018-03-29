@@ -30,9 +30,11 @@ class Login extends React.Component{
 
   render(){
     return(
-      <div>
-        <h1 className='header1'>User Login</h1>
-        <form onSubmit={this.handleSubmit}>
+      <div style={{display: 'table', width: '100%'}}>
+        <h1 style={{marginTop:'400px'}}>Welcome to Musician Finder</h1>
+        <h2 className='header1' style={{marginTop:'80px'}}>User Login</h2>
+
+        <form onSubmit={this.handleSubmit} style={{marginTop:'30px'}} >
           <label>Username: </label>
           {/* <input onChange={this.handleChange} name="username"></input> */}
           <TextField

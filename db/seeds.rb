@@ -43,7 +43,7 @@ end
 
 
 
-thom = User.create(name: "Thom Yorke", password:"123", borough:"Brooklyn",image_url:"http://cdn3-www.comingsoon.net/assets/uploads/2017/05/Yorke.jpg", age:49,gender:'M',top_song_url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/25800075&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true")
+thom = User.create(name: "Thom Yorke", password:"123", borough:"Brooklyn",image_url:"http://cdn3-www.comingsoon.net/assets/uploads/2017/05/Yorke.jpg", age:49,gender:'M',top_song_url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/398635977&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true")
 
 thom.instruments << Instrument.all.sample(rand(3..7))
 thom.genres << Genre.all.sample(rand(3..10))
