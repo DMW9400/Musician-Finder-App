@@ -44,6 +44,7 @@ class Login extends React.Component{
           <label>Password: </label>
           <TextField
             name='password'
+            type='password'
             onChange={this.handleChange}
           />
           {/* <input type="password" onChange={this.handleChange} name="password"></input> */}

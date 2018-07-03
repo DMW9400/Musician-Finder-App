@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
 def create
- user = User.create(user_params)
+user = User.create(user_params)
 
   rel_inst_ids = params[:selectedInstruments].map {|i| i["id"].to_i}
   relevant_instruments = Instrument.all.select {|inst| rel_inst_ids.include?(inst[:id])}

@@ -182,11 +182,12 @@ class UserInput extends React.Component{
 
 
   render(){
-    console.log(this.props)
+    console.log('Props!', this.props)
     const selectedInstruments = this.state.selectedInstruments
     const seekingInstruments = this.state.seekingInstruments
     return(
       <div>
+        <h1 style={{marginTop:'120px',marginBottom:'60px'}}>Create your Profile</h1>
         <form onSubmit={this.handleSubmit} className='User-Creation-Form'>
           <label style={{}}><span className="field-name">Name </span>
           {/* <input type='text' onChange={this.handleChange} name='name'></input> */}

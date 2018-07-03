@@ -24,7 +24,7 @@ class FindMusician extends React.Component {
   sortUsers = () => {
     let ranking = {}
     if(this.props.users.length > 0){
-      this.props.users[0].map(user =>{
+      this.props.users[0].map(user => {
         if(user.name !== this.props.currentUser.name ){
         ranking[user.name] = {
           id: user.id,
