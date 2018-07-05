@@ -50,11 +50,13 @@ class UserInput extends React.Component{
       }
     }, ()=> console.log("State changing: ", this.state))
   }
+  //
+  // handleSelectedInstrumentChange = (event, index, chosenInstruments) => this.setState({selectedInstruments: chosenInstruments},()=>console.log('selected instruments',this.state.selectedInstruments));
 
-  // handleSelectedInstrumentChange = (event, index, selectedInstruments) => this.setState({selectedInstruments},()=>console.log('selected instruments',this.state.selectedInstruments));
   handleSelectedInstrumentChange = (event, index, selectedInstruments) => {
-    let chosenInstruments = this.props.instruments[0].filter(instrument => selectedInstruments.includes(instrument.name) )
-    this.setState({selectedInstruments : chosenInstruments},()=>console.log('selected instruments',this.state.selectedInstruments));
+    let chosenInstruments = this.props.instruments[0].filter(instrument =>  selectedInstruments.includes(instrument.name) )
+    console.log('selected instruments, not state:', chosenInstruments)
+    this.setState({selectedInstruments : [...this.state.selectedInstruments, chosenInstruments[0]]},()=>console.log('selected instruments',this.state.selectedInstruments));
   }
   handleSeekingInstrumentChange = (event, index, seekingInstruments) => this.setState({seekingInstruments},()=>console.log('seeking instruments', this.state.seekingInstruments));
 
