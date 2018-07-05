@@ -54,10 +54,19 @@ class UserInput extends React.Component{
   // handleSelectedInstrumentChange = (event, index, chosenInstruments) => this.setState({selectedInstruments: chosenInstruments},()=>console.log('selected instruments',this.state.selectedInstruments));
 
   handleSelectedInstrumentChange = (event, index, selectedInstruments) => {
-    let chosenInstruments = this.props.instruments[0].filter(instrument =>  selectedInstruments.includes(instrument.name) )
-    console.log('selected instruments, not state:', chosenInstruments)
-    this.setState({selectedInstruments : [...this.state.selectedInstruments, chosenInstruments[0]]},()=>console.log('selected instruments',this.state.selectedInstruments));
+    // console.log('print event', event.currentTarget.value)
+    console.log('print event', selectedInstruments)
+
+    // let chosenInstruments = this.props.instruments[0].filter(instrument =>
+    //    selectedInstruments.includes(instrument.name)
+    //  )
+    // console.log('selected instruments, not state:', chosenInstruments)
+      this.setState(
+        {selectedInstruments : selectedInstruments},
+        ()=>console.log('selected instruments',this.state.selectedInstruments)
+      );
   }
+
   handleSeekingInstrumentChange = (event, index, seekingInstruments) => this.setState({seekingInstruments},()=>console.log('seeking instruments', this.state.seekingInstruments));
 
   menuItems(values) {
@@ -67,9 +76,11 @@ class UserInput extends React.Component{
           key={instrument.id}
           insetChildren={true}
           checked={values && values.indexOf(instrument) > -1}
-          value={instrument.name}
-          primaryText={instrument.name}
-        />
+          value={instrument}
+
+        >
+          {instrument.name}
+        </MenuItem>
       ));
     }
 }
