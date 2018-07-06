@@ -69,7 +69,7 @@ class UserInput extends React.Component{
 
   handleSeekingInstrumentChange = (event, index, seekingInstruments) => this.setState({seekingInstruments},()=>console.log('seeking instruments', this.state.seekingInstruments));
 
-  menuItems(values) {
+  menuItems (values) {
     if (this.props.instruments.length>0) {
       return this.props.instruments[0].map((instrument) => (
         <MenuItem
@@ -77,9 +77,8 @@ class UserInput extends React.Component{
           insetChildren={true}
           checked={values && values.indexOf(instrument) > -1}
           value={instrument}
-
+          primaryText={instrument.name}
         >
-          {instrument.name}
         </MenuItem>
       ));
     }
