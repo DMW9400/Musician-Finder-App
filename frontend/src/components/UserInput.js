@@ -50,17 +50,12 @@ class UserInput extends React.Component{
       }
     }, ()=> console.log("State changing: ", this.state))
   }
-  //
-  // handleSelectedInstrumentChange = (event, index, chosenInstruments) => this.setState({selectedInstruments: chosenInstruments},()=>console.log('selected instruments',this.state.selectedInstruments));
+
 
   handleSelectedInstrumentChange = (event, index, selectedInstruments) => {
-    // console.log('print event', event.currentTarget.value)
+
     console.log('print event', selectedInstruments)
 
-    // let chosenInstruments = this.props.instruments[0].filter(instrument =>
-    //    selectedInstruments.includes(instrument.name)
-    //  )
-    // console.log('selected instruments, not state:', chosenInstruments)
       this.setState(
         {selectedInstruments : selectedInstruments},
         ()=>console.log('selected instruments',this.state.selectedInstruments)
@@ -216,6 +211,8 @@ class UserInput extends React.Component{
           {/* <input type='text' onChange={this.handleChange} name='password'></input> */}
           <TextField
             name='password'
+            id='password-input'
+            type='password'
             onChange={this.handleChange}
             placeholder='               Your Password            '
           /></label>
