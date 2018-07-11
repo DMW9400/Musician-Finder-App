@@ -44,6 +44,8 @@ class UserInput extends React.Component{
   }
 
   handleChange = (event) => {
+
+
     this.setState({
       user:{
         ...this.state.user,
@@ -52,19 +54,34 @@ class UserInput extends React.Component{
     }, ()=> console.log("State changing: ", this.state))
   }
 
-  handleOtherChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
+
+  handleSelectedArtists = (event) => {
+    console.log(event.target.value)
+
+      this.setState({
+        [event.target.name]: event.target.value
+      },
+      // ()=> console.log('selectedArtists state: ', this.state.selectedArtists
+      () => this.convertArtistStringToArray(this.state.selectedArtists)
+    );
   }
 
+  convertArtistStringToArray = (artistString) => {
+    console.log('artistString: ', artistString)
+
+    let splitArtists = artistString.split()
+
+    console.log('Split artist String: ', splitArtists)
+
+  }
 
   handleSelectedInstrumentChange = (event, index, selectedInstruments) => {
 
     console.log('print event', selectedInstruments)
 
       this.setState(
-        {selectedInstruments : selectedInstruments},
+        {selectedInstruments : selectedInstruments
+        },
         ()=>console.log('selected instruments',this.state.selectedInstruments)
       );
   }
@@ -117,6 +134,7 @@ class UserInput extends React.Component{
 
 
 
+
   handleSubmit = (event) => {
     event.preventDefault()
     return fetch(`http://localhost:3000/api/v1/users`, {
@@ -145,7 +163,7 @@ class UserInput extends React.Component{
   }
 
   handleInstrumentChange = (event) => {
-    // Ask why this works!
+    // investigate
     let instrumentSelect= [].slice.call(event.target.selectedOptions).map(option =>{
       return {id: option.value, name: option.text}
     })
@@ -154,7 +172,7 @@ class UserInput extends React.Component{
     }, ()=> console.log(this.state.selectedInstruments))
   }
   handleSoughtInstrumentChange = (event) => {
-    // Ask why this works!
+
     let instrumentSelect= [].slice.call(event.target.selectedOptions).map(option =>{
       return {id: option.value, name: option.text}
     })
@@ -200,7 +218,6 @@ class UserInput extends React.Component{
 
 
   render(){
-    console.log('State: ', this.state)
     // console.log('Props!', this.props)
     const selectedInstruments = this.state.selectedInstruments
     const seekingInstruments = this.state.seekingInstruments
@@ -301,14 +318,15 @@ class UserInput extends React.Component{
               >
                 {this.menuItems(seekingInstruments)}
               </SelectField>
-              <label>Artists you are influenced by</label>
+              <label>Artists you are influenced by:</label>
               <TextField
                 name='selectedArtists'
-                onChange={this.handleOtherChange}
-                placeholder='    Enter names separated by commas         '
-              >
+                onChange={this.handleSelectedArtists}
+                multiLine='true'
+                style={{width:500}}
+                placeholder='                              Enter names separated by commas         '
+              />
 
-              </TextField>
           {/* <input type='submit'></input> */}
         </form>
         <FlatButton id='submit-button' onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />

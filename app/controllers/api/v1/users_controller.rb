@@ -25,9 +25,26 @@ user = User.create(user_params)
     relevant_user_s_instrument.update(:seeking => true)
   end
 
-  rel_artist_ids = params[:selectedArtists].map {|a| a["id"].to_i}
-  relevant_artists = Artist.all.select {|art| rel_artist_ids.include?(art[:id])}
-  relevant_artists.each {|relArt| user.artists << relArt}
+  # take in artist name as param - use regex to capitalize names properly, separate each name by the commas, do search of included names - use find or create by
+  # find artist by name -
+  # need find_or_create_by using names - if artist is new, use regex to capitalize properly
+
+  print 'TEEEEEST2', params[:selectedArtists]
+  # print 'TEEEEEeeeeeeeeeeeeeeeessttt'
+
+  returnArr = []
+  #
+  # params[:selectedArtists].map do |artist_name|
+  #
+  #  cap_name = artist_name.split().map(&:capitalize).join(' ')
+  #  returnArr.push(cap_name)
+  # end
+
+  # puts 'HHHHHHEEEEEERR'returnArr
+
+  # rel_artist_ids = params[:selectedArtists].map {|a| a["id"].to_i}
+  # relevant_artists = Artist.all.select {|art| rel_artist_ids.include?(art[:id])}
+  # relevant_artists.each {|relArt| user.artists << relArt}
 
   rel_genre_ids = params[:selectedGenres].map {|g| g["id"].to_i}
   relevant_genres = Genre.all.select {|gen| rel_genre_ids.include?(gen[:id])}
