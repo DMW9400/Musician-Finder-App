@@ -52,6 +52,12 @@ class UserInput extends React.Component{
     }, ()=> console.log("State changing: ", this.state))
   }
 
+  handleOtherChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
 
   handleSelectedInstrumentChange = (event, index, selectedInstruments) => {
 
@@ -194,7 +200,8 @@ class UserInput extends React.Component{
 
 
   render(){
-    console.log('Props!', this.props)
+    console.log('State: ', this.state)
+    // console.log('Props!', this.props)
     const selectedInstruments = this.state.selectedInstruments
     const seekingInstruments = this.state.seekingInstruments
     return(
@@ -265,7 +272,7 @@ class UserInput extends React.Component{
             onChange={this.handleChange}
               placeholder='   Your third song embed link            '
           /></label>
-    
+
           <label>Instruments you play:</label>
           <SelectField
             name='playedInstruments'
@@ -295,7 +302,11 @@ class UserInput extends React.Component{
                 {this.menuItems(seekingInstruments)}
               </SelectField>
               <label>Artists you are influenced by</label>
-              <TextField>
+              <TextField
+                name='selectedArtists'
+                onChange={this.handleOtherChange}
+                placeholder='    Enter names separated by commas         '
+              >
 
               </TextField>
           {/* <input type='submit'></input> */}
