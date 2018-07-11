@@ -5,6 +5,7 @@ import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import { Link } from 'react-router-dom'
+import { AutoComplete }   from 'material-ui';
 
 
 const selectStyle = {
@@ -264,24 +265,7 @@ class UserInput extends React.Component{
             onChange={this.handleChange}
               placeholder='   Your third song embed link            '
           /></label>
-          {/* <input type='text' onChange={this.handleChange} name='song_embed_3'></input> */}
-          {/* <label>Instruments</label> */}
-          {/* <select multiple onChange={this.handleInstrumentChange}>
-            {this.populateInstrumentSelect()}
-          </select>
-          <label>Seeking Instruments</label>
-          <select multiple onChange={this.handleSoughtInstrumentChange}>
-            {this.populateInstrumentSelect()}
-          </select>
-          <label>Artists</label>
-          <select multiple onChange={this.handleArtistChange}>
-            {this.populateArtistSelect()}
-          </select>
-          <label>Genres</label>
-          <select multiple onChange={this.handleGenreChange} width={10}>
-            {this.populateGenreSelect()}
-          </select>
-          {this.renderBorough()} */}
+    
           <label>Instruments you play:</label>
           <SelectField
             name='playedInstruments'
@@ -310,6 +294,10 @@ class UserInput extends React.Component{
               >
                 {this.menuItems(seekingInstruments)}
               </SelectField>
+              <label>Artists you are influenced by</label>
+              <TextField>
+
+              </TextField>
           {/* <input type='submit'></input> */}
         </form>
         <FlatButton id='submit-button' onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
