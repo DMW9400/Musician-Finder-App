@@ -222,7 +222,7 @@ class ProfileEdit extends React.Component{
     const seekingInstruments = this.state.seekingInstruments
     return(
       <div>
-        <h1 style={{marginTop:'120px',marginBottom:'60px'}}>Create your Profile</h1>
+        <h1 style={{marginTop:'120px',marginBottom:'60px'}}>Edit your Profile</h1>
         <form onSubmit={this.handleSubmit} className='User-Creation-Form'>
           <label style={{}}><span className="field-name">Name </span>
           {/* <input type='text' onChange={this.handleChange} name='name'></input> */}
@@ -334,7 +334,6 @@ class ProfileEdit extends React.Component{
                 placeholder='                              Enter genres separated by commas         '
               />
 
-          {/* <input type='submit'></input> */}
         </form>
         <FlatButton id='submit-button' onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
         <Link to="/login" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A', display:'block',padding:'20px' }}>Already a user? Login</Link>
@@ -353,4 +352,4 @@ const mapStateToProps = (state) => {
 }
 
 // export default ProfileEdit
-export default connect(mapStateToProps, {loginUser})(ProfileEdit)
+export default connect(mapStateToProps)(ProfileEdit)
