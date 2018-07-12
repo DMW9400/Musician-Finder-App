@@ -29,6 +29,7 @@ class Login extends React.Component{
   }
 
   render(){
+    console.log('login props: ', this.props)
     return(
       <div style={{display: 'table', width: '100%'}}>
         <h1 style={{marginTop:'400px'}}>Welcome to Musician Finder</h1>

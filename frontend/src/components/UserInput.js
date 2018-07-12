@@ -5,7 +5,7 @@ import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import { Link } from 'react-router-dom'
-import { AutoComplete }   from 'material-ui';
+import { loginUser } from '../actions'
 
 
 const selectStyle = {
@@ -217,7 +217,7 @@ class UserInput extends React.Component{
 
 
   render(){
-    // console.log('Props!', this.props)
+    console.log('Props!', this.props)
     const selectedInstruments = this.state.selectedInstruments
     const seekingInstruments = this.state.seekingInstruments
     return(
@@ -344,6 +344,7 @@ class UserInput extends React.Component{
 }
 const mapStateToProps = (state) => {
   return {
+    currentUser: state.currentUser,
     users: state.users,
     instruments: state.instruments,
     artists: state.artists,
