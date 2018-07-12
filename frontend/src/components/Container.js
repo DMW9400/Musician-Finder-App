@@ -8,6 +8,7 @@ import Profile from '../components/Profile'
 import MessagePage from '../components/MessagePage'
 import MyMessages from '../components/MyMessages'
 import FindMusician from '../components/FindMusician'
+import ProfileEdit from '../components/Edit'
 import { dispatchCurrentUser } from '../actions'
 
 
@@ -35,6 +36,7 @@ class Container extends React.Component{
           <Route exact path="/base/users/:id/message" component={MessagePage}/>
           <Route exact path="/base/my_messages" component={MyMessages}/>
           <Route exact path="/base/findMusician" component={FindMusician}/>
+          <Route exact path="/base/edit" component={ProfileEdit}/>
 
         </Switch>
       </div>
