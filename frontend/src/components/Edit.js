@@ -224,65 +224,66 @@ class ProfileEdit extends React.Component{
         <div>
           <h1 style={{marginTop:'120px',marginBottom:'60px'}}>Edit your Profile</h1>
           <form onSubmit={this.handleSubmit} className='User-Creation-Form'>
-            <label style={{}}><span className="field-name">Name </span>
-            {/* <input type='text' onChange={this.handleChange} name='name'></input> */}
-            <label>Current Name: {this.props.currentUser.name}</label>
+
+            <label style={{marginRight:'20px'}}><span className="field-name">Current Name: {this.props.currentUser.name}  </span>
             <TextField
               name='name'
               onChange={this.handleChange}
-              placeholder='                       Your Name            '
+              placeholder='                       New Name            '
             /></label>
-            <label style={{}}><span className="field-name">Password  </span>
-            {/* <input type='text' onChange={this.handleChange} name='password'></input> */}
+
+
+            <label style={{}}><span className="field-name"> Password  </span>
             <TextField
               name='password'
               id='password-input'
               type='password'
               onChange={this.handleChange}
-              placeholder='               Your Password            '
+              placeholder='               Confirm Password            '
             /></label>
+
             <label> <span className="field-name">Image Url</span>
-            {/* <input type='text' onChange={this.handleChange} name='image_url'></input> */}
             <TextField
               name='image_url'
               onChange={this.handleChange}
               placeholder='        URL for your profile picture            '
             /></label>
+
             <label className="field-name"><span className="field-name">Age</span>
-            {/* <input type='text' onChange={this.handleChange} name='age'></input> */}
             <TextField
               name='age'
               onChange={this.handleChange}
               placeholder='                              Your Age            '
             /></label>
+
             <label className="field-name"><span className="field-name">Gender</span>
-            {/* <input type='text' onChange={this.handleChange} name='gender'></input> */}
             <TextField
               name='gender'
               onChange={this.handleChange}
               placeholder='                        Your Gender            '
             /></label>
+
             <label className="field-name"><span className="field-name">Top Song URL</span>
-            {/* <input type='text' onChange={this.handleChange} name='top_song_url'></input> */}
             <TextField
               name='top_song_url'
               onChange={this.handleChange}
               placeholder='          Link for your top song            '
             /></label>
+
             <label className="field-name"><span className="field-name">Song Embed One</span>
             <TextField
               name='song_embed_1'
               onChange={this.handleChange}
               placeholder='    Your first song embed link            '
             /></label>
-            {/* <input type='text' onChange={this.handleChange} name='song_embed_1'></input> */}
+
             <label className="field-name"><span className="field-name">Song Embed Two</span>
             <TextField
               name='song_embed_2'
               onChange={this.handleChange}
               placeholder=' Your second song embed link            '
             /></label>
-            {/* <input type='text' onChange={this.handleChange} name='song_embed_2'></input> */}
+
             <label className="field-name"><span className="field-name">Song Embed Three</span>
             <TextField
               name='song_embed_3'
