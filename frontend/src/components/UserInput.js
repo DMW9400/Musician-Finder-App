@@ -56,24 +56,31 @@ class UserInput extends React.Component{
 
 
   handleSelectedArtists = (event) => {
-    console.log(event.target.value)
+    console.log('event value:', event.target.value)
+
+    // split by comma
+    let splitArtists = event.target.value.split(',')
+    // remove any spaces
+    let spaceChecked = splitArtists.map(artistName => {
+      return artistName.trim()
+    })
+    // capitalize each word per entry
+    let capitalizedArtists = spaceChecked.map(capArtist =>{
+      splitArtists = capArtist.split(' ')
+      return splitArtists.map(eachWord => {
+        eachWord[0].toUpperCase() + eachWord.slice(1)
+        console.log('eachWord[0]', eachWord[0])
+        }
+      )
+    })
 
       this.setState({
-        [event.target.name]: event.target.value
+        [event.target.name]: capitalizedArtists
       },
-      // ()=> console.log('selectedArtists state: ', this.state.selectedArtists
-      () => this.convertArtistStringToArray(this.state.selectedArtists)
+      ()=> console.log('selectedArtists State: ', this.state.selectedArtists)
     );
   }
 
-  convertArtistStringToArray = (artistString) => {
-    console.log('artistString: ', artistString)
-
-    let splitArtists = artistString.split()
-
-    console.log('Split artist String: ', splitArtists)
-
-  }
 
   handleSelectedInstrumentChange = (event, index, selectedInstruments) => {
 
