@@ -55,7 +55,7 @@ class UserInput extends React.Component{
   }
 
 
-  handleSelectedArtists = (event) => {
+  handleSelectedArtistsOrGenres = (event) => {
     console.log('event value:', event.target.value)
 
     // split by comma
@@ -69,7 +69,7 @@ class UserInput extends React.Component{
       this.setState({
         [event.target.name]: spaceChecked
       },
-      ()=> console.log('selectedArtists State: ', this.state.selectedArtists)
+      ()=> console.log('State: ', this.state)
     );
   }
 
@@ -320,10 +320,18 @@ class UserInput extends React.Component{
               <label>Artists you are influenced by:</label>
               <TextField
                 name='selectedArtists'
-                onChange={this.handleSelectedArtists}
+                onChange={this.handleSelectedArtistsOrGenres}
                 multiLine='true'
                 style={{width:500}}
                 placeholder='                              Enter names separated by commas         '
+              />
+              <label>Genres you listen to:</label>
+              <TextField
+                name='selectedGenres'
+                onChange={this.handleSelectedArtistsOrGenres}
+                multiLine='true'
+                style={{width:500}}
+                placeholder='                              Enter genres separated by commas         '
               />
 
           {/* <input type='submit'></input> */}

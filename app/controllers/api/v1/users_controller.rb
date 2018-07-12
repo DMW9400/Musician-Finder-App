@@ -25,13 +25,6 @@ def create
     relevant_user_s_instrument.update(:seeking => true)
   end
 
-  # take in artist name as param - use regex to capitalize names properly, separate each name by the commas, do search of included names - use find or create by
-  # find artist by name -
-  # need find_or_create_by using names - if artist is new, use regex to capitalize properly
-
-  print 'ArtistParams', params[:selectedArtists]
-
-
   capitalized_artists = []
   params[:selectedArtists].map do |artist_name|
    cap_name = artist_name.split().map(&:capitalize).join(' ')
@@ -43,10 +36,18 @@ def create
     artistObj = Artist.find_or_create_by(name: artist)
     user.artists << artistObj
   end
-  
-  rel_genre_ids = params[:selectedGenres].map {|g| g["id"].to_i}
-  relevant_genres = Genre.all.select {|gen| rel_genre_ids.include?(gen[:id])}
-  relevant_genres.each {|relGen| user.genres << relGen}
+
+  capitalized_genres = []
+  params[:selectedGenres].map do |genre_name|
+    cap_genre = genre_name.split().map(&:capitalize).join(' ')
+    capitalized_genres.push(cap_genre)
+  end
+
+  relevant_genre_objects_arr= []
+    capitalized_genres.each do |genre|
+      genreObj = Genre.find_or_create_by(name: genre)
+      user.genres << genreObj
+  end
 
 
 
