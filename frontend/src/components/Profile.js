@@ -7,7 +7,7 @@ class Profile extends React.Component {
 
   renderPlayedInstruments(){
     if (this.props.users.length > 0){
-      let relUser = this.findById()
+      let relUser = this.props.currentUser
       return (
         <ul>
           {relUser.played_instruments.map(instrument => <li key={instrument.id}>{instrument.name}</li>)}
@@ -17,7 +17,7 @@ class Profile extends React.Component {
   }
   renderSeekingInstruments(){
     if (this.props.users.length > 0){
-      let relUser = this.findById()
+        let relUser = this.props.currentUser
       return (
         <ul>
           {relUser.seeking_instruments.map(instrument => <li key={instrument.id}>{instrument.name}</li>)}
@@ -27,7 +27,7 @@ class Profile extends React.Component {
   }
   renderArtistsLiked(){
     if (this.props.users.length > 0){
-      let relUser = this.findById()
+        let relUser = this.props.currentUser
       return (
         <ul>
           {relUser.artists.map(artist => <li key={artist.id}>{artist.name}</li>)}
@@ -37,7 +37,7 @@ class Profile extends React.Component {
   }
   renderGenresLiked(){
     if (this.props.users.length > 0){
-      let relUser = this.findById()
+      let relUser = this.props.currentUser
       return (
         <ul>
           {relUser.genres.map(genre => <li key={genre.id}>{genre.name}</li>)}
@@ -46,29 +46,29 @@ class Profile extends React.Component {
     }
   }
 
-  findById = () => {
-       if (this.props.users.length > 0){
-         let found = this.props.users[0].find((user) => {
-          return user.id === parseInt(this.props.match.params.id)
-        })
-        return found
-       }
+  // findById = () => {
+  //      if (this.props.users.length > 0){
+  //        let found = this.props.users[0].find((user) => {
+  //         return user.id === parseInt(this.props.match.params.id)
+  //       })
+  //       return found
+  //      }
+  // }
+  selfPage = () => {
+
   }
+
   renderPage = () => {
-    let relUser = this.findById()
     if (this.props.users.length > 0){
           return (
             <div id="container-div">
               <div className='profile-user-div' style={{marginTop:'80px'}}>
-                <h1>{relUser.name}</h1>
-                <img className='profile' src={relUser.image_url} alt='' ></img>
+                <h1>{this.props.currentUser.name}</h1>
+                <img className='profile' src={this.props.currentUser.image_url} alt='' ></img>
                 <div align='center' className="user-info">
-                  <p>Age: {relUser.age}</p>
-                  <p>Gender: {relUser.gender}</p>
-                  <p>Borough: {relUser.borough}</p>
-                  <Link to={`/base/users/${relUser.id}/message`} style={{display:'block', margin:'10px',fontWeight: 'bold',textDecoration: 'none', borderBottom: 'blue', color:'#546E7A'}}>
-                    Message {relUser.name}
-                  </Link>
+                  <p>Age: {this.props.currentUser.age}</p>
+                  <p>Gender: {this.props.currentUser.gender}</p>
+                  <p>Borough: {this.props.currentUser.borough}</p>
                 </div>
               </div>
               <div className='instruments-div' style={{marginTop:'80px'}}>
@@ -91,7 +91,7 @@ class Profile extends React.Component {
 
               </div>
               <div id='soundCloud-iFrame'>
-                <iframe title ='' width="65%" height="150" scrolling="no" frameBorder="no" allow="autoplay" src={relUser.top_song_url}></iframe>
+                <iframe title ='' width="65%" height="150" scrolling="no" frameBorder="no" allow="autoplay" src={this.props.currentUser.top_song_url}></iframe>
               </div>
             </div>
           )
@@ -108,7 +108,7 @@ class Profile extends React.Component {
   }
 
   render(){
-    console.log("Profile Props:", this.props)
+    console.log("Profile Props:", this.props.currentUser)
     if (this.props.userInstruments.length === 0) {
       return <div>Loading</div>
     }
