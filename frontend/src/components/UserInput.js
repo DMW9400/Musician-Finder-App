@@ -65,17 +65,9 @@ class UserInput extends React.Component{
       return artistName.trim()
     })
     // capitalize each word per entry
-    let capitalizedArtists = spaceChecked.map(capArtist =>{
-      splitArtists = capArtist.split(' ')
-      return splitArtists.map(eachWord => {
-        eachWord[0].toUpperCase() + eachWord.slice(1)
-        console.log('eachWord[0]', eachWord[0])
-        }
-      )
-    })
 
       this.setState({
-        [event.target.name]: capitalizedArtists
+        [event.target.name]: spaceChecked
       },
       ()=> console.log('selectedArtists State: ', this.state.selectedArtists)
     );

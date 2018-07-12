@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
 def create
-user = User.create(user_params)
+  user = User.create(user_params)
 
   rel_inst_ids = params[:selectedInstruments].map {|i| i["id"].to_i}
   relevant_instruments = Instrument.all.select {|inst| rel_inst_ids.include?(inst[:id])}
@@ -29,23 +29,21 @@ user = User.create(user_params)
   # find artist by name -
   # need find_or_create_by using names - if artist is new, use regex to capitalize properly
 
-  print 'TEEEEEST2', params[:selectedArtists]
-  # print 'TEEEEEeeeeeeeeeeeeeeeessttt'
+  print 'ArtistParams', params[:selectedArtists]
 
-  returnArr = []
-  #
-  # params[:selectedArtists].map do |artist_name|
-  #
-  #  cap_name = artist_name.split().map(&:capitalize).join(' ')
-  #  returnArr.push(cap_name)
-  # end
 
-  # puts 'HHHHHHEEEEEERR'returnArr
+  capitalized_artists = []
+  params[:selectedArtists].map do |artist_name|
+   cap_name = artist_name.split().map(&:capitalize).join(' ')
+   capitalized_artists.push(cap_name)
+  end
 
-  # rel_artist_ids = params[:selectedArtists].map {|a| a["id"].to_i}
-  # relevant_artists = Artist.all.select {|art| rel_artist_ids.include?(art[:id])}
-  # relevant_artists.each {|relArt| user.artists << relArt}
-
+  relevant_artist_objects_arr = []
+  capitalized_artists.each do |artist|
+    artistObj = Artist.find_or_create_by(name: artist)
+    user.artists << artistObj
+  end
+  
   rel_genre_ids = params[:selectedGenres].map {|g| g["id"].to_i}
   relevant_genres = Genre.all.select {|gen| rel_genre_ids.include?(gen[:id])}
   relevant_genres.each {|relGen| user.genres << relGen}
