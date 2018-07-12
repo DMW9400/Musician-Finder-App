@@ -27,7 +27,7 @@ class Navbar extends React.Component {
     if (!this.state.currentUser){
       return (<div>Loading</div>)
     }else {
-      this.state.curentUser ?  console.log('current user: ', this.state.currentUser) : console.log('No user')
+      this.state.curentUser ?  console.log('current user: ', this.state.currentUser) : console.log('No user', this.state.currentUser)
       const linkstyle = {textDecoration: 'none', borderBottom: 'blue', color:'#546E7A', margin:'10px', display:'inline-block'}
       return(
         <header className="nav-wrapper" style={{backgroundColor:'#BDBDBD', margin:'0px',paddingTop: '0px'}} >

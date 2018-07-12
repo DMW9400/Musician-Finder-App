@@ -43,9 +43,17 @@ class UserInput extends React.Component{
     values:[]
   }
 
+
+  componentWillReceiveProps(nextProps){
+    this.setState({
+      currentUser: nextProps.currentUser
+    })
+    if (nextProps.currentUser){
+      this.props.history.push('/base')
+    }
+  }
+
   handleChange = (event) => {
-
-
     this.setState({
       user:{
         ...this.state.user,
@@ -136,6 +144,9 @@ class UserInput extends React.Component{
 
   handleSubmit = (event) => {
     event.preventDefault()
+
+    this.props.loginUser(this.state.user.name, this.state.user.password)
+
     return fetch(`http://localhost:3000/api/v1/users`, {
       method: 'POST',
       headers:{
@@ -352,4 +363,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(UserInput)
+export default connect(mapStateToProps, {loginUser})(UserInput)

@@ -12,7 +12,7 @@ const defaultState = {
 export function rootReducer(state=defaultState,action){
   switch(action.type){
     case "SET_USER":
-      console.log("SETTING USER")
+      console.log("SETTING USER", defaultState)
       return {...state, currentUser: action.payload}
     case "FETCH_USERS":
       return {...state, users: [...state.users, action.payload]}
