@@ -215,95 +215,82 @@ class ProfileEdit extends React.Component{
     )
   }
 
-
-  render(){
-    console.log('Props!', this.props)
+  renderEditPage = () =>{
     const selectedInstruments = this.state.selectedInstruments
     const seekingInstruments = this.state.seekingInstruments
-    return(
-      <div>
-        <h1 style={{marginTop:'120px',marginBottom:'60px'}}>Edit your Profile</h1>
-        <form onSubmit={this.handleSubmit} className='User-Creation-Form'>
-          <label style={{}}><span className="field-name">Name </span>
-          {/* <input type='text' onChange={this.handleChange} name='name'></input> */}
-          <TextField
-            name='name'
-            onChange={this.handleChange}
-            placeholder='                       Your Name            '
-          /></label>
-          <label style={{}}><span className="field-name">Password  </span>
-          {/* <input type='text' onChange={this.handleChange} name='password'></input> */}
-          <TextField
-            name='password'
-            id='password-input'
-            type='password'
-            onChange={this.handleChange}
-            placeholder='               Your Password            '
-          /></label>
-          <label> <span className="field-name">Image Url</span>
-          {/* <input type='text' onChange={this.handleChange} name='image_url'></input> */}
-          <TextField
-            name='image_url'
-            onChange={this.handleChange}
-            placeholder='        URL for your profile picture            '
-          /></label>
-          <label className="field-name"><span className="field-name">Age</span>
-          {/* <input type='text' onChange={this.handleChange} name='age'></input> */}
-          <TextField
-            name='age'
-            onChange={this.handleChange}
-            placeholder='                              Your Age            '
-          /></label>
-          <label className="field-name"><span className="field-name">Gender</span>
-          {/* <input type='text' onChange={this.handleChange} name='gender'></input> */}
-          <TextField
-            name='gender'
-            onChange={this.handleChange}
-            placeholder='                        Your Gender            '
-          /></label>
-          <label className="field-name"><span className="field-name">Top Song URL</span>
-          {/* <input type='text' onChange={this.handleChange} name='top_song_url'></input> */}
-          <TextField
-            name='top_song_url'
-            onChange={this.handleChange}
-            placeholder='          Link for your top song            '
-          /></label>
-          <label className="field-name"><span className="field-name">Song Embed One</span>
-          <TextField
-            name='song_embed_1'
-            onChange={this.handleChange}
-            placeholder='    Your first song embed link            '
-          /></label>
-          {/* <input type='text' onChange={this.handleChange} name='song_embed_1'></input> */}
-          <label className="field-name"><span className="field-name">Song Embed Two</span>
-          <TextField
-            name='song_embed_2'
-            onChange={this.handleChange}
-            placeholder=' Your second song embed link            '
-          /></label>
-          {/* <input type='text' onChange={this.handleChange} name='song_embed_2'></input> */}
-          <label className="field-name"><span className="field-name">Song Embed Three</span>
-          <TextField
-            name='song_embed_3'
-            onChange={this.handleChange}
-              placeholder='   Your third song embed link            '
-          /></label>
 
-          <label>Instruments you play:</label>
-          <SelectField
-            name='playedInstruments'
-            menuItemStyle = {menuItem}
-            labelStyle={textColor}
-            selectedMenuItemStyle={textColor}
-            style={selectStyle}
-            multiple={true}
-            hintText="Select an Instrument"
-            value={selectedInstruments}
-            onChange={this.handleSelectedInstrumentChange}
-            >
-              {this.menuItems(selectedInstruments)}
-            </SelectField>
-            <label>Instruments you want collaborators to play:</label>
+    if (this.props.currentUser){
+      return(
+        <div>
+          <h1 style={{marginTop:'120px',marginBottom:'60px'}}>Edit your Profile</h1>
+          <form onSubmit={this.handleSubmit} className='User-Creation-Form'>
+            <label style={{}}><span className="field-name">Name </span>
+            {/* <input type='text' onChange={this.handleChange} name='name'></input> */}
+            <label>Current Name: {this.props.currentUser.name}</label>
+            <TextField
+              name='name'
+              onChange={this.handleChange}
+              placeholder='                       Your Name            '
+            /></label>
+            <label style={{}}><span className="field-name">Password  </span>
+            {/* <input type='text' onChange={this.handleChange} name='password'></input> */}
+            <TextField
+              name='password'
+              id='password-input'
+              type='password'
+              onChange={this.handleChange}
+              placeholder='               Your Password            '
+            /></label>
+            <label> <span className="field-name">Image Url</span>
+            {/* <input type='text' onChange={this.handleChange} name='image_url'></input> */}
+            <TextField
+              name='image_url'
+              onChange={this.handleChange}
+              placeholder='        URL for your profile picture            '
+            /></label>
+            <label className="field-name"><span className="field-name">Age</span>
+            {/* <input type='text' onChange={this.handleChange} name='age'></input> */}
+            <TextField
+              name='age'
+              onChange={this.handleChange}
+              placeholder='                              Your Age            '
+            /></label>
+            <label className="field-name"><span className="field-name">Gender</span>
+            {/* <input type='text' onChange={this.handleChange} name='gender'></input> */}
+            <TextField
+              name='gender'
+              onChange={this.handleChange}
+              placeholder='                        Your Gender            '
+            /></label>
+            <label className="field-name"><span className="field-name">Top Song URL</span>
+            {/* <input type='text' onChange={this.handleChange} name='top_song_url'></input> */}
+            <TextField
+              name='top_song_url'
+              onChange={this.handleChange}
+              placeholder='          Link for your top song            '
+            /></label>
+            <label className="field-name"><span className="field-name">Song Embed One</span>
+            <TextField
+              name='song_embed_1'
+              onChange={this.handleChange}
+              placeholder='    Your first song embed link            '
+            /></label>
+            {/* <input type='text' onChange={this.handleChange} name='song_embed_1'></input> */}
+            <label className="field-name"><span className="field-name">Song Embed Two</span>
+            <TextField
+              name='song_embed_2'
+              onChange={this.handleChange}
+              placeholder=' Your second song embed link            '
+            /></label>
+            {/* <input type='text' onChange={this.handleChange} name='song_embed_2'></input> */}
+            <label className="field-name"><span className="field-name">Song Embed Three</span>
+            <TextField
+              name='song_embed_3'
+              onChange={this.handleChange}
+                placeholder='   Your third song embed link            '
+            /></label>
+
+            <label>Instruments you play:</label>
             <SelectField
               name='playedInstruments'
               menuItemStyle = {menuItem}
@@ -312,31 +299,62 @@ class ProfileEdit extends React.Component{
               style={selectStyle}
               multiple={true}
               hintText="Select an Instrument"
-              value={seekingInstruments}
-              onChange={this.handleSeekingInstrumentChange}
+              value={selectedInstruments}
+              onChange={this.handleSelectedInstrumentChange}
               >
-                {this.menuItems(seekingInstruments)}
+                {this.menuItems(selectedInstruments)}
               </SelectField>
-              <label>Artists you are influenced by:</label>
-              <TextField
-                name='selectedArtists'
-                onChange={this.handleSelectedArtistsOrGenres}
-                multiLine='true'
-                style={{width:500}}
-                placeholder='                              Enter names separated by commas         '
-              />
-              <label>Genres you listen to:</label>
-              <TextField
-                name='selectedGenres'
-                onChange={this.handleSelectedArtistsOrGenres}
-                multiLine='true'
-                style={{width:500}}
-                placeholder='                              Enter genres separated by commas         '
-              />
+              <label>Instruments you want collaborators to play:</label>
+              <SelectField
+                name='playedInstruments'
+                menuItemStyle = {menuItem}
+                labelStyle={textColor}
+                selectedMenuItemStyle={textColor}
+                style={selectStyle}
+                multiple={true}
+                hintText="Select an Instrument"
+                value={seekingInstruments}
+                onChange={this.handleSeekingInstrumentChange}
+                >
+                  {this.menuItems(seekingInstruments)}
+                </SelectField>
+                <label>Artists you are influenced by:</label>
+                <TextField
+                  name='selectedArtists'
+                  onChange={this.handleSelectedArtistsOrGenres}
+                  multiLine='true'
+                  style={{width:500}}
+                  placeholder='                              Enter names separated by commas         '
+                />
+                <label>Genres you listen to:</label>
+                <TextField
+                  name='selectedGenres'
+                  onChange={this.handleSelectedArtistsOrGenres}
+                  multiLine='true'
+                  style={{width:500}}
+                  placeholder='                              Enter genres separated by commas         '
+                />
 
-        </form>
-        <FlatButton id='submit-button' onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
-        <Link to="/login" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A', display:'block',padding:'20px' }}>Already a user? Login</Link>
+          </form>
+          <FlatButton id='submit-button' onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
+          <Link to="/login" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A', display:'block',padding:'20px' }}>Already a user? Login</Link>
+        </div>
+      )
+    }
+    else{
+      return <h1>Loading</h1>
+    }
+  }
+
+
+  render(){
+    console.log('Props!', this.props.currentUser)
+    const selectedInstruments = this.state.selectedInstruments
+    const seekingInstruments = this.state.seekingInstruments
+
+    return(
+      <div>
+        {this.renderEditPage()}
       </div>
     )
   }
