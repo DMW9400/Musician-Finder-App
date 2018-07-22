@@ -67,8 +67,9 @@ end
 
 
 def update
-  @recipe.update(recipe_params)
-  render json: @recipe, status: 200
+  @user = current_user
+  @user.update(user_params)
+  render json: @user, status: 200
 end
 
 def destroy
