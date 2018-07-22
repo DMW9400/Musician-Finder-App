@@ -18,15 +18,16 @@ export const loginUser = (username, password) => {
 }
 
 export const editUser = (username, password) => {
-  return function(dispatch){
-    fetches.editFetch(username, password)
-    .then(json => {
-      dispatch({
-        type: "SET_USER",
-        payload: json
-      })
-    })
-  }
+  // return function(dispatch){
+  //   fetches.editFetch(username, password)
+  //   .then(json => {
+  //     dispatch({
+  //       type: "SET_USER",
+  //       payload: json
+  //     })
+  //   })
+  // }
+  return fetches.editFetch(username,password)
 }
 
 export const dispatchCurrentUser = () => {

@@ -134,7 +134,7 @@ class ProfileEdit extends React.Component{
   handleSubmit = (event) => {
     event.preventDefault()
 
-    this.props.editUser(this.state.user.name, this.state.user.password)
+    // this.props.editUser(this.state.user.name, this.state.user.password)
 
     return fetch(`http://localhost:3000/api/v1/users/:id`, {
       method: 'PATCH',

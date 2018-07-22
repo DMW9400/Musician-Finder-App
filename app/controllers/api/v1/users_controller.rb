@@ -67,8 +67,8 @@ end
 
 
 def update
-  @user ||= User.find_by(id: token_user_id)
-  puts 'HEEEEEEEEEERRRREEEEEE', @user
+  @user ||= User.find_by(id: params[:id])
+  puts 'ID:', @user.id, 'Name:', @user.name
   @user.update(user_params)
   render json: @user, status: 200
 end
