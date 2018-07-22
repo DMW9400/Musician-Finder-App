@@ -17,6 +17,12 @@ export const loginUser = (username, password) => {
   }
 }
 
+export const editUser = (username, password) => {
+  return function(dispatch){
+    
+  }
+}
+
 export const dispatchCurrentUser = () => {
   return function(dispatch){
     fetches.fetchCurrentUser()

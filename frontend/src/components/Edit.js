@@ -137,7 +137,7 @@ class ProfileEdit extends React.Component{
     this.props.loginUser(this.state.user.name, this.state.user.password)
 
     return fetch(`http://localhost:3000/api/v1/users`, {
-      method: 'POST',
+      method: 'PATCH',
       headers:{
         'Accept': 'application/json',
         'Content-Type':'application/json'
@@ -215,7 +215,8 @@ class ProfileEdit extends React.Component{
     )
   }
 
-  renderEditPage = () =>{
+  renderEditPage = () => {
+    console.log('edit props', this.props)
     const selectedInstruments = this.state.selectedInstruments
     const seekingInstruments = this.state.seekingInstruments
 
@@ -349,7 +350,6 @@ class ProfileEdit extends React.Component{
 
 
   render(){
-    console.log('Props!', this.props.currentUser)
     const selectedInstruments = this.state.selectedInstruments
     const seekingInstruments = this.state.seekingInstruments
 
@@ -371,4 +371,4 @@ const mapStateToProps = (state) => {
 }
 
 // export default ProfileEdit
-export default connect(mapStateToProps)(ProfileEdit)
+export default connect(mapStateToProps, {loginUser})(ProfileEdit)

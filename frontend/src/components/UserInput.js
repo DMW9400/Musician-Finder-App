@@ -246,7 +246,6 @@ class UserInput extends React.Component{
 
 
   render(){
-    console.log('Props!', this.props)
     const selectedInstruments = this.state.selectedInstruments
     const seekingInstruments = this.state.seekingInstruments
     return(
