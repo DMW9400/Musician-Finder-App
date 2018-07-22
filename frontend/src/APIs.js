@@ -13,6 +13,9 @@ const fetches = {
         })
     }).then(res => res.json())
   },
+  editFetch: (username,password) => {
+    return fetch('http://localhost:3000/api/v1/')
+  },
   fetchCurrentUser: () => {
     return fetch('http://localhost:3000/api/v1/active_user', {
       method: 'POST',

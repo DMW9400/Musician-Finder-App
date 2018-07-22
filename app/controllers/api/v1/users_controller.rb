@@ -6,10 +6,8 @@ class Api::V1::UsersController < ApplicationController
     render json: users, status: 200
   end
 
-def create
+  def create
   user = User.create(user_params)
-
-
 
   rel_inst_ids = params[:selectedInstruments].map {|i| i["id"].to_i}
   relevant_instruments = Instrument.all.select {|inst| rel_inst_ids.include?(inst[:id])}
@@ -50,8 +48,6 @@ def create
       genreObj = Genre.find_or_create_by(name: genre)
       user.genres << genreObj
   end
-
-
 
  render json: {user: user, instruments: user.instruments} , status: 201
 end
