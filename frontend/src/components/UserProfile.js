@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-class Profile extends React.Component {
+class UserProfile extends React.Component {
 
   renderPlayedInstruments(){
     if (this.props.users.length > 0){
@@ -51,6 +51,9 @@ class Profile extends React.Component {
         })
         return found
        }
+  }
+  selfPage = () => {
+
   }
 
   renderPage = () => {
@@ -126,4 +129,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Profile)
+export default connect(mapStateToProps)(UserProfile)

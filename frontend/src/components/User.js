@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const User = (props) => {
-  console.log(props)
+  console.log('User page props:', props)
 
     return(
       <div className='styled-div' >
