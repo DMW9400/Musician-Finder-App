@@ -35,7 +35,7 @@ class Navbar extends React.Component {
               <li className='nav'><Link to="/base/users" style={linkstyle}>View Users</Link></li>
               <li className='nav'><Link to="/base/findmusician" style={linkstyle}>Find Musician</Link></li>
               <li className='nav'><a href="/base/my_messages" style={linkstyle}>My Messages</a></li>
-              {/* <li className='nav'><a href="/base/edit" style={linkstyle}>Edit Profile</a></li> */}
+              <li className='nav'><a href="/base/edit" style={linkstyle}>Edit Profile</a></li>
               <FlatButton onClick={this.logout} label="Logout" backgroundColor="#90A4AE" />
             </ul>
           </nav>

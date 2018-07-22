@@ -66,12 +66,12 @@ def user_instruments
 end
 
 
-# def update
-#   @user ||= User.find_by(id: token_user_id)
-#   puts 'HEEEEEEEEEERRRREEEEEE', @user
-#   @user.update(user_params)
-#   render json: @user, status: 200
-# end
+def update
+  @user ||= User.find_by(id: token_user_id)
+  puts 'HEEEEEEEEEERRRREEEEEE', @user
+  @user.update(user_params)
+  render json: @user, status: 200
+end
 
 def destroy
   recipeId = @recipe.id
