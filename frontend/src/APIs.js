@@ -14,7 +14,12 @@ const fetches = {
     }).then(res => res.json())
   },
   editFetch: (username,password) => {
-    return fetch('http://localhost:3000/api/v1/')
+    return fetch('http://localhost:3000/api/v1/users/:id', {
+      method: 'PATCH',
+      headers: {
+        'authorization': localStorage.getItem('token')
+      }
+    }).then(res => res.json())
   },
   fetchCurrentUser: () => {
     return fetch('http://localhost:3000/api/v1/active_user', {
