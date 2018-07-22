@@ -135,15 +135,14 @@ class ProfileEdit extends React.Component{
     event.preventDefault()
 
     // this.props.editUser(this.state.user.name, this.state.user.password)
-
-    return fetch(`http://localhost:3000/api/v1/users/:id`, {
+    // debugger
+    return fetch(`http://localhost:3000/api/v1/users/${this.props.currentUser.id}`, {
       method: 'PATCH',
       headers:{
         'Accept': 'application/json',
         'Content-Type':'application/json'
       },
       body: JSON.stringify({
-        id: this.props.currentUser.id,
         name: this.state.user.name,
         password: this.state.user.password,
         age: this.state.user.age,
