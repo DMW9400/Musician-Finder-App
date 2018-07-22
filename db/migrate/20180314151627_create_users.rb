@@ -14,5 +14,6 @@ class CreateUsers < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    # SELECT setval('users_id_seq', (SELECT MAX(id) from "users"));
   end
 end
