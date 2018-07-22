@@ -1,7 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import fetches from '../APIs'
-import User from './User'
 import { Link } from 'react-router-dom'
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';

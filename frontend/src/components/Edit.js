@@ -350,8 +350,6 @@ class ProfileEdit extends React.Component{
 
 
   render(){
-    const selectedInstruments = this.state.selectedInstruments
-    const seekingInstruments = this.state.seekingInstruments
 
     return(
       <div>

@@ -366,7 +366,6 @@ class UserInput extends React.Component{
         </form>
         <FlatButton id='submit-button' onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
         <Link to="/login" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A', display:'block',padding:'20px' }}>Already a user? Login</Link>
-        {/* {this.redirectUser()} */}
       </div>
     )
   }

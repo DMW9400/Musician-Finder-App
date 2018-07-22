@@ -1,8 +1,6 @@
 import React from 'react'
-import User from './User'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router'
 import FlatButton from 'material-ui/FlatButton';
 
 class Navbar extends React.Component {
@@ -52,6 +50,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(Navbar)
-
-// Link to not working immediately
-{/* <Link to="/base/my_messages">My Messages</Link> */}

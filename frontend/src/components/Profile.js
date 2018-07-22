@@ -1,7 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import fetches from '../APIs'
-import { Link } from 'react-router-dom'
 
 class Profile extends React.Component {
 

@@ -10,6 +10,3 @@ const Welcome = () => {
   )
 }
 export default Welcome
-
-
-{/* <li><a href="/create-user">Create Profile </a></li> */}
