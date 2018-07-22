@@ -5,7 +5,7 @@ import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import { Link } from 'react-router-dom'
-import { loginUser } from '../actions'
+import { editUser } from '../actions'
 
 const selectStyle = {
   width: '70%',
@@ -134,9 +134,9 @@ class ProfileEdit extends React.Component{
   handleSubmit = (event) => {
     event.preventDefault()
 
-    this.props.loginUser(this.state.user.name, this.state.user.password)
+    this.props.editUser(this.state.user.name, this.state.user.password)
 
-    return fetch(`http://localhost:3000/api/v1/users`, {
+    return fetch(`http://localhost:3000/api/v1/users/:id`, {
       method: 'PATCH',
       headers:{
         'Accept': 'application/json',
@@ -371,4 +371,4 @@ const mapStateToProps = (state) => {
 }
 
 // export default ProfileEdit
-export default connect(mapStateToProps, {loginUser})(ProfileEdit)
+export default connect(mapStateToProps, {editUser})(ProfileEdit)
