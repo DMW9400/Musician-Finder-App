@@ -49,7 +49,24 @@ class UserInput extends React.Component{
       currentUser: nextProps.currentUser
     })
     if (nextProps.currentUser){
+      //
+      console.log('WILL RECEIVE PROPS')
       this.props.history.push('/base')
+    }
+
+  }
+
+  redirectUser(){
+    debugger
+    if (this.localStorage){
+      if (this.localStorage.length > 0 ){
+        //
+        console.log('REDIRECT')
+        this.props.history.push('/base')
+      }
+      else{
+        console.log('No Token')
+      }
     }
   }
 
@@ -144,10 +161,7 @@ class UserInput extends React.Component{
 
   handleSubmit = (event) => {
     event.preventDefault()
-
-    this.props.loginUser(this.state.user.name, this.state.user.password)
-
-    return fetch(`http://localhost:3000/api/v1/users`, {
+    fetch(`http://localhost:3000/api/v1/users`, {
       method: 'POST',
       headers:{
         'Accept': 'application/json',
@@ -169,7 +183,11 @@ class UserInput extends React.Component{
         selectedArtists: this.state.selectedArtists,
         selectedGenres: this.state.selectedGenres
       })
-    }).then(res=>res.json().then(data => console.log(data)))
+    }).then((res) => {
+      res.json().then(() => {
+        this.props.loginUser(this.state.user.name, this.state.user.password)
+      })
+    });
   }
 
   handleInstrumentChange = (event) => {
@@ -349,6 +367,7 @@ class UserInput extends React.Component{
         </form>
         <FlatButton id='submit-button' onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
         <Link to="/login" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A', display:'block',padding:'20px' }}>Already a user? Login</Link>
+        {/* {this.redirectUser()} */}
       </div>
     )
   }
