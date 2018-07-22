@@ -143,6 +143,7 @@ class ProfileEdit extends React.Component{
         'Content-Type':'application/json'
       },
       body: JSON.stringify({
+        id: this.props.currentUser.id,
         name: this.state.user.name,
         password: this.state.user.password,
         age: this.state.user.age,
