@@ -55,8 +55,10 @@ class Api::V1::UsersController < ApplicationController
   def create
     user = User.create(user_params)
     relevant_played_instruments(user)
-
-
+    relevant_sought_instruments(user)
+    handle_artists(user)
+    handle_genres(user)
+    render json: {user: user, instruments: user.instruments} , status: 201
   end
 
 
@@ -77,11 +79,17 @@ class Api::V1::UsersController < ApplicationController
 
 
   def update
-    @user ||= User.find_by(id: params[:id])
-    puts 'ID:', @user.id, 'Name:', @user.name
-    # @user.user_instruments << params[:selectedArtists]
-    @user.update(user_params)
-    render json: @user, status: 200
+    user ||= User.find_by(id: params[:id])
+    puts 'ID:', user.id, 'Name:', user.name
+
+    relevant_played_instruments(user)
+    relevant_sought_instruments(user)
+    handle_artists(user)
+    handle_genres(user)
+
+    render json: {user: user, instruments: user.instruments} , status: 201
+
+    # render json: user, status: 200
   end
 
   def destroy
