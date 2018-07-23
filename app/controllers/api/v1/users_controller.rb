@@ -52,42 +52,52 @@ class Api::V1::UsersController < ApplicationController
 #     render json: {user: user, instruments: user.instruments} , status: 201
 # end
 
-def user_messages
-  relevant_user = User.find_by(id: params[:id])
-  received_messages = relevant_user.received_messages
-  sent_messages = relevant_user.sent_messages
-  render json: {received_messages: received_messages, sent_messages: sent_messages}, status: 201
-end
-
-def user_instruments
-  relevant_user = User.find_by(id: params[:id])
-  relevant_instruments = relevant_user.user_instruments
-  render json: relevant_instruments, status: 201
-end
+  def create
+    user = User.create(user_params)
+    relevant_played_instruments(user)
 
 
-def update
-  @user ||= User.find_by(id: params[:id])
-  puts 'ID:', @user.id, 'Name:', @user.name
-  # @user.user_instruments << params[:selectedArtists]
-  @user.update(user_params)
-  render json: @user, status: 200
-end
+  end
 
-def destroy
-  recipeId = @recipe.id
-  @recipe.destroy
-  render json: {message:"Zap! Recipe deleted", recipeId:recipeId}
-end
 
-def show
-  render json: @recipe, status: 200
-end
+  def user_messages
+    relevant_user = User.find_by(id: params[:id])
+    received_messages = relevant_user.received_messages
+    sent_messages = relevant_user.sent_messages
+    render json: {received_messages: received_messages, sent_messages: sent_messages}, status: 201
+  end
 
-private
-def user_params
-  params.permit(:id, :name,:password,:image_url,:age,:gender,:top_song_url, :selectedArtists, :selectedGenres, :song_embed_1, :song_embed_2, :song_embed_3, :borough)
-end
+  def user_instruments
+    relevant_user = User.find_by(id: params[:id])
+    relevant_instruments = relevant_user.user_instruments
+    render json: relevant_instruments, status: 201
+  end
+
+  def
+
+
+  def update
+    @user ||= User.find_by(id: params[:id])
+    puts 'ID:', @user.id, 'Name:', @user.name
+    # @user.user_instruments << params[:selectedArtists]
+    @user.update(user_params)
+    render json: @user, status: 200
+  end
+
+  def destroy
+    recipeId = @recipe.id
+    @recipe.destroy
+    render json: {message:"Zap! Recipe deleted", recipeId:recipeId}
+  end
+
+  def show
+    render json: @recipe, status: 200
+  end
+
+  private
+  def user_params
+    params.permit(:id, :name,:password,:image_url,:age,:gender,:top_song_url, :selectedArtists, :selectedGenres, :song_embed_1, :song_embed_2, :song_embed_3, :borough)
+  end
 
 
 end
