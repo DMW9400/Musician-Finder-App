@@ -133,9 +133,7 @@ class ProfileEdit extends React.Component{
 
   handleSubmit = (event) => {
     event.preventDefault()
-
-    // this.props.editUser(this.state.user.name, this.state.user.password)
-    // debugger
+    console.log('Sent State: ', this.state)
     return fetch(`http://localhost:3000/api/v1/users/${this.props.currentUser.id}`, {
       method: 'PATCH',
       headers:{
@@ -158,7 +156,7 @@ class ProfileEdit extends React.Component{
         selectedArtists: this.state.selectedArtists,
         selectedGenres: this.state.selectedGenres
       })
-    }).then(res=>res.json().then(data => console.log(data)))
+    }).then(res=>res.json()).then(data => console.log('Received data: ', data))
   }
 
   handleInstrumentChange = (event) => {
