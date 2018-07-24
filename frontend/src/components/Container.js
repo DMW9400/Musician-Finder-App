@@ -37,7 +37,6 @@ class Container extends React.Component{
           <Route exact path="/base/my_messages" component={MyMessages}/>
           <Route exact path="/base/findMusician" component={FindMusician}/>
           <Route exact path="/base/edit" component={ProfileEdit}/>
-
         </Switch>
       </div>
     )

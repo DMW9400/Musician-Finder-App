@@ -180,7 +180,8 @@ class ProfileEdit extends React.Component{
       })
     }).then(res=>res.json()).then(data => console.log('Received data: ', data))
 
-    // localStorage.clear()
+    localStorage.clear()
+    this.props.history.push('/login')
   }
 
   handleInstrumentChange = (event) => {
