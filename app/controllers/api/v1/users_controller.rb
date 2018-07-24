@@ -172,6 +172,7 @@ class Api::V1::UsersController < ApplicationController
        user_object.genres << genreObj
     end
   end
+
   def index
     users = User.all
     render json: users, status: 200
@@ -249,20 +250,20 @@ def update
   #
 end
 
-def destroy
-  recipeId = @recipe.id
-  @recipe.destroy
-  render json: {message:"Zap! Recipe deleted", recipeId:recipeId}
-end
+  def destroy
+    recipeId = @recipe.id
+    @recipe.destroy
+    render json: {message:"Zap! Recipe deleted", recipeId:recipeId}
+  end
 
-def show
-  render json: @recipe, status: 200
-end
+  def show
+    render json: @recipe, status: 200
+  end
 
-private
-def user_params
-  params.permit(:id, :name,:password,:image_url,:age,:gender,:top_song_url, :selectedArtists, :selectedGenres, :song_embed_1, :song_embed_2, :song_embed_3, :borough)
-end
+  private
+  def user_params
+    params.permit(:id, :name,:password,:image_url,:age,:gender,:top_song_url, :selectedArtists, :selectedGenres, :song_embed_1, :song_embed_2, :song_embed_3, :borough)
+  end
 
 
 end
