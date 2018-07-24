@@ -55,7 +55,7 @@ class Profile extends React.Component {
 
   renderPage = () => {
     let relUser = this.findById()
-    if (this.props.users.length > 0){
+    if (relUser){
           return (
             <div id="container-div">
               <div className='profile-user-div' style={{marginTop:'80px'}}>

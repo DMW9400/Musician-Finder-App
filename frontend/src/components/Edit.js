@@ -129,7 +129,7 @@ class ProfileEdit extends React.Component{
   handleSubmit = (event) => {
     event.preventDefault()
     console.log('Sent State: ', this.state)
-    return fetch(`http://localhost:3000/api/v1/users/${this.props.currentUser.id}`, {
+    fetch(`http://localhost:3000/api/v1/users/${this.props.currentUser.id}`, {
       method: 'PATCH',
       headers:{
         'Accept': 'application/json',
@@ -152,6 +152,7 @@ class ProfileEdit extends React.Component{
         selectedGenres: this.state.selectedGenres
       })
     }).then(res=>res.json()).then(data => console.log('Received data: ', data))
+    this.props.history.push('/base')
   }
   handleDelete = (event) => {
     event.preventDefault()
