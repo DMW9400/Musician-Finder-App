@@ -238,7 +238,6 @@ def user_instruments
 end
 
 def update
-
     @user ||= User.find_by(id: params[:id])
     relevant_played_instruments(@user)
     relevant_sought_instruments(@user)
@@ -251,9 +250,11 @@ def update
 end
 
   def destroy
-    recipeId = @recipe.id
-    @recipe.destroy
-    render json: {message:"Zap! Recipe deleted", recipeId:recipeId}
+
+    person = User.find_by(id: params[:id].to_i)
+    puts "user", User.find_by(id: params[:id].to_i)
+    person.destroy
+    render json: {message:"user deleted", userId: person.id}
   end
 
   def show

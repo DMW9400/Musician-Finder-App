@@ -126,11 +126,6 @@ class ProfileEdit extends React.Component{
     }
   }
 
-
-
-
-
-
   handleSubmit = (event) => {
     event.preventDefault()
     console.log('Sent State: ', this.state)
@@ -157,6 +152,35 @@ class ProfileEdit extends React.Component{
         selectedGenres: this.state.selectedGenres
       })
     }).then(res=>res.json()).then(data => console.log('Received data: ', data))
+  }
+  handleDelete = (event) => {
+    event.preventDefault()
+    console.log('Delete Clicked')
+    fetch(`http://localhost:3000/api/v1/users/${this.props.currentUser.id}`, {
+      method: 'DELETE',
+      headers:{
+        'Accept': 'application/json',
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify({
+        name: this.props.currentUser.name,
+        password: this.props.currentUser.password,
+        age: this.props.currentUser.age,
+        image_url: this.props.currentUser.image_url,
+        gender: this.props.currentUser.gender,
+        top_song_url: this.props.currentUser.top_song_url,
+        song_embed_1: this.props.currentUser.song_embed_1,
+        song_embed_2: this.props.currentUser.song_embed_2,
+        song_embed_3: this.props.currentUser.song_embed_3,
+        borough: this.props.currentUser.borough,
+        selectedInstruments: this.state.selectedInstruments,
+        seekingInstruments: this.state.seekingInstruments,
+        selectedArtists: this.state.selectedArtists,
+        selectedGenres: this.state.selectedGenres
+      })
+    }).then(res=>res.json()).then(data => console.log('Received data: ', data))
+
+    // localStorage.clear()
   }
 
   handleInstrumentChange = (event) => {
@@ -337,6 +361,7 @@ class ProfileEdit extends React.Component{
 
           </form>
           <FlatButton id='submit-button' onClick={this.handleSubmit} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Submit" />
+          <FlatButton id='delete-button' onClick={this.handleDelete} backgroundColor="#90A4AE" hoverColor='#B0BEC5' label="Delete Profile" />
           <Link to="/login" style={{ textDecoration: 'none', borderBottom: 'blue', color:'#546E7A', display:'block',padding:'20px' }}>Already a user? Login</Link>
         </div>
       )
