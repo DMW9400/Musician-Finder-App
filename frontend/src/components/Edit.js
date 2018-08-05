@@ -153,7 +153,6 @@ class ProfileEdit extends React.Component{
   }
   handleDelete = (event) => {
     event.preventDefault()
-    console.log('Delete Clicked')
     fetch(`http://localhost:3000/api/v1/users/${this.props.currentUser.id}`, {
       method: 'DELETE',
       headers:{
@@ -189,7 +188,7 @@ class ProfileEdit extends React.Component{
     })
     this.setState({
       selectedInstruments: instrumentSelect
-    }, ()=> console.log(this.state.selectedInstruments))
+    })
   }
   handleSoughtInstrumentChange = (event) => {
 
@@ -198,7 +197,7 @@ class ProfileEdit extends React.Component{
     })
     this.setState({
       seekingInstruments: instrumentSelect
-    },()=>console.log(this.state.seekingInstruments))
+    })
   }
   handleArtistChange = (event) => {
     let artistSelect= [].slice.call(event.target.selectedOptions).map(option =>{
