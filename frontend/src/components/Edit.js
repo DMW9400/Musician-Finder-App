@@ -48,7 +48,7 @@ class ProfileEdit extends React.Component{
         ...this.state.user,
         [event.target.name]: event.target.value
       }
-    }, ()=> console.log("State changing: ", this.state))
+    }
   }
 
 
@@ -76,8 +76,7 @@ class ProfileEdit extends React.Component{
 
       this.setState(
         {selectedInstruments : selectedInstruments
-        },
-        ()=>console.log('selected instruments',this.state.selectedInstruments)
+        }
       );
   }
 
@@ -127,7 +126,6 @@ class ProfileEdit extends React.Component{
 
   handleSubmit = (event) => {
     event.preventDefault()
-    console.log('Sent State: ', this.state)
     fetch(`http://localhost:3000/api/v1/users/${this.props.currentUser.id}`, {
       method: 'PATCH',
       headers:{
