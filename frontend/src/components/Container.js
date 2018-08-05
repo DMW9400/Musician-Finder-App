@@ -25,7 +25,6 @@ class Container extends React.Component{
   // Route is what gives a component history in its props
 
   render(){
-    // console.log('Container Props: ', this.props)
     return(
       <div>
         <Route path="/" component={Navbar}></Route>

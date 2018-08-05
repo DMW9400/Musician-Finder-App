@@ -53,7 +53,6 @@ class MyMessages extends React.Component{
         })
 
       }
-      console.log('return object', returnObj)
       return returnObj
     }
   }

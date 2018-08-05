@@ -65,8 +65,7 @@ class ProfileEdit extends React.Component{
 
       this.setState({
         [event.target.name]: spaceChecked
-      },
-      ()=> console.log('State: ', this.state)
+      }
     );
   }
 
